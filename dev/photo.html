@@ -140,22 +140,39 @@
 				</div>
 			</div>
 		</div>
-		<header class="header" id="header">
-			<picture>
-				<source srcset="img/er.svg" media="(max-width: 576px)">
-				<source srcset="img/errr.svg" media="(max-width: 1200px)">
-				<img src="img/err.svg" alt="" class="error__fig">
-			</picture>
+		<header class="header sear" id="header">
 			<nav class="nav">
 				<div class="container">
 					<div class="nav__box q">
 						<div class="menu-btn"></div>
-						<p class="nav__sub">
-							г. Белокуриха, ул. Бреславского, 68
-						</p>
-						<a href="index.html" class="nav__logo">
-							<img src="img/logo.png" alt="">
-						</a>
+						<img src="img/logo2.svg" alt="" class="logo2">
+						<ul class="sear__list">
+							<li>
+								<a href="#">
+									Медицина
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									СПА
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Инфраструктура
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Номера
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>
 						<a href="tel:+78003336753" class="nav__tel">
 							<img src="img/tel.svg" alt="">
 							+7 800 333 67 53
@@ -166,58 +183,135 @@
 					</div>
 				</div>
 			</nav>
-			<div class="container head">
-				<div class="header__wrap">
-					<h1>
-						<span>
-							АЛТАЙ
-						</span> <br> РЕСТАРТ
-					</h1>
-				</div>
-			</div>
 		</header>
-		<section class="error" id="error">
+		<section class="search photo" id="photo">
 			<div class="container">
-				<img src="img/err2.svg" alt="" class="error__pic">
-				<p class="error__text">
-					Кажется, страницы не существует! <br> Чем мы можем вам помочь?
-				</p>
-				<div class="error__row q">
-					<a href="#" class="error__item">
-						<img src="img/err1.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-						<p>
-							Забронировать <br> проживание
-						</p>
+				<div class="bread">
+					<a href="#">
+						Главная
 					</a>
-					<a href="#" class="error__item">
-						<img src="img/err2.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-						<p>
-							Заказать <br> столик
-						</p>
+					<p>
+						Блог
+					</p>
+				</div>
+				<h1>
+					фото: 2025
+				</h1>
+				<div class="blog-item__images q">
+					<img src="img/bl1.png" alt="">
+					<img src="img/bl2.png" alt="">
+					<img src="img/bl3.png" alt="">
+					<img src="img/bl4.png" alt="">
+					<img src="img/bl4.png" alt="">
+					<img src="img/bl3.png" alt="">
+					<img src="img/bl2.png" alt="">
+					<img src="img/bl1.png" alt="">
+				</div>
+				<div class="search__nav q">
+					<a href="#" class="arrow">
+						<img src="img/left.svg" alt="" class="svg">
 					</a>
-					<a href="#" class="error__item">
-						<img src="img/err3.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-						<p>
-							Назначить <br> трансфер
-						</p>
-					</a>
-					<a href="#" class="error__item">
-						<img src="img/err4.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-
-						<p>
-							Экскурсия <br>
-							или программа
-						</p>
+					<ul class="q">
+						<li class="active">
+							<a href="#">
+								1
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								2
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								3
+							</a>
+						</li>
+						<li>
+							...
+						</li>
+						<li>
+							<a href="#">
+								8
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="arrow">
+						<img src="img/right.svg" alt="" class="svg">
 					</a>
 				</div>
-				<a href="index.html" class="btn error__btn">
-					Вернуться на главную 
+				<a href="#" class="btn error__btn">
+					Следующая статья
 					<img src="img/arr.svg" alt="">
 				</a>
+			</div>
+		</section>
+		<section class="order item" id="order">
+			<img src="img/order2.svg" alt="" class="order__per">
+			<div class="container">
+				<img src="img/order1.svg" alt="" class="order__fig">
+				<p class="order__title">
+					Алтай-Рестарт — идеальный выбор для индивидуального отдыха или путешествия вдвоём в атмосфере спокойствия и осознанного комфорта.
+				</p>
+				<form action="#" class="item__form">
+					<div class="booking">
+						<div class="dates">
+							<div class="date-field">
+								<span class="date-label">Заезд</span>
+								<div class="date-input">
+									<input type="date" id="checkin">
+									<span class="calendar-icon">
+									<img src="img/cal.svg" alt="">
+									</span>
+								</div>
+							</div>
+							<div class="date-field" id="checkin-field">
+								<span class="date-label">выезд</span>
+								<div class="date-input">
+									<input type="date" id="checkin">
+									<span class="calendar-icon">
+										<img src="img/cal.svg" alt="">
+									</span>
+								</div>
+							</div>
+							<div class="date-field">
+								<span class="date-label">Гости</span>
+								<div class="custom-select" id="guestSelect">
+									<div class="select-trigger">
+									<span id="guestResult">1 взрослый, 0 детей</span>
+									<div class="arrrow">
+										<img src="img/sel.svg" alt="">
+									</div>
+									</div>
+									<div class="select-dropdown">
+									<div class="select-group">
+										<p>Взрослые</p>
+										<div class="options" data-type="adults">
+										<label><input type="radio" name="adults" value="1" checked> 1</label>
+										<label><input type="radio" name="adults" value="2"> 2</label>
+										<label><input type="radio" name="adults" value="3"> 3</label>
+										<label><input type="radio" name="adults" value="4"> 4</label>
+										</div>
+									</div>
+									<div class="select-group">
+										<p>Дети</p>
+										<div class="options" data-type="children">
+										<label><input type="radio" name="children" value="0" checked> 0</label>
+										<label><input type="radio" name="children" value="1"> 1</label>
+										<label><input type="radio" name="children" value="2"> 2</label>
+										<label><input type="radio" name="children" value="3"> 3</label>
+										</div>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<button class="btn error__btn">
+					Забронировать проживание
+					<img src="img/arr.svg" alt="">
+				</button>
 			</div>
 		</section>
 		<footer class="footer" id="footer">

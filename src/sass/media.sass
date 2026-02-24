@@ -25,6 +25,10 @@
       padding-right: 0
    .footer__bottom
       padding-right: 150px
+   .sear__list
+      margin-left: 33px
+   .item-room .swiper2 .swiper-slide
+      width: 23.7%
 @media screen and (max-width: 1199px)
    .main 
       overflow: hidden
@@ -253,6 +257,43 @@
       z-index: 2
    .page .header__wrap h1
       margin-top: 290px
+   .sear__list
+      display: none
+   .item-room .swiper2 .swiper-slide
+      width: 31.9%
+   .room2__item:nth-child(2n)
+      margin-left: 0
+   .room3__top
+      margin-bottom: 60px
+      flex-direction: column
+   .room3__right
+      margin-left: 0
+      margin-top: 30px
+      max-width: 100%
+   .room3__row
+      flex-direction: column
+   .room3__left
+      max-width: 100%
+   .blog .swiper4 .swiper-slide a h3
+      font-size: 27px
+   .blog-item__wrap h1
+      margin-bottom: 120px
+   .blog-item__row
+      flex-direction: column
+   .blog-item__content
+      max-width: 100% 
+      margin-top: 30px
+   .blog-item__block
+      text-align: center
+      padding: 20px
+      height: auto
+   .blog-item__images img
+      height: 450px
+   .blog-item__images
+      margin-bottom: 40px
+   .blog-item__row h3
+      font-size: 30px
+      line-height: 120%
 @media ( max-width: 991px )
    .container 
       max-width: 720px !important
@@ -431,6 +472,85 @@
       gap: 4px 
    .error__item
       width: 49.6%
+   .blog .swiper4 .swiper-slide a
+      padding-bottom: 30px
+      padding-top: 250px
+   .blog .swiper4 .swiper-slide a h3
+      font-size: 19px
+      line-height: 110%
+      display: block
+      margin: 0 auto 8px
+      letter-spacing: initial
+      text-align: center
+   .blog .swiper4 .swiper-slide a span
+      font-size: 9px
+      line-height: 110% 
+      margin: 0 auto 20px
+      text-align: center
+      display: block
+   .blog .swiper4 .swiper-slide a p
+      font-size: 10px
+      line-height: 120%
+      text-align: center
+      margin-bottom: 25px
+   .blog .swiper4 .swiper-slide a small
+      font-size: 9px
+      line-height: 100% 
+      text-align: center
+      margin: 0 auto
+   .search__sub
+      text-align: center
+      margin-bottom: 40px
+   .search__item
+      flex-direction: column 
+      align-items: center
+   .search__item
+      text-align: center
+      img
+         margin-right: 0
+         margin-bottom: 15px
+   .search__item div h3
+      text-align: center
+      margin-bottom: 12px
+   .search__item div p
+      margin: 0 auto 15px
+   .search__item div span
+      margin: 0 auto
+   .order .date-field:last-child
+      margin-left: 0
+   .order
+      .dates 
+         width: 100%
+         .date-field
+            width: 100%
+   .item-room .swiper2 .swiper-slide
+      width: 48%
+   .room2__item
+      margin-bottom: 60px
+      flex-direction: column
+   .room2__right
+      max-width: 100%
+   .room2__left
+      margin-right: 0
+      max-width: 100%
+      margin-bottom: 30px
+   .room2__title
+      margin-bottom: 30px
+   .room2__text
+      margin: 30px 0
+   .room2 .error__btn
+      width: 100%
+   .room2__item:nth-child(2n) .room2__right
+      order: 2 
+      text-align: left
+   .room2__item:nth-child(2n) .room2__left
+      margin-left: 0
+   .room2__item:nth-child(2n) .room2__sub
+      margin-left: 0
+   .room3__slider .mySwiper5
+      height: 600px
+   .blog-page .swiper4 .swiper-slide
+      width: 48.5%
 @media screen and (max-width: 767px)
    .container 
       max-width: 540px !important
@@ -876,7 +996,44 @@
    .text div p, .text div ul li
       text-align: center
       font-size: 14px
-
+   .blog__top
+      margin-bottom: 30px
+      flex-direction: column 
+      align-items: flex-start
+   .blog
+      .arrows 
+         justify-content: center
+         margin: 0 auto 20px
+   .room2 h1
+      font-size: 24px
+      line-height: 110%
+      margin: 50px auto
+   .room2 .tabs__btn_first
+      font-size: 16px
+      line-height: 100%
+      margin-bottom: 50px
+   .room2 .tabs2__nav .tabs__btn
+      font-size: 10px
+      padding: 0 10px
+   .room2 .tabs2__nav
+      margin-bottom: 30px
+   .room2__left
+      height: 400px
+      padding: 30px
+   .room2__left p
+      font-size: 30px
+   .room2__left p span
+      font-size: 10px
+      margin-bottom: 10px
+   .room2__title
+      font-size: 24px
+   .room2__sub
+      font-size: 16px
+      line-height: 140%
+   .room2__text
+      font-size: 14px
+   .blog-page .swiper4 .swiper-slide
+      width: 100%
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -1021,6 +1178,93 @@
       margin-right: -35px
       img 
          width: 100%
+   .blog .swiper4 .swiper-slide a::after
+      left: 50%
+      margin-left: -17.5px
+   .search h1
+      line-height: 110% 
+      font-size: 22px
+   .bread
+      margin-bottom: 40px
+   .bread a, .bread p
+      font-size: 12px
+   .sear .logo2
+      display: none
+   .search__sub
+      font-size: 12px
+   .search__item div p
+      font-size: 12px
+      width: 100%
+      line-height: 120%
+   .search__item div h3
+      font-size: 16px
+   .search__item div span
+      font-size: 12px
+   .search__nav ul li
+      width: 35px
+      height: 35px
+   .order__fig
+      margin-bottom: 30px
+   .order__title
+      font-size: 18px
+   .order__per
+      display: none
+   .item-room .swiper2 .swiper-slide
+      width: 100%
+   .item-room .swiper2
+      gap: 0
+   .item .dates, .item .date-field
+      width: 100%
+   .room3__sub
+      margin-bottom: 50px
+      font-size: 18px
+   .room3__left p, .room3__name
+      font-size: 24px
+      line-height: 110%
+      br 
+         display: none
+   .room3__left ul li
+      font-size: 18px
+   .room3__text
+      font-size: 18px
+      line-height: 28px
+   .room3__top
+      margin-bottom: 40px
+   .room3__right ul li
+      font-size: 18px
+      line-height: 28px
+   .room3
+      padding-bottom: 40px
+   .order2 .order__title
+      font-size: 18px
+   .room3__name
+      margin-bottom: 25px
+   .blog-page h1
+      margin-top: 0
+   .blog-item__wrap img
+      border-radius: 20px 20px 0px 0px
+   .blog-item__wrap h1
+      margin: -62px auto 80px
+      max-width: 368px
+   .blog-item__wrap:after
+      bottom: 35px
+   .blog-item__row h3
+      font-size: 24px
+   .blog-item__text p
+      font-size: 16px
+      line-height: 24px
+   .blog-item__block p
+      font-size: 18px
+      line-height: 110%
+   .blog-item__images
+      flex-wrap: wrap 
+      img 
+         width: 50%
+         height: 300px
+   .photo .error__btn
+      margin-top: 80px
+   .photo h1
+      margin-bottom: 40px
 @media screen and (max-width: 576px) and (min-width: 440px)
    .error__fig
       top: -60px

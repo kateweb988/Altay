@@ -29,7 +29,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Tenor+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -176,48 +175,408 @@
 				</div>
 			</div>
 		</header>
-		<section class="error" id="error">
+		<section class="item item-room" id="item">
+			<img src="img/gold.png" alt="" class="item__gold">
 			<div class="container">
-				<img src="img/err2.svg" alt="" class="error__pic">
-				<p class="error__text">
-					Кажется, страницы не существует! <br> Чем мы можем вам помочь?
-				</p>
-				<div class="error__row q">
-					<a href="#" class="error__item">
-						<img src="img/err1.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
+				<div class="item__wrap">
+					<div class="item__title">
+						<h2>
+							номера <span>/</span>
+						</h2>
 						<p>
-							Забронировать <br> проживание
+							шале
 						</p>
+					</div>
+					<a href="#" class="item__btn">
+						Забронировать <br> проживание
+						<img src="img/st.svg" alt="">
 					</a>
-					<a href="#" class="error__item">
-						<img src="img/err2.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-						<p>
-							Заказать <br> столик
-						</p>
-					</a>
-					<a href="#" class="error__item">
-						<img src="img/err3.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-						<p>
-							Назначить <br> трансфер
-						</p>
-					</a>
-					<a href="#" class="error__item">
-						<img src="img/err4.png" alt="">
-						<img src="img/link.svg" alt="" class="svg">
-
-						<p>
-							Экскурсия <br>
-							или программа
-						</p>
+					<form action="#" class="item__form">
+						<div class="booking">
+							<div class="dates">
+								<div class="date-field">
+									<span class="date-label">Заезд</span>
+									<div class="date-input">
+										<input type="date" id="checkin">
+										<span class="calendar-icon">
+										<img src="img/cal.svg" alt="">
+										</span>
+									</div>
+								</div>
+								<div class="date-field" id="checkin-field">
+									<span class="date-label">выезд</span>
+									<div class="date-input">
+										<input type="date" id="checkin">
+										<span class="calendar-icon">
+											<img src="img/cal.svg" alt="">
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="item__per">
+								<span class="date-label">гости</span>
+									<div class="guests">
+									<label class="guest-option">
+										<input type="radio" name="guests" value="1">
+										<span class="count">1</span>
+										<span class="text">гость</span>
+									</label>
+									<label class="guest-option">
+										<input type="radio" name="guests" value="2">
+										<span class="count">2</span>
+										<span class="text">гостя</span>
+									</label>
+									<label class="guest-option">
+										<input type="radio" name="guests" value="3">
+										<span class="count">3</span>
+										<span class="text">гостя</span>
+									</label>
+									<label class="guest-option">
+										<input type="radio" name="guests" value="4+">
+										<span class="count">4+</span>
+										<span class="text">гостей</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="swiper2">
+						
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/item.png" alt="" class="item__pic">
+								<div class="item__top q">
+									<div class="item__info">
+										<span>
+											№ 24
+										</span>
+										<p>
+											12 корпус, Этаж 1
+										</p>
+									</div>
+									<div class="item__links q">
+										<a href="#">
+											<img src="img/b1.svg" alt="" class="svg">
+										</a>
+										<a href="#">
+											<img src="img/b2.svg" alt="" class="svg">
+										</a>
+									</div>
+								</div>
+								<div class="item__content">
+									<div class="item__row q">
+										<p>
+											свободно
+										</p>
+										<span>
+											59.5 м
+										</span>
+									</div>
+									<p class="item__sum">
+										379 557 руб.
+									</p>
+								</div>
+								<a href="#" class="item__lnl btn">
+									Забронировать номер <img src="img/arr.svg" alt="">
+								</a>
+							</div>
+						
+					</div>
+					<div class="search__nav q">
+						<a href="#" class="arrow">
+							<img src="img/left.svg" alt="" class="svg">
+						</a>
+						<ul class="q">
+							<li class="active">
+								<a href="#">
+									1
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									2
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									3
+								</a>
+							</li>
+							<li>
+								...
+							</li>
+							<li>
+								<a href="#">
+									8
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="arrow">
+							<img src="img/right.svg" alt="" class="svg">
+						</a>
+					</div>
+					<a href="#" class="item-room__link">
+						К номерам <img src="img/ark.svg" alt="" class="svg">
 					</a>
 				</div>
-				<a href="index.html" class="btn error__btn">
-					Вернуться на главную 
-					<img src="img/arr.svg" alt="">
-				</a>
 			</div>
 		</section>
 		<footer class="footer" id="footer">
@@ -484,7 +843,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
 	<script src="js/all.js"></script>
