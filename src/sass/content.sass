@@ -186,7 +186,7 @@ input.error
    max-width: 20px
    margin-right: 11px
 .custom-checkbox:checked+label::before 
-   background: url(/img/check2.png) no-repeat center center
+   background: url(/img/check2.webp) no-repeat center center
    background-size: 8px
 .swiper-pagination
    display: flex
@@ -426,7 +426,7 @@ input.error
    height: 5px
    text-align: center
    vertical-align: top
-   background: url(/img/down-arrow.png) no-repeat !important
+   background: url(/img/down-arrow.webp) no-repeat !important
    position: absolute
    right: -16px
    top: 8px
@@ -577,7 +577,7 @@ ul.info li
    content: ""
    position: absolute
    right: 0px
-   background: url(img/down-arrow.png) no-repeat !important
+   background: url(img/down-arrow.webp) no-repeat !important
    width: 7px
    left: inherit
    height: 5px
@@ -588,7 +588,7 @@ ul.info li
    content: ""
    position: absolute
    right: 0px
-   background: url(img/down-arrow.png) no-repeat !important
+   background: url(img/down-arrow.webp) no-repeat !important
    width: 7px
    left: inherit
    height: 5px
@@ -673,7 +673,7 @@ ul.info li
             color: rgba(144, 151, 158, 1)
             font-size: 24px
             font-weight: 400
-            font-family: "Geologica", sans-serif
+            font-family: 'Geologica', sans-serif
             line-height: 125%
             text-align: center
             text-transform: uppercase
@@ -693,6 +693,8 @@ ul.info li
    .footer__el img
       width: 26px
       margin-right: 25px
+      flex: 1 0 auto
+      max-width: 26px
    &__tel 
       width: max-content
       display: block
@@ -721,7 +723,7 @@ ul.info li
          width: 154px
          background: url(/img/tt2.svg) no-repeat center center
       &:after 
-         background: url(/img/tt1.png) no-repeat center center / cover
+         background: url(/img/tt1.webp) no-repeat center center / cover
          width: 8px
    &__top 
       width: 100%
@@ -783,8 +785,6 @@ ul.info li
       &:hover 
          color: $yel
 .header 
-   .head 
-      max-width: 1430px
    &__wrap 
       position: relative
       z-index: 2
@@ -813,25 +813,33 @@ ul.info li
          color: rgb(255, 255, 255)
          font-size: 18px
          font-weight: 400
-         font-family: "Geologica", sans-serif
+         font-family: 'Geologica', sans-serif
          line-height: 103%
          position: absolute
          left: 463px
          bottom: 12px
          letter-spacing: -0.045rem
+         width: 100%
+         max-width: 208px
 
 .main 
-   padding: 213px 0 304px
+   padding: 0px 0 304px
    position: relative
    overflow-x: auto
+   .head 
+      max-width: 1430px
+      margin-bottom: 215px
+      h1
+         width: 100%
+         max-width: 900px
    &__fig1 
       position: absolute
-      top: -271px
+      top: 0px
       left: 0
       z-index: -1
    &__fig2
       position: absolute
-      top: -597px
+      top: 0px
       right: 0
       z-index: -1
    &__sub 
@@ -841,6 +849,8 @@ ul.info li
       line-height: 28px
       margin-left: 682px
       letter-spacing: -0.09rem
+      width: 100%
+      max-width: 528px
    &__wrap 
       position: relative
    &__item 
@@ -989,7 +999,7 @@ ul.info li
       letter-spacing: -0.045rem
       line-height: 125%
       text-transform: uppercase
-      font-family: "Geologica", sans-serif
+      font-family: 'Geologica', sans-serif
       padding: 0 60px
    &__sub 
       color: rgba(255, 216, 176, 1)
@@ -1092,6 +1102,7 @@ ul.info li
       align-items: center
       padding-left: 54px
       overflow: hidden
+      padding-right: 120px
       text-align: right
       img 
          position: absolute
@@ -1404,7 +1415,7 @@ ul.info li
                font-size: 12px
                font-weight: 400
                line-height: 125%
-               font-family: "Geologica", sans-serif
+               font-family: 'Geologica', sans-serif
                text-transform: uppercase
                &:hover 
                   color: rgba(255, 216, 176, 1)
@@ -1418,7 +1429,7 @@ ul.info li
          color: rgba(255, 216, 176, 1)
          font-size: 12px
          font-weight: 400
-         font-family: "Geologica", sans-serif
+         font-family: 'Geologica', sans-serif
          line-height: 125%
          text-transform: uppercase
          margin-bottom: 4px
@@ -1426,7 +1437,7 @@ ul.info li
             color: white
       span 
          display: block
-         font-family: "Geologica", sans-serif
+         font-family: 'Geologica', sans-serif
          color: rgba(144, 151, 158, 1)
          font-size: 12px
          font-weight: 400
@@ -1510,10 +1521,12 @@ ul.info li
             font-size: 16px
             font-weight: 400
             line-height: 125%
-            font-family: "Geologica", sans-serif
+            font-family: 'Geologica', sans-serif
             text-transform: uppercase
             margin-left: auto
             padding-right: 48px
+         .btn
+            margin: 30px 507px 0 auto
    .swiper-pagination3
       width: 90%
       display: flex
@@ -1527,7 +1540,7 @@ ul.info li
          margin: 0
          width: max-content
          height: 35px
-         padding: 10px 24px
+         padding: 12px 24px 10px
          box-sizing: border-box
          border: 1px solid rgba(228, 178, 127, 1)
          border-radius: 57px
@@ -1585,7 +1598,7 @@ ul.info li
          &:after 
             color: rgba(255, 255, 255, 1)
 .info 
-   padding: 120px 0 142px
+   padding: 0px 0 142px
    h2 
       margin: -184px 0 98px 
       margin-left: -10px
@@ -1617,15 +1630,15 @@ ul.info li
          letter-spacing: -0.05rem
          font-weight: 400
          line-height: 19px
-      &:nth-child(7)
+      &_7
          margin-left: auto
          width: 35%
          margin-top: 70px
          p 
             max-width: 415px
-      &:nth-child(8)
+      &_8
          margin-top: 70px
-      &:nth-child(5), &:nth-child(6), &:nth-child(8)
+      &_5, &_6, &_8
          &:before 
             content: ""
             display: block 
@@ -1865,7 +1878,7 @@ ul.info li
       color: rgba(255, 255, 255, 1)
       font-size: 16px
       font-weight: 400
-      font-family: "Geologica", sans-serif
+      font-family: 'Geologica', sans-serif
       line-height: 125%
       text-transform: uppercase
    &__name 
@@ -1883,6 +1896,7 @@ ul.info li
       line-height: 20px
    &__content 
       margin-bottom: 474px
+      font-style: normal
    &__bottom 
       position: relative
       z-index: 2
@@ -2002,6 +2016,8 @@ ul.info li
       letter-spacing: 0
       position: relative
       z-index: 3
+      width: 100%
+      max-width: 560px
    &__box 
       position: relative
       justify-content: space-between
@@ -2013,7 +2029,7 @@ ul.info li
       color: rgba(144, 151, 158, 1)
       font-size: 16px
       font-weight: 400
-      font-family: "Tenor Sans", sans-serif
+      font-family: 'Tenor Sans', sans-serif
       line-height: 19px
       width: 100%
       max-width: 325px 
@@ -2092,7 +2108,7 @@ ul.info li
             display: flex
             align-items: center
             margin-bottom: 13px
-            font-family: "Geologica", sans-serif
+            font-family: 'Geologica', sans-serif
             color: rgba(255, 255, 255, 1) 
             font-size: 14px
             font-weight: 400
@@ -2133,7 +2149,7 @@ ul.info li
             color: rgba(144, 151, 158, 1)
             font-size: 12px
             font-weight: 400
-            font-family: "Geologica", sans-serif
+            font-family: 'Geologica', sans-serif
             line-height: 125%
             text-align: left
             text-transform: uppercase
@@ -2234,7 +2250,7 @@ ul.info li
       font-size: 12px
       font-weight: 400
       line-height: 125%
-      font-family: "Geologica", sans-serif
+      font-family: 'Geologica', sans-serif
       text-transform: uppercase
    &__last 
       margin-top: 151px
@@ -2272,13 +2288,17 @@ ul.info li
 .swiper-select
    display: none
 .page 
-   .header__wrap
-      height: auto
    .header__wrap h1
       letter-spacing: 0
-      margin: 157px auto 0
+      margin: 100px auto 165px
       text-align: center
       font-size: 40px
+      width: 100%
+      max-width: 300px
+   .header__wrap
+      height: auto
+      .margin2
+         margin: 158px auto 100px
 .error
    padding-bottom: 64px
    &__fig 
@@ -2507,7 +2527,7 @@ ul.info li
                height: 35px
                top: 205px
                left: 5px
-               background: url(/img/st.png) no-repeat center center
+               background: url(/img/st.webp) no-repeat center center
             &:hover 
                border: 1px solid white
                small 
@@ -2860,7 +2880,7 @@ span.text
                display: inline-flex
                content: ""
                height: 35px
-               background: url(/img/star3.png) no-repeat center center
+               background: url(/img/star3.webp) no-repeat center center
                width: 35px
                margin-right: 10px
    &__right 
@@ -2974,10 +2994,23 @@ span.text
       justify-content: center 
    &__row 
       justify-content: center
+.room2
+   h2 
+      text-align: center
+      font-size: 48px
+      line-height: 120%
+      margin-top: 0
+      letter-spacing: 0
+      margin-bottom: 80px
 .blog-page 
    background: transparent
-   h1 
+   h2 
+      text-align: center
+      font-size: 48px
+      line-height: 120%
       margin-top: 0
+      letter-spacing: 0
+      margin-bottom: 80px
    .swiper4
       max-width: 1100px
       gap: 20px
@@ -3093,3 +3126,5 @@ span.text
       margin-bottom: 30px
 button.btn 
    border: none
+.address
+   font-style: normal

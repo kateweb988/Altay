@@ -37,3 +37,80 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Tenor Sans';
+    src: url('/fonts/TenorSans.eot');
+    src: url('/fonts/TenorSans.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/TenorSans.woff2') format('woff2'),
+        url('/fonts/TenorSans.woff') format('woff'),
+        url('/fonts/TenorSans.ttf') format('truetype'),
+        url('/fonts/TenorSans.svg#TenorSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('/fonts/Geologica-ExtraBold.eot');
+    src: url('/fonts/Geologica-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Geologica-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Geologica-ExtraBold.woff') format('woff'),
+        url('/fonts/Geologica-ExtraBold.ttf') format('truetype'),
+        url('/fonts/Geologica-ExtraBold.svg#Geologica-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('/fonts/Geologica-Bold.eot');
+    src: url('/fonts/Geologica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Geologica-Bold.woff2') format('woff2'),
+        url('/fonts/Geologica-Bold.woff') format('woff'),
+        url('/fonts/Geologica-Bold.ttf') format('truetype'),
+        url('/fonts/Geologica-Bold.svg#Geologica-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('/fonts/Geologica-SemiBold.eot');
+    src: url('/fonts/Geologica-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Geologica-SemiBold.woff2') format('woff2'),
+        url('/fonts/Geologica-SemiBold.woff') format('woff'),
+        url('/fonts/Geologica-SemiBold.ttf') format('truetype'),
+        url('/fonts/Geologica-SemiBold.svg#Geologica-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('/fonts/Geologica-Medium.eot');
+    src: url('/fonts/Geologica-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Geologica-Medium.woff2') format('woff2'),
+        url('/fonts/Geologica-Medium.woff') format('woff'),
+        url('/fonts/Geologica-Medium.ttf') format('truetype'),
+        url('/fonts/Geologica-Medium.svg#Geologica-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('/fonts/Geologica-Regular.eot');
+    src: url('/fonts/Geologica-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Geologica-Regular.woff2') format('woff2'),
+        url('/fonts/Geologica-Regular.woff') format('woff'),
+        url('/fonts/Geologica-Regular.ttf') format('truetype'),
+        url('/fonts/Geologica-Regular.svg#Geologica-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

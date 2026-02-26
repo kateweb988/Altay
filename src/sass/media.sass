@@ -8,7 +8,7 @@
    .item__sum
       font-size: 36px
       line-height: 100%
-   .info__item:nth-child(7) p
+   .info__item_7 p
       max-width: 368px
    .area__box
       flex-direction: column
@@ -55,7 +55,10 @@
       text-align: center
       width: 100%
    .main
-      padding: 154px 0 78px
+      padding: 0px 0 78px
+   .main .head h1
+      width: 100%
+      max-width: 649px
    .main__btn
       position: absolute
       width: 48.5%
@@ -156,13 +159,13 @@
       width: 132%
       left: -150px
       bottom: 181px
-   .info__item:nth-child(7), .info__item:nth-child(8)
+   .info__item_7, .info__item_8
       margin-top: 300px
       margin-left: 0
       margin-bottom: 0
    .info
-      padding: 120px 0 48px
-   .info__item:nth-child(5):before, .info__item:nth-child(6):before, .info__item:nth-child(8):before
+      padding: 0px 0 48px
+   .info__item_5:before, .info__item_6:before, .info__item_8:before
       top: -38px
    .area
       padding: 63px 0
@@ -294,6 +297,16 @@
    .blog-item__row h3
       font-size: 30px
       line-height: 120%
+   .page .header__wrap .margin2
+      margin-top: 244px
+   .med .swiper3 .swiper-slide .btn
+      margin: 30px 230px 0 auto
+   .info h2
+      margin: -64px 0 67px
+      margin-bottom: 44px
+      margin-left: -10px
+      width: 100%
+      max-width: 473px
 @media ( max-width: 991px )
    .container 
       max-width: 720px !important
@@ -334,7 +347,7 @@
    .info__item h3
       br 
          display: none
-   .info__item:nth-child(7), .info__item:nth-child(8)
+   .info__item_7, .info__item_8
       h3 br 
          display: block
    .info__pic
@@ -424,7 +437,7 @@
       height: 47px
       background: url(/img/btn1.svg) no-repeat center center
    .menu .btn:after
-      background: url(/img/btn2.png) no-repeat center center / cover
+      background: url(/img/btn2.webp) no-repeat center center / cover
       width: 4px
    .header__wrap
       height: 320px
@@ -552,12 +565,22 @@
    .blog-page .swiper4 .swiper-slide
       width: 48.5%
 @media screen and (max-width: 767px)
+   .main .head h1
+      max-width: 300px
+      margin-left: auto
+      margin-right: auto
+   .header__wrap p
+      width: 100%
+      max-width: 117px
+      margin-left: -57px
+   .main .head
+      margin-bottom: 140px
    .container 
       max-width: 540px !important
    .main__row
       gap: 8px
    .main
-     padding-top: 126px
+     padding-top: 0px
      .main__btn 
          position: relative
          width: 100%
@@ -695,7 +718,9 @@
    .info h2
       text-align: center
       font-size: 32px
-      margin: -151px 0 40px
+      margin: -151px auto 40px
+      width: 100%
+      max-width: 340px
    .info__item
       width: 100% !important
    .info__item h3
@@ -708,22 +733,22 @@
       font-size: 13px
       line-height: 15px 
       text-align: center
-   .info__item:nth-child(5):before, .info__item:nth-child(6):before, .info__item:nth-child(8):before
+   .info__item_5:before, .info__item_6:before, .info__item_8:before
       margin-left: -47px
       font-size: 11px
       left: 50%
       top: -43px
-   .info__item:nth-child(5), .info__item:nth-child(6), .info__item:nth-child(8)
+   .info__item_5, .info__item_6, .info__item_8
       margin-top: 20px
    .info__pic 
       bottom: 260px
       height: 206px
       width: 153%
-   .info__item:nth-child(7)
+   .info__item_7
       margin-top: 169px
-   .info__item:nth-child(8)
+   .info__item_8
       margin-top: 70px
-   .info__item:nth-child(7) p
+   .info__item_7 p
       max-width: 100%
    .area__content h2
       font-size: 32px
@@ -1034,6 +1059,17 @@
       font-size: 14px
    .blog-page .swiper4 .swiper-slide
       width: 100%
+   .page .header__wrap h1
+      width: 100%
+      max-width: 268px
+   .page .header__wrap .margin
+      margin: 24px auto 113px !important
+   .blog-page h2
+      font-size: 32px
+      margin-bottom: 30px
+   .room2 h2
+      font-size: 32px
+      margin-bottom: 30px
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -1265,6 +1301,24 @@
       margin-top: 80px
    .photo h1
       margin-bottom: 40px
+   .page .header__wrap h1 
+      margin-bottom: 143px
+      margin-top: 87px
+   .page .header__wrap .margin2
+      margin: 153px auto 74px !important
+   .ser__row
+      left: 10px
+      width: 100%
+      max-width: 58%
+   .ser__bottom
+      margin-top: 5px
+   .med .swiper3 .swiper-slide .btn
+      margin-left: auto 
+      margin-right: auto
+      margin-top: 15px
+      margin-bottom: 40px
+   .info h2
+      margin: -33px auto 29px
 @media screen and (max-width: 576px) and (min-width: 440px)
    .error__fig
       top: -60px
