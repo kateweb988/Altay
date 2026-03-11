@@ -113,6 +113,7 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 document.addEventListener('DOMContentLoaded', function () {
   $('.articmodal-close').click(function (e) {
     $.arcticmodal('close');
@@ -135,6 +136,39 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const social = document.querySelector(".social");
+
+  const offsetBottom = 40;
+  const limit = 390;
+  const breakpoint = 1200;
+
+  function updatePosition() {
+    if (window.innerWidth < breakpoint) {
+      social.style.bottom = offsetBottom + "px";
+      return;
+    }
+
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+
+    const distanceToBottom = docHeight - (scrollTop + windowHeight);
+
+    if (distanceToBottom < limit) {
+      social.style.bottom = offsetBottom + (limit - distanceToBottom) + "px";
+    } else {
+      social.style.bottom = offsetBottom + "px";
+    }
+  }
+
+  window.addEventListener("scroll", updatePosition);
+  window.addEventListener("resize", updatePosition);
+
+  updatePosition();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   $(document).ready(function () {
     $('[data-submit]').on('click', function (e) {
@@ -254,49 +288,80 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-document.addEventListener('DOMContentLoaded', function () {
 
-  /* ==============================
-     SWIPER 1
-  ============================== */
-  if (document.querySelector('.swiper1')) {
-    new Swiper('.swiper1', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      speed: 800,
-      allowTouchMove: true,
-      watchOverflow: true,
-      resistanceRatio: 0,
-      navigation: {
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 700,
+    grabCursor: true,
+    navigation: {
         nextEl: '.swiper-button-next1',
         prevEl: '.swiper-button-prev1',
       },
-    });
+  });
+
+  const preview = document.querySelector(".preview");
+
+  function updatePreview() {
+    preview.innerHTML = "";
+    const slides = swiper.slides;
+    const previewCount = 4; // максимальное количество превью
+    let width = 46; // начальная ширина
+    const widthStep = 10; // шаг уменьшения
+
+    const remainingSlides = slides.length - swiper.activeIndex - 1; 
+    if (remainingSlides <= 0) return; // если после активного нет слайдов, не рисуем
+
+    // сколько блоков превью реально рисуем
+    const blocksToShow = Math.min(previewCount, remainingSlides);
+
+    for (let i = 0; i < blocksToShow; i++) {
+      const index = swiper.activeIndex + 1 + i; // начинаем с слайда после активного
+      const imgSrc = slides[index].querySelector("img").src;
+
+      const div = document.createElement("div");
+      div.style.width = width + "px";
+      div.style.height = "100%";
+      div.style.marginBottom = "4px";
+      div.innerHTML = `<img src="${imgSrc}">`;
+      preview.appendChild(div);
+
+      width -= widthStep;
+      if (width < 20) width = 20; // минимальная ширина
+    }
   }
 
+  swiper.on("init", updatePreview);
+  swiper.on("slideChange", updatePreview);
+  swiper.init();
+
+  // сразу отображаем превью для первого слайда
+  updatePreview();
+});
+document.addEventListener('DOMContentLoaded', function () {
+    
   /* ==============================
-     SWIPER 2 (GRID БЕЗ ПАДЕНИЯ)
+     SWIPER HOTEL
   ============================== */
-  const swiper2El = document.querySelector('.swiper2');
 
-  if (
-    swiper2El &&
-    swiper2El.querySelector('.swiper-wrapper') &&
-    swiper2El.querySelectorAll('.swiper-slide').length
-  ) {
+  let swiperHotel;
 
-    new Swiper(swiper2El, {
+  if (document.querySelector('.swiper-hotel')) {
+
+    swiperHotel = new Swiper('.swiper-hotel', {
       spaceBetween: 19,
-      slidesPerView: 3,
+      slidesPerView: 4,
       watchOverflow: true,
+      allowTouchMove: false,
       pagination: {
-        el: '.swiper-pagination2',
+        el: '.swiper-pagination-hotel',
         type: 'progressbar',
       },
       breakpoints: {
         0: {
           slidesPerView: 1,
+          allowTouchMove: true,
           grid: {
             rows: 1,
             fill: 'row',
@@ -310,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function () {
           },
         },
         1200: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           grid: {
             rows: 1,
           },
@@ -320,9 +385,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+
+  /* ==============================
+     SWIPER CHALET
+  ============================== */
+
+  let swiperChalet;
+
+  if (document.querySelector('.swiper-chalet')) {
+
+    swiperChalet = new Swiper('.swiper-chalet', {
+      spaceBetween: 19,
+      slidesPerView: 4,
+      watchOverflow: true,
+      allowTouchMove: false,
+      pagination: {
+        el: '.swiper-pagination-chalet',
+        type: 'progressbar',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          allowTouchMove: true,
+          grid: {
+            rows: 1,
+            fill: 'row',
+          },
+        },
+        768: {
+          slidesPerView: 2,
+          grid: {
+            rows: 2,
+            fill: 'row',
+          },
+        },
+        1200: {
+          slidesPerView: 4,
+          grid: {
+            rows: 1,
+          },
+        },
+      },
+    });
+
+  }
+
+
   /* ==============================
      SWIPER 4
   ============================== */
+
   if (document.querySelector('.swiper4')) {
     new Swiper('.swiper4', {
       slidesPerView: 3,
@@ -353,9 +465,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+
   /* ==============================
      SWIPER 5 + THUMBS
   ============================== */
+
   if (document.querySelector('.mySwiper5') && document.querySelector('.mySwiper6')) {
 
     const swiper6 = new Swiper(".mySwiper6", {
@@ -375,8 +489,94 @@ document.addEventListener('DOMContentLoaded', function () {
         swiper: swiper6,
       },
     });
+
   }
 
+
+  /* ==============================
+     TABS (ФОРМА + СЛАЙДЕР)
+  ============================== */
+
+  const tabs = document.querySelectorAll(".title-tab");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  if (tabs.length) {
+
+    tabs.forEach(tab => {
+
+      tab.addEventListener("click", function () {
+
+        const tabName = this.dataset.tab;
+
+        /* активный заголовок */
+
+        tabs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+
+        /* переключаем контент */
+
+        tabContents.forEach(content => {
+
+          content.classList.remove("active");
+
+          if (content.dataset.tab === tabName) {
+            content.classList.add("active");
+          }
+
+        });
+
+        /* фикс swiper после display:none */
+
+        setTimeout(() => {
+
+          if (swiperHotel) {
+            swiperHotel.update();
+            swiperHotel.updateSlides();
+            swiperHotel.updateProgress();
+            swiperHotel.updateSize();
+            swiperHotel.pagination.render();
+            swiperHotel.pagination.update();
+          }
+
+          if (swiperChalet) {
+            swiperChalet.update();
+            swiperChalet.updateSlides();
+            swiperChalet.updateProgress();
+            swiperChalet.updateSize();
+            swiperChalet.pagination.render();
+            swiperChalet.pagination.update();
+          }
+
+        }, 120);
+
+      });
+
+    });
+
+  }
+
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const wrap = document.querySelector('.main__wrap');
+  const row = wrap.querySelector('.main__row');
+
+  // Проверяем, что устройство – десктоп
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    wrap.addEventListener('mousemove', e => {
+      const { width } = wrap.getBoundingClientRect();
+      const mouseX = e.clientX - wrap.getBoundingClientRect().left;
+
+      const maxScroll = row.scrollWidth - wrap.clientWidth;
+      const scroll = (mouseX / width) * maxScroll;
+
+      row.style.transform = `translateX(${-scroll}px)`;
+    });
+
+    // Чтобы скролл возвращался в исходное положение при уходе мыши
+    wrap.addEventListener('mouseleave', () => {
+      row.style.transform = `translateX(0)`;
+    });
+  }
 });
 document.addEventListener('DOMContentLoaded', () => {
 

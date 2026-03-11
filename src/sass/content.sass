@@ -823,9 +823,8 @@ ul.info li
          max-width: 208px
 
 .main 
-   padding: 0px 0 304px
+   padding: 0px
    position: relative
-   overflow-x: auto
    .head 
       max-width: 1430px
       margin-bottom: 215px
@@ -853,6 +852,11 @@ ul.info li
       max-width: 528px
    &__wrap 
       position: relative
+      padding-bottom: 500px
+      overflow-x: hidden
+      overflow-y: hidden
+   &__row 
+      transition: transform 0.1s linear
    &__item 
       position: relative
       width: 429.63px
@@ -910,13 +914,13 @@ ul.info li
       &:nth-child(3)
          position: absolute
          left: 219px
-         bottom: 4px
+         top: 390px
       &:nth-child(4)
          margin-top: 40px
       &:nth-child(5)
          position: absolute
          right: 0
-         bottom: -203px
+         top: 550px
          margin: 0
       &:hover 
          p 
@@ -929,9 +933,6 @@ ul.info li
                stroke: $yel
          img 
             filter: inherit
-   &__wrap 
-      position: relative
-      padding-bottom: 188px
    &__btn 
       top: 38px
       width: 340px
@@ -946,10 +947,6 @@ ul.info li
       overflow: hidden
       width: 100%
       .swiper-slide 
-         flex-shrink: 0
-         height: 100%
-         width: 47px
-         transition: width 0.8s ease
          position: relative
          &:after 
             content: ""
@@ -960,18 +957,12 @@ ul.info li
             width: 100%
             height: 100%
             background: rgba(0, 0, 0, 0.3 )
-         img 
-            width: 100%
-            height: 100%
-            object-fit: cover
-            z-index: 0
-      .swiper-slide-active
-         width: calc(100% - 94px)
-      .swiper-slide-next, .swiper-slide-prev 
-         width: 47px
-      // .swiper-slide
-      //    &:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev)
-      //       width: 47px
+         & >
+            img 
+               width: 100%
+               height: 100%
+               object-fit: cover
+               z-index: 0
    &__block 
       position: relative
       z-index: 2
@@ -979,6 +970,9 @@ ul.info li
       max-width: 350px
       background: #7C6B5A
       padding: 60px 0px 0px 
+      img 
+         width: auto !important
+         height: auto !important
    &__top 
       align-items: center
       margin-bottom: 202px
@@ -1062,18 +1056,18 @@ ul.info li
    &__title 
       display: flex
       align-items: flex-start
-      h2 
-         span 
-            margin-right: 8px
-            margin-left: -9px
-            font-weight: 400
-            font-size: 96px
-            position: relative
-            top: -20px
-            line-height: 90%
-            letter-spacing: -0.09em
-            text-transform: uppercase
-            color: #FFD8B0
+   .title-tab
+      span 
+         margin-right: 4px
+         margin-left: -5px
+         font-weight: 400
+         font-size: 96px
+         position: relative
+         top: -25px
+         line-height: 90%
+         letter-spacing: -0.09em
+         text-transform: uppercase
+         color: #FFD8B0
       p 
          display: block
          width: max-content
@@ -1088,6 +1082,27 @@ ul.info li
          margin-left: 22px
          position: relative
          top: 9px
+   .title-tab.active
+      opacity: 1 !important
+      display: flex
+      align-items: flex-start
+      span 
+         margin-right: 4px
+         margin-left: 22px
+         font-weight: 400
+         font-size: 96px
+         position: relative
+         top: -11px
+         line-height: 90%
+         letter-spacing: -0.09em
+         text-transform: uppercase
+         color: #FFD8B0
+   h2.title-tab.active
+      position: relative
+      top: -10px
+      margin-left: 0
+   p.title-tab.active
+      margin-left: 0
    &__wrap 
       position: relative
    &__btn 
@@ -1231,7 +1246,7 @@ ul.info li
       width: 78%
       overflow: visible
       margin-top: 131px
-      height: 539px
+      height: 484px
       .swiper-slide 
          display: flex
          flex-direction: column 
@@ -1246,12 +1261,13 @@ ul.info li
             top: 0
             left: 0
             width: 100%
+            opacity: 0
             height: 435px
             background: rgba(0, 0, 0, 0.3 )
    &__pic
       position: absolute
       width: 100%
-      height: 435px
+      height: 417px
       object-fit: cover
    &__top 
       width: 100%
@@ -1263,7 +1279,7 @@ ul.info li
    &__lnl 
       z-index: 2
       width: 100%
-      height: 104px
+      height: 67px
       border-radius: 0px
       box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1)
       background: rgba(71, 77, 83, 1)
@@ -1311,14 +1327,24 @@ ul.info li
       z-index: 3
       padding: 0 26px
       margin-top: auto
-      margin-bottom: -20px
+      margin-bottom: 0px
+   &__txt 
+      font-size: 12px
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      color: #FFFFFF
+      font-family: 'Geometria'
+      margin: 10px 0 20px
+      width: 100%
+      max-width: 209px
    &__row 
       width: 100%
       justify-content: space-between
       align-items: center
       p 
          color: rgba(255, 216, 176, 1)
-         font-size: 12px
+         font-size: 11px
          font-weight: 500
          line-height: 14px
          text-transform: uppercase
@@ -1333,7 +1359,7 @@ ul.info li
          text-transform: uppercase
    &__sum 
       color: rgba(255, 216, 176, 1)
-      font-size: 40px
+      font-size: 38px
       font-weight: 400
       line-height: 47px
       letter-spacing: -0.15rem
@@ -1344,6 +1370,54 @@ ul.info li
       top: 5px
       left: 0
       z-index: 0
+.tab-content
+   display: none
+.tab-content.active
+   display: block
+.item
+   h2.title-tab 
+      top: -20px !important
+      span 
+         margin-right: 1px
+         margin-left: 7px
+         font-weight: 400
+         font-size: 96px
+         position: relative
+         top: 24px
+         line-height: 90%
+         letter-spacing: -0.09em
+         text-transform: uppercase
+         color: #FFD8B0
+.item__title .title-tab 
+   cursor: pointer
+   display: block
+   width: max-content
+   padding-bottom: 2px
+   color: #FFD8B0
+   font-size: 40px
+   font-weight: 400
+   line-height: 90%
+   text-align: left
+   letter-spacing: -0.15rem
+   text-transform: uppercase
+   margin-left: 0px
+   position: relative
+   top: 9px
+.item__title .title-tab.active 
+   margin: 0
+   color: rgb(255, 255, 255)
+   font-size: 128px
+   font-weight: 400
+   line-height: 90%
+   letter-spacing: -0.7rem
+   text-align: left
+   text-transform: uppercase
+p.title-tab
+   margin-left: 20px !important
+.item .title-tab.active span
+   top: -4px
+.item__title .title-tab
+   top: 3px
 .images 
    display: flex
    align-items: center
@@ -1798,10 +1872,15 @@ ul.info li
          border-left: 2px solid rgba(228, 178, 127, 1)
          br 
             display: none
-   &__img 
-      width: 46.6%
-      object-fit: cover 
-      height: 500px
+   &__img
+      picture
+         display: block 
+         width: 46.6%
+         height: 500px
+         img 
+            object-fit: cover
+            width: 100%
+            height: 100%
    &__time 
       width: 89%
       div 
@@ -1903,6 +1982,8 @@ ul.info li
    &__content 
       margin-bottom: 474px
       font-style: normal
+      position: relative
+      z-index: 2
    &__bottom 
       position: relative
       z-index: 2
@@ -3049,6 +3130,7 @@ span.text
          max-width: 642px 
          margin: -179px auto 180px
          position: relative
+         min-height: 228px
          z-index: 3
       &:after 
          content: ""
@@ -3134,3 +3216,170 @@ button.btn
    border: none
 .address
    font-style: normal
+.item .swiper-pagination-progressbar
+   display: none
+.item .swiper2
+   width: 100%
+   overflow: hidden
+.social
+   bottom: 200px
+.swiper4 
+   .swiper-slide 
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      height: auto
+.blog .swiper4 .swiper-slide a p
+   margin-top: auto
+.spec__sum
+   &:after 
+      content: "₽"
+      display: inline-flex
+      font-size: 40px
+      margin-left: 10px
+.room2 h2
+   width: 100%
+   max-width: 1000px
+   margin: 0px auto 80px
+.services 
+   h3 
+      font-weight: 400
+      font-size: 20px
+      line-height: 90%
+      text-align: center
+      letter-spacing: -0.07em
+      text-transform: uppercase
+      color: #FFFFFF
+      padding-bottom: 13px
+      &:after 
+         content: ""
+         display: block
+         margin: 10px 0 60px
+         background: url(/img/border.svg) no-repeat center center
+         width: 100%
+         height: 3px
+         background-size: 100% !important
+   &__item 
+      margin: 0 auto 200px 
+      width: 100%
+      max-width: 962px
+      &:last-child
+         margin-bottom: 100px
+         .error__row
+            gap: 40px
+            justify-content: center
+      .error__item
+         height: 408px
+         width: 30.4%
+         .svg 
+            width: 40px
+            height: 40px
+            bottom: 120px
+         picture 
+            display: block
+            width: 100%
+         img 
+            width: 100%
+            object-fit: cover
+            height: 220px
+   .error__btn
+      height: 60px
+      width: 340px
+      margin: 0 auto 50px
+   &__wrap 
+      margin-top: 200px
+.images img  
+   cursor: pointer 
+.image-modal  
+   position: fixed 
+   inset: 0 
+   background: rgba(0,0,0,0.9) 
+   display: flex 
+   align-items: center 
+   justify-content: center 
+   z-index: 9999 
+   opacity: 0 
+   visibility: hidden 
+   transition: opacity .3s 
+.image-modal.show  
+   opacity: 1 
+   visibility: visible 
+.image-modal img  
+   max-width: 90% 
+   max-height: 90% 
+.image-modal__arrow  
+   position: absolute 
+   top: 50% 
+   transform: translateY(-50%) 
+   font-size: 40px 
+   color: #fff 
+   cursor: pointer 
+   user-select: none 
+   padding: 20px 
+.image-modal__arrow.prev  
+   left: 30px
+.image-modal__arrow.next  
+   right: 30px 
+.swiper 
+   width: 100% 
+   height: 600px 
+   overflow: hidden 
+   .swiper-slide 
+      position: relative 
+   .swiper-slide img 
+      width: 100% 
+      height: 100% 
+      object-fit: cover 
+ 
+
+/* ПРАВЫЕ ПРЕВЬЮ */
+.preview 
+   position: absolute 
+   top: 0 
+   right: 0 
+   height: 100% 
+   display: flex 
+   z-index: 10 
+   pointer-events: none 
+ 
+
+.preview div 
+   width: 46px 
+   height: 100% 
+   overflow: hidden 
+   border-left: 2px solid #C7A888
+   position: relative
+.preview img 
+   width: 100% 
+   height: 100% 
+   object-fit: cover 
+/* Превью */
+.preview  
+   position: absolute 
+   top: 0 
+   right: 0 
+   height: 100% 
+   display: flex 
+   z-index: 10 
+   align-items: center
+   pointer-events: none 
+ 
+
+.preview div  
+   overflow: hidden 
+   position: relative 
+   margin-bottom: 0px 
+   &:after  
+      content: "" 
+      display: block 
+      position: absolute 
+      top: 0 
+      left: 0 
+      width: 100% 
+      height: 100% 
+      background: rgba(0, 0, 0, 0.6) 
+ 
+   
+
+ 
+ 

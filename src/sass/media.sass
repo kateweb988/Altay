@@ -29,6 +29,8 @@
       margin-left: 33px
    .item-room .swiper2 .swiper-slide
       width: 23.7%
+   .area__item picture
+      width: 63.6%
 @media screen and (max-width: 1199px)
    .main 
       overflow: hidden
@@ -121,7 +123,7 @@
    .item .booking
       margin-top: 48px
    .item__btn
-      top: -3px
+      top: 88px
    .swiper2 .swiper-wrapper 
       align-items: stretch
    .item .swiper2
@@ -307,6 +309,8 @@
       margin-left: -10px
       width: 100%
       max-width: 473px
+   .item__pic
+      height: 473px
 @media ( max-width: 991px )
    .container 
       max-width: 720px !important
@@ -339,9 +343,9 @@
    .item__per
       padding-left: 0
    .item__btn 
-      top: 189px
+      top: 230px
       right: inherit
-      left: 167px
+      left: 187px
    .med .swiper3 .swiper-slide p
       padding-right: 0
    .info__item h3
@@ -564,6 +568,20 @@
       height: 600px
    .blog-page .swiper4 .swiper-slide
       width: 48.5%
+   .services__wrap
+      margin-top: 100px
+      .error__row
+         gap: 15px
+   .services__item .error__item
+      width: 100%
+   .services__item
+      margin-bottom: 100px
+   .ch3:after
+      margin-bottom: 30px
+   .services__item:last-child
+      margin-bottom: 30px 
+   .services .room2 .error__btn
+      margin-bottom: 30px
 @media screen and (max-width: 767px)
    .main .head h1
       max-width: 300px
@@ -1070,13 +1088,48 @@
    .room2 h2
       font-size: 32px
       margin-bottom: 30px
-   .item__title h2 span 
+   .item h2.title-tab span
+      margin-right: -7px
+   .item h2.title-tab span
       font-size: 24px
+   .item__title h2 span 
+      font-size: 28px
       top: -2px
       margin-left: 0
    .item__title p
       top: 5px
       margin-left: 14px
+   .item__title .title-tab
+      font-size: 24px
+      top: -15px
+      letter-spacing: 0
+   .item__title .title-tab.active
+      font-size: 32px
+      line-height: 100%
+      letter-spacing: 0px
+   .item .title-tab.active span
+      font-size: 28px
+      top: 3px
+      margin-right: -9px
+      margin-left: 9px
+   p.title-tab.active 
+      top: -12px
+   .item h2.title-tab span
+      top: 5px
+   .item h2.title-tab
+      display: flex
+      flex-wrap: nowrap
+   .item h2.title-tab
+      top: -9px !important
+   .preview
+      display: none
+   .ser__row 
+      left: 20px
+   .ser__block
+      max-width: 76%
+   .ser .arrows
+      position: relative
+      left: -80px
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -1326,7 +1379,38 @@
       margin-bottom: 40px
    .info h2
       margin: -33px auto 29px
-   
+   .item .swiper-pagination-progressbar
+      display: flex
+   .spec__sum:after 
+      content: "₽"
+      display: inline-flex
+      font-size: 19px
+   .services__wrap .error__row
+      max-width: 100%
+   .services__item .error__item
+      max-width: 250px 
+      margin: 0 auto
+   .services__item .error__item img
+      height: 189px 
+   .services__item .error__item
+      height: 350px
+   .services__item .error__item .svg
+      margin-right: -22px
+   .services 
+      .error__item p 
+         padding: 20px 34px 32px
+   .blog-item__wrap h1 
+      min-height: 99px
+   .item .title-tab.active span
+      font-size: 29px
+   .item h2.title-tab span
+      top: 4px
+   .item h2.title-tab
+      top: -13px !important
+   .item .booking
+      margin-top: 30px
+   .item__title
+      margin-top: 20px
 @media screen and (max-width: 576px) and (min-width: 440px)
    .error__fig
       top: -60px
