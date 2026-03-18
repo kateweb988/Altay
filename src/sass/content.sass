@@ -1966,6 +1966,8 @@ p.title-tab
       font-family: 'Geologica', sans-serif
       line-height: 125%
       text-transform: uppercase
+      width: 100%
+      max-width: 250px
    &__name 
       color: rgba(255, 216, 176, 1)
       font-size: 14px
@@ -2081,6 +2083,9 @@ p.title-tab
       line-height: 140%
       font-family: 'Geometria'
       text-transform: uppercase
+      width: 100%
+      max-width: 200px
+      margin-top: 5px
 .spec 
    overflow: hidden
    padding: 100px 0 93px
@@ -2648,6 +2653,8 @@ span.text
    padding: 70px 0
    position: relative
    background: #2d3236
+   .booking 
+      flex-direction: column
    &__per   
       position: absolute
       bottom: 0
@@ -3378,8 +3385,1790 @@ button.btn
       width: 100% 
       height: 100% 
       background: rgba(0, 0, 0, 0.6) 
- 
-   
+.note 
+   position: fixed
+   bottom: 100px
+   z-index: 20
+   display: flex
+   justify-content: space-between
+   align-items: center
+   width: 586px
+   height: 73px
+   background: #2D3235
+   border-bottom: 2px solid #786A52
+   &__text 
+      padding-left: 10px
+      font-weight: 400
+      font-size: 16px
+      line-height: 110%
+      letter-spacing: -0.04em
+      font-family: 'Geologica', sans-serif
+      color: #FFFFFF
+   &__close 
+      height: 100%
+      cursor: pointer
+      border-radius: 0px
+      svg 
+         margin-left: 15px
+.order .dates_1 .date-input
+   margin-bottom: 30px
+   input 
+      border: 1px solid transparent !important
+      &:focus 
+         border: 1px solid $yel !important
+.about 
+   .blog-item__wrap
+      margin: 60px 0
+      &:after
+         bottom: 0
+      img 
+         border-radius: 0
+   .blog-item__text, &__info
+      width: 100%
+      max-width: 654px
+      margin-left: auto
+   &__area
+      max-width: 890px
+      width: 100%
+      margin-left: auto
+   &__info
+      flex-wrap: wrap 
+      justify-content: space-between
+   &__item 
+      width: 50%
+      span 
+         display: block
+         font-weight: 400
+         font-size: 16px
+         line-height: 150%
+         font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+         color: #FFFFFF
+         opacity: 0.5
+         margin-bottom: 15px
+      a, p 
+         font-weight: 400
+         font-size: 24px
+         line-height: 28px
+         letter-spacing: -0.06em
+         color: #FFFFFF
+      a:hover 
+         color: $yel
+      &:last-child
+         width: 100%
+         margin-top: 60px
+   &__content 
+      .blog-item__text
+         margin-bottom: 50px
+      .blog-item__name
+         margin-bottom: 50px
+         p 
+            font-weight: 400
+            font-size: 24px
+            line-height: 32px
+            text-align: center
+            text-transform: uppercase
+            font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+            color: #FFD8B0
+            letter-spacing: 0.01rem
+   .arrow
+      background: transparent
+      border: 1px solid #e4b27f
+      path 
+         stroke: white
+   &__area 
+      h2
+         font-weight: 400
+         font-size: 32px
+         line-height: 120%
+         font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+         color: #FFFFFF
+         letter-spacing: 0
+         text-transform: none
+   &__per 
+      margin: 60px 0 80px
+   &__block 
+      align-items: flex-end
+      padding-bottom: 60px
+      margin-bottom: 60px
+      border-bottom: 1px solid #D0D0D0
+      img 
+         object-fit: cover 
+         width: 259.33px
+         height: 203.76px
+      div 
+         width: 100%
+         max-width: 467px
+         margin-left: 60px
+         h3 
+            margin-top: 0
+            text-transform: none
+            font-weight: 400
+            font-size: 26px
+            line-height: 106.5%
+            font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+            color: #FFFFFF
+            margin-bottom: 20px
+            letter-spacing: 0
+         p
+            font-weight: 400
+            font-size: 18px
+            line-height: 24px
+            letter-spacing: -0.06em
+            color: #FFFFFF
+      &:last-child
+         border-bottom: none
+   &__flex 
+      justify-content: space-between
+      width: 100%
+      align-items: center
+      margin-bottom: 60px
+   .swiper7
+      overflow: hidden
+      width: 100% 
+      margin-bottom: 50px
+      .swiper-slide
+         width: 100%
+         display: flex
+         align-items: flex-start
+         justify-content: space-between
+         background: #35393D
+         border: 1px solid rgba(255, 255, 255, 0.5)
+         a 
+            display: flex
+            font-weight: 400
+            font-size: 13px
+            line-height: 150%
+            color: #FFD8B0
+            align-items: center
+            .svg 
+               margin-left: 15px
+               position: relative
+               top: 1px
+            &:hover 
+               color: white
+               .svg
+                  path 
+                     fill: white
+                     fill-opacity: 1
+      &__img 
+         height: 100%
+         width: 400px
+         object-fit: cover
+      &__content 
+         padding: 30px
+      &__info 
+         align-items: center
+         margin-bottom: 30px
+         p 
+            font-weight: 400
+            font-size: 13px
+            line-height: 150%
+            color: #FFD8B0
+            margin-right: 20px
+         span 
+            font-weight: 400
+            font-size: 13px
+            line-height: 150%
+            color: #FFFFFF
+      &__text 
+         width: 100%
+         max-width: 309px
+         font-weight: 400
+         font-size: 14.3176px
+         line-height: 160%
+         color: #FFFFFF
+         font-family: 'Geometria'
+         margin-bottom: 30px
+   &__link 
+      width: 100%
+      max-width: 215px 
+      justify-content: space-between
+      align-items: center
+      padding-bottom: 20px
+      font-weight: 400
+      font-size: 16px
+      line-height: 19px
+      letter-spacing: -0.06em
+      color: #FFD8B0
+      border-bottom: 1px solid #FFD8B0
+      &:hover 
+         color: white 
+         border-bottom: 1px solid white 
+         .svg 
+            path 
+               stroke: white
+.swiper7
+   overflow: hidden
+   width: 100% 
+   margin-bottom: 50px
+   .swiper-slide
+      width: 100%
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      background: #35393D
+      border: 1px solid rgba(255, 255, 255, 0.5)
+      a 
+         display: flex
+         font-weight: 400
+         font-size: 13px
+         line-height: 150%
+         color: #FFD8B0
+         align-items: center
+         .svg 
+            margin-left: 15px
+            position: relative
+            top: 1px
+         &:hover 
+            color: white
+            .svg
+               path 
+                  fill: white
+                  fill-opacity: 1
+   &__img 
+      height: 100%
+      width: 400px
+      object-fit: cover
+   &__content 
+      padding: 30px
+   &__info 
+      align-items: center
+      margin-bottom: 30px
+      p 
+         font-weight: 400
+         font-size: 13px
+         line-height: 150%
+         color: #FFD8B0
+         margin-right: 20px
+      span 
+         font-weight: 400
+         font-size: 13px
+         line-height: 150%
+         color: #FFFFFF
+   &__text 
+      width: 100%
+      max-width: 309px
+      font-weight: 400
+      font-size: 14.3176px
+      line-height: 160%
+      color: #FFFFFF
+      font-family: 'Geometria'
+      margin-bottom: 30px
+.marquee-container  
+   width: 100% 
+   overflow: hidden 
+   display: flex 
+   align-items: center 
+   height: auto
+   position: relative 
+   margin: 100px 0 80px
+.marquee-track  
+   display: flex 
+   gap: 40px 
+   align-items: center
+   animation: marquee 15s linear infinite 
+.marquee-container:hover .marquee-track  
+   animation-play-state: paused 
+.marquee-item  
+   flex: 0 0 auto 
+   width: auto
+   height: auto
+   overflow: hidden 
+   display: flex 
+   align-items: center 
+   justify-content: center 
+   position: relative
+   &:after 
+      content: ""
+      display: inline-block
+      background: url(/img/big-star.svg) no-repeat center center
+      width: 103px
+      height: 103px
+      margin-left: 40px
+.marquee-item p
+   font-weight: 400
+   font-size: 128px
+   line-height: 120%
+   font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+   color: #545C60
+@keyframes marquee  
+   from
+      transform: translateX(0)   
+   to   
+      transform: translateX(-50%)   
+.links 
+   padding: 100px 0 50px
+   &__item 
+      display: flex
+      align-items: flex-start
+      padding-bottom: 70px
+      position: relative
+      margin-bottom: 70px
+      border-bottom: 1px solid rgb(96,100,103)
+      img 
+         top: 0
+         left: 0
+         position: absolute 
+         width: 100%
+         height: 100%
+         object-fit: cover 
+         z-index: -1
+         opacity: 0
+         transition: 0.5s
+      span 
+         display: block
+         font-weight: 400
+         font-size: 13.7548px
+         line-height: 150%
+         font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+         color: #D5A789
+         margin-right: 100px
+      h3 
+         margin-top: 0
+         margin-bottom: 0
+         font-weight: 400
+         font-size: 30.9482px
+         line-height: 120%
+         font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+         color: #FFFFFF
+         text-transform: none
+         font-family: 'Geometria'
+         width: 100%
+         max-width: 407px 
+         transition: 0.5s
+         margin-right: 200px
+      p 
+         width: 100%
+         max-width: 420px 
+         font-weight: 400
+         font-size: 13.7548px
+         line-height: 150%
+         font-feature-settings: 'ordn' on, 'salt' on, 'ss01' on
+         color: #FFFFFF
+         font-family: 'Geometria'
+      .svg 
+         margin-left: auto
+      &:last-child
+         margin-bottom: 0
+         border: none
+   &__btn 
+      height: 60px
+      border-radius: 0
+      width: 340px
+      margin: 30px auto 0
+.team
+   padding-bottom: 60px
+   &__row 
+      justify-content: space-between
+   &__left 
+      width: 100%
+      max-width: 500px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      h1 
+         font-weight: 400
+         font-size: 40px
+         line-height: 57px
+         letter-spacing: -1.5px
+         text-transform: uppercase
+         color: #FFD8B0
+      h2 
+         margin-top: auto
+         margin-bottom: 30px
+         font-weight: 400
+         font-size: 24px
+         line-height: 32px
+         text-transform: uppercase
+         color: #FFD8B0
+         letter-spacing: 0
+      p 
+         font-weight: 400
+         font-size: 18px
+         line-height: 24px
+         letter-spacing: -0.06em
+         color: #FFFFFF
+   &__right 
+      max-width: 710px
+      width: 100%
+   &__item 
+      display: flex
+      align-items: flex-start
+      width: 100%
+      margin-bottom: 40px
+      &:last-child
+         margin-bottom: 0
+      img 
+         object-fit: cover 
+         width: 674px
+         height: 422px
+         margin-right: 50px
+      a 
+         display: flex
+         align-items: center
+         justify-content: space-between
+         padding-bottom: 15px
+         font-weight: 400
+         font-size: 16px
+         line-height: 19px
+         letter-spacing: -0.06em
+         color: #FFD8B0
+         border-bottom: 1px solid #FFD8B0
+         width: 215px
+         margin-top: 200px
+         &:hover 
+            color: white
+            border-bottom: 1px solid white
+            .svg 
+               path 
+                  stroke: white
+   &__content 
+      width: 100%
+      max-width: 320px
+      h3 
+         margin-top: 0
+         margin-bottom: 20px
+         font-weight: 400
+         font-size: 32px
+         line-height: 32px
+         text-transform: uppercase
+         color: #FFD8B0
+         font-family: 'Tenor Sans', sans-serif
+         letter-spacing: 0
+      p 
+         margin-bottom: 20px
+         font-weight: 400
+         font-size: 16px
+         line-height: 134.23%
+         letter-spacing: -0.06em
+         color: #FFFFFF
+         font-family: 'Geometria'
+.youtube-link .svg, .youtube-link path 
+   transition: 0.5s
+.grtvideo-popup
+   position: fixed
+   top: 0px
+   left: 0
+   right: 0
+   bottom: 0
+   background: rgba(0, 0, 0, 0.85)
+   z-index: 99999
+   padding-top: 100px
+.grtvideo-popup-content
+   margin-top: 50px
+   width: 95%
+   max-width: 850px
+   margin-left: auto
+   margin-right: auto
+   -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.4)
+   -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.4)
+   box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.4)
+   position: relative
+.grtvideo-popup-close 
+   position: absolute
+   top: -35px
+   right: 0
+   color: #FFF
+   font-size: 25px
+   cursor: pointer
+   transition: 0.5s
+   &:hover 
+      transform: rotate(90deg)
+.grtyoutube-iframe 
+   width: 100%
+   height: 480px
+.team-item 
+   &__top 
+      justify-content: center
+      margin: 90px 0 120px
+      align-items: flex-start
+   &__left 
+      width: 100%
+      max-width: 392px 
+      margin-right: 140px  
+      cursor: pointer
+      img 
+         width: 100%
+         height: 550px
+         object-fit: cover
+      &:hover 
+         .team-item__play
+            opacity: 0.85
+   &__play 
+      margin: -50px auto 0
+      display: block
+      transition: 0.5s
+   .team__content
+      max-width: 520px
+      h2 
+         font-weight: 400
+         font-size: 50.5741px
+         line-height: 51px
+         text-transform: uppercase
+         color: #FFD8B0
+         margin-bottom: 25px
+         letter-spacing: 0
+      .team-item__sub 
+         font-weight: 400
+         font-family: 'Geometria'
+         font-size: 25.2871px
+         line-height: 134.23%
+         letter-spacing: -0.06em
+         color: #FFFFFF
+         margin-bottom: 25px
+      span 
+         margin-bottom: 30px
+         font-weight: 400
+         font-size: 25.2871px
+         line-height: 30px
+         letter-spacing: -0.06em
+         color: #FFD8B0
+         display: block
+      .team-item__text
+         margin-bottom: 50px
+         font-weight: 400
+         font-size: 18px
+         line-height: 24px
+         letter-spacing: -0.06em
+         color: #FFFFFF
+   &__links 
+      a 
+         height: 60px
+         display: flex
+         justify-content: space-between
+         align-items: center
+         font-weight: 400
+         font-size: 16px
+         line-height: 19px
+         letter-spacing: -0.06em
+         color: #FFD8B0
+         &:first-child
+            width: 215px
+            padding: 0 19px
+            background: #474d53
+            border-bottom: 1px solid #e8c7a5
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.10)
+            margin-right: 30px
+         &:nth-child(2)
+            width: 174px
+            border-bottom: 1px solid #e8c7a5
+            background: transparent
+         &:hover 
+            color: white
+            border-bottom: 1px solid white
+            .svg 
+               path 
+                  stroke: white
+   &__row 
+      align-items: flex-start
+      justify-content: space-between
+      width: 100%
+      padding: 45px 0 
+      border-bottom: 1px solid #5F6468
+      h3 
+         font-size: 24px
+         font-weight: 400
+         color: #ffd8b0
+         line-height: 32px
+         margin-top: 0
+         width: 100%
+         max-width: 400px
+         letter-spacing: 0
+      p 
+         font-size: 16px
+         font-weight: 400
+         color: #ffffff
+         font-family: 'Geometria'
+         line-height: 21px
+         letter-spacing: -0.1px
+         width: 100%
+         max-width: 700px
+      &:first-child
+         border-top: 1px solid $yel
+      &:last-child
+         border: none
+         margin-bottom: 40px
+.ser-page
+   &__links 
+      display: flex
+      margin: 60px 0 80px
+      justify-content: flex-start
+      a
+         font-size: 24px
+         font-weight: 400
+         text-align: LEFT
+         color: #9a9d9f
+         line-height: 32px
+         margin-right: 80px 
+         &:last-child
+            margin-right: 0
+         &:hover 
+            color: white
+      .tabs__btn_active
+         color: white !important
+   .links__item h3
+      font-size: 26px
+   .links__item span
+      transition: 0.5s
+      font-size: 22px
+   .links__item
+      margin-bottom: 0
+      padding: 60px 0
+      transition: 0.5s
+      div 
+         width: 100%
+         max-width: 550px
+         p 
+            max-width: 100%
+      p
+         font-size: 18px
+         margin-bottom: 20px
+         line-height: 24px
+      small 
+         font-size: 13px
+         font-weight: 400
+         color: #ffd8b0
+         line-height: 20px
+      .svg 
+         path 
+            fill: #D5A789
+      h3 
+         margin-right: 120px
+      &:hover 
+         padding-right: 50px
+         img 
+            opacity: 1
+         span 
+            opacity: 0
+         .svg 
+            path 
+               opacity: 1
+               fill: white
+.cases
+   &__btn
+      margin-bottom: 0 !important
+      width: 100%
+      height: 60px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-weight: 400
+      font-size: 16px
+      line-height: 19px
+      letter-spacing: -0.06em
+      color: #FFD8B0
+      width: 215px
+      border-bottom: 1px solid #e8c7a5
+      background: transparent
+      position: absolute
+      bottom: 40px
+      left: 44px
+      opacity: 0
+      &:hover 
+         color: white
+         border-bottom: 1px solid white
+         .svg 
+            path 
+               stroke: white
+   &__row 
+      flex-wrap: wrap 
+      gap: 30px
+      margin-top: 60px
+   &__item 
+      overflow: hidden
+      position: relative
+      border: 1px solid rgba(255,255,255,0.14)
+      background: rgba(53,57,61,0.20)
+      width: 23.3%
+      padding: 34px 33px 40px
+      button 
+         font-size: 13px
+         font-weight: 400
+         color: #ffd8b0
+         line-height: 20px
+         border: none 
+         background: transparent
+         transition: 0.5s
+      img 
+         position: absolute
+         top: 0
+         left: 0
+         transition: 0.5s
+         object-fit: cover
+         height: 220px
+         width: 100%
+      div 
+         margin-bottom: 40px
+         transition: 0.5s
+         &:first-of-type
+            display: flex
+            margin-bottom: 30px
+            p 
+               font-size: 15px
+               font-weight: 400
+               color: #ffd8b0
+               line-height: 23px
+               margin-right: 30px
+            span 
+               font-size: 13px
+               font-weight: 400
+               color: #ffffff
+               line-height: 20px
+      &:hover 
+         background: url(/img/case2.png) no-repeat center center / cover
+         div:first-of-type
+            opacity: 0
+         img 
+            opacity: 0
+         .cases__text
+            opacity: 0
+         button 
+            opacity: 0
+         .cases__btn
+            opacity: 1
+   &__title 
+      font-size: 32px
+      font-weight: 400
+      color: #ffffff
+      line-height: 38px
+      margin-bottom: 150px
+   &__text 
+      font-size: 14px
+      font-weight: 400
+      color: #ffffff
+      line-height: 21px
+      font-family: 'Geometria'
+      margin-bottom: 30px
+      transition: 0.5s
+   &__more 
+      margin: 80px auto 40px
+      width: 340px
+      height: 60px
+      .svg 
+         position: absolute
+         top: 21px
+         right: 20px
+.price 
+   padding-bottom: 80px
+   .team__left
+      max-width: 100%
+      display: flex
+      align-items: flex-start
+      flex-direction: initial
+   &__sub 
+      width: 213px
+      height: 213px
+      border: 1px solid rgba(255, 255, 255, 0.2)
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      margin-left: 180px
+      margin-top: -40px
+      p 
+         font-size: 12px
+         font-weight: 400
+         color: #ffd8b0
+         font-family: "Geometria"
+         line-height: 18px
+         position: absolute
+         bottom: 36px
+         right: -195px
+         width: 277px
+         letter-spacing: 0
+         &::first-letter
+            margin-left: 20px
+   &__area
+      margin-top: 60px
+      display: flex
+      justify-content: space-between
+      .tabs__nav
+         width: 100%
+         max-width: 206px
+         flex-direction: column 
+         .tabs__btn_active
+            color: white !important
+         a 
+            font-size: 24px
+            font-weight: 400
+            display: block
+            color: #9a9d9f
+            line-height: 32px
+            margin-bottom: 50px
+            &:last-child
+               margin-bottom: 0
+            &:hover 
+               color: white
+   .tabs__content
+      width: 100%
+      max-width: 918px
+   &__wrap 
+      .links__item 
+         padding: 40px 0
+         margin-bottom: 0
+         .svg 
+            transition: 0.5s
+            margin-left: 0
+            margin-top: 8px
+            path
+               transition: 0.5s
+               stroke: #FFD8B0
+         p 
+            font-size: 24px
+            font-weight: 400
+            color: #ffffff
+            line-height: 32px
+            transition: 0.5s
+         span 
+            margin-left: auto
+            font-size: 24px
+            font-weight: 400
+            color: #ffd8b0
+            line-height: 36px
+            margin-right: 60px
+         &:last-child
+            margin-bottom: 53px
+            border-bottom: 1px solid rgb(96, 100, 103)
+         &:first-child
+            padding-top: 0
+         &:hover 
+            .svg 
+               path 
+                  opacity: 1
+                  fill: white
+            p 
+               color: $yel
+   &__info 
+      width: 100%
+      max-width: 340px
+      height: auto
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+   &__btn 
+      margin-top: auto
+      width: 340px
+      height: 60px
+.cert
+   padding-bottom: 100px
+   .arrow 
+      background: transparent
+      border: 1px solid #e4b27f
+      path 
+         stroke: white
+   .team__left
+      max-width: 100%
+      flex-direction: initial
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 50px
+   .swiper8 
+      overflow: hidden
+      .swiper-slide 
+         a 
+            display: block
+            img 
+               width: 100%
+               object-fit: cover 
+               height: 568px
+               margin-bottom: 20px
+            p 
+               font-size: 24px
+               font-weight: 400
+               color: #ffd8b0
+               line-height: 36px
+               transition: 0.5s
+            &:hover 
+               p 
+                  color: white
+         &:nth-child(2n)
+            margin-top: 230px
+         &:nth-child(3n)
+            margin-top: 100px
+.lic 
+   padding: 20px 0 100px
+   h2 
+      font-size: 40px
+      font-weight: 400
+      color: #ffd8b0
+      line-height: 57px
+      letter-spacing: -0.06px
+      margin-bottom: 40px
+   &__row 
+      margin-bottom: 30px
+      align-items: center
+      p 
+         font-size: 24px
+         font-weight: 400
+         color: #90979e
+         line-height: 32px
+         margin-left: 25px
+         text-transform: uppercase
+   &__flex 
+      align-items: flex-start
+   &__code 
+      margin-top: 10px
+      margin-right: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 24px
+      width: 212px
+      height: 212px
+      background: #303437
+      img 
+         width: 100%
+         object-fit: contain
+   &__content
+      width: 100%
+      max-width: 580px
+      h3 
+         margin-top: 0
+         margin-bottom: 20px
+         font-size: 16px
+         font-weight: 400
+         letter-spacing: 0
+         color: #ffd8b0
+         line-height: 32px
+      p 
+         font-size: 14px
+         font-weight: 400
+         color: #ffffff
+         line-height: 21px
+         margin-bottom: 10px
+         font-family: "Geometria"
+         &:last-child
+            margin-bottom: 0
+.excursions 
+   .links__item div
+      p
+         font-size: 15px
+         & + p
+            font-size: 15px
+            font-weight: 400
+            color: #9dadbe
+            font-family: "Geometria"
+            line-height: 21px
+            letter-spacing: -0.1px
+      small 
+         font-size: 20px
+         line-height: 100%
+   .team__left
+      max-width: 100%
+.exc-item
+   .blog-item__wrap
+      img 
+         height: 658px
+      h1 
+         margin-bottom: 120px
+   .blog-item__row
+      margin-bottom: 80px
+      position: relative
+      h3
+         width: 100%
+         max-width: 490px
+      &_2 
+         margin-bottom: 50px
+         h3 
+            max-width: 100%
+            text-align: center
+   &__sub 
+      width: 100%
+      max-width: 490px
+      font-size: 18px
+      font-weight: 400
+      font-family: "Geometria"
+      color: #ffd8b0
+      line-height: 27px
+      position: absolute
+      bottom: 0
+      left: 0
+   .blog-item__images
+      img 
+         width: 50%
+   .error__btn
+      margin-top: 50px
+.kids 
+   .error__item p
+      font-size: 26px
+      line-height: 130%
+      min-height: 128.8px
+      box-sizing: border-box
+   .services__item:nth-child(2)
+      .error__item p
+         font-size: 24px
+.shop
+   .services__wrap
+      margin-top: 100px
+   .services__item
+      max-width: 100% 
+      margin-bottom: 80px
+      h3 
+         text-align: left
+         &:after 
+            margin-top: 20px
+            margin-bottom: 40px
+            background: url(/img/border2.svg) no-repeat center center
+   .error__btn
+      margin-left: 0
+      margin-right: 0
+   &__row 
+      flex-wrap: wrap
+      gap: 40px
+   &__item 
+      width: 31%
+      display: flex
+      align-items: flex-start
+   &__pic 
+      width: 112px
+      height: 125px
+      object-fit: cover
+      margin-right: 35px
+   &__content 
+      h4 
+         margin-top: 0
+         margin-bottom: 10px
+         font-size: 28px
+         line-height: 130%
+         font-weight: 400
+         color: #ffffff
+         letter-spacing: -0.17px
+      p 
+         font-size: 12px
+         font-weight: 400
+         color: #90979e
+         letter-spacing: -0.07px
+         margin-bottom: 10px
+      a 
+         display: flex
+         align-items: center
+         font-size: 13px
+         font-weight: 400
+         color: #ffd8b0
+         letter-spacing: -0.08px
+         width: max-content
+         .svg 
+            margin-right: 5px
+         &:hover 
+            color: white 
+            .svg 
+               path 
+                  fill: white
+.sales 
+   padding-bottom: 0
+   &__wrap
+      background: #2d3235
+      position: relative
+      .services__wrap
+         padding: 100px 0
+         margin-bottom: 0
+      .error__row
+         margin-bottom: 0
+         flex-wrap: wrap
+         .error__item
+            background: #383d41
+      .services__item
+         margin-bottom: 0
+   &__bg
+      position: absolute
+      bottom: 0
+      left: 0
+   .services__wrap
+      margin-top: 100px
+.order.grey 
+   background: #383d41
+.loyalty 
+   background: #383D41
+   &__wrap 
+      margin-top: 100px
+      margin-bottom: 80px
+   .error__btn
+      margin-bottom: 30px
+   &__item
+      margin-bottom: 50px
+      h2 
+         font-size: 24px
+         font-weight: 400
+         color: #ffd8b0
+         letter-spacing: -0.14px
+         text-transform: none
+         margin-bottom: 30px
+      p 
+         font-size: 16px
+         font-weight: 400
+         color: #d7dde3
+         line-height: 21px
+         letter-spacing: -0.03px
+         font-family: "Geometria"
+      ul 
+         margin-top: 20px
+         li 
+            font-size: 16px
+            font-weight: 400
+            color: #d7dde3
+            line-height: 21px
+            letter-spacing: -0.03px
+            font-family: "Geometria"
+            display: flex
+            align-items: flex-start
+            margin-bottom: 3px
+            &:before 
+               content: ""
+               display: inline-flex
+               border-radius: 50% 
+               background: #d7dde3
+               flex: 1 0 auto 
+               max-width: 5px
+               width: 5px
+               height: 5px
+               margin: 0 10px
+               position: relative
+               top: 8px
+.contacts-page
+   .contacts__content
+      margin-bottom: 300px
+   .contacts__map
+      mix-blend-mode: lighten
+   h2
+      margin-bottom: 200px
+   &__links 
+      margin-top: 40px
+      a 
+         width: 297px
+         height: 60px
+         &:first-child
+            margin-bottom: 15px
+   &__info
+      width: 100%
+      max-width: 769px 
+      margin-left: auto
+   &__form 
+      width: 100%
+      button 
+         margin-top: -10px !important
+   &__field 
+      width: 100%
+      margin-bottom: 25px
+   &__label 
+      display: block
+      font-size: 13px
+      font-family: "Geometria"
+      font-weight: 500
+      color: #ffd8b0
+      line-height: 18px
+      margin-bottom: 8px
+      text-transform: uppercase
+   &__input 
+      width: 100%
+      input 
+         height: 56px
+         background: #bec7cf
+         border: 1px solid rgba(0,0,0,0.00)
+         font-family: "Geometria"
+         padding-left: 20px
+         width: 100%
+         font-size: 14px
+         font-weight: 400
+         color: #5d5d5d
+         letter-spacing: -0.03px
+         border: 1px solid transparent
+         &:focus 
+            border: 1px solid $yel
+      textarea
+         border: 1px solid transparent
+         background: #bec7cf
+         border: 1px solid rgba(0,0,0,0.00)
+         font-family: "Geometria"
+         padding-left: 20px
+         width: 100%
+         font-size: 14px
+         font-weight: 400
+         color: #5d5d5d
+         letter-spacing: -0.03px
+         padding-top: 20px
+         height: 197px
+         &:focus 
+            border: 1px solid $yel
+.corporate
+   h1 
+      font-size: 40px
+      text-align: center
+   &__block 
+      background: #2B3134
+      padding: 46px 0 
+      margin: 40px 0
+      p 
+         font-size: 20px
+         font-weight: 400
+         text-align: center
+         color: #ffd8b0
+         letter-spacing: -0.2px
+         width: 100%
+         max-width: 1044px 
+         margin: 0 auto
+         line-height: 130%
+   &__row 
+      align-items: flex-start
+      position: relative
+      justify-content: space-between
+      margin-bottom: 70px
+      .error__btn
+         position: absolute
+         bottom: 0
+         left: 0
+   &__name 
+      font-size: 23px
+      font-weight: 400
+      font-family: 'Tenor Sans', sans-serif
+      color: #ffd8b0
+      line-height: 130%
+      letter-spacing: -0.14px
+      text-transform: none
+      width: 100%
+      max-width: 500px
+   &__info 
+      width: 100%
+      max-width: 676px
+      p 
+         margin-bottom: 25px
+         font-size: 16px
+         font-weight: 400
+         font-family: "Geometria"
+         color: #ffffff
+         line-height: 23px
+         letter-spacing: -0.03px
+         span 
+            font-weight: 700
+         &:last-child
+            margin-bottom: 0
+   &__area 
+      margin: 40px 0 60px
+      div 
+         display: flex
+         align-items: flex-start
+         justify-content: space-between
+         padding: 30px 0
+         border-bottom: 1px solid #6b7e89
+         h4 
+            margin-top: 0
+            margin-bottom: 0
+            font-size: 26px
+            font-weight: 400
+            color: #ffffff
+            line-height: 31px
+            width: 100%
+            max-width: 470px
+         p 
+            font-size: 17px
+            font-weight: 400
+            font-family: "Geometria"
+            color: #ffffff
+            line-height: 24px
+            letter-spacing: -0.11px
+            width: 100%
+            max-width: 383px
+         span 
+            font-size: 17px
+            font-weight: 400
+            color: #ffd8b0
+            line-height: 24px
+            font-family: "Geometria"
+            letter-spacing: -0.2px
+            width: 100%
+            max-width: 390px
+   &__image 
+      width: 100%
+      object-fit: cover 
+      height: 404px
+      margin-bottom: 50px
+   .room3__left
+      p 
+         font-size: 16px
+         font-family: "Geometria"
+         font-weight: 400
+         color: #ffffff
+         line-height: 21px
+         letter-spacing: -0.03px
+         margin-bottom: 50px
+      ul 
+         li 
+            font-size: 15px
+            font-family: "Geometria"
+            font-weight: 400
+            color: #ffffff
+            line-height: 21px
+            letter-spacing: -0.03px
+            &:before 
+               flex: 1 0 auto 
+               max-width: 35px
+.about-item
+   padding-bottom: 70px
+   .blog-item__wrap:after
+      display: none
+   .corporate__info 
+      p
+         font-size: 18px
+         line-height: 31px
+      ul 
+         margin-top: 20px
+         li 
+            font-size: 18px
+            font-weight: 400
+            color: white
+            line-height: 31px
+            letter-spacing: -0.03px
+            font-family: "Geometria"
+            display: flex
+            align-items: flex-start
+            margin-bottom: 3px
+            &:before 
+               content: ""
+               display: inline-flex
+               border-radius: 50% 
+               background: white
+               flex: 1 0 auto 
+               max-width: 5px
+               width: 5px
+               height: 5px
+               margin: 0 10px
+               position: relative
+               top: 10px
+   .corporate__name
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: 400
+      line-height: 32px
+      letter-spacing: 0
+   .corporate__row
+      margin-bottom: 40px
+      &:last-child
+         margin-bottom: 80px
+   .about__flex
+      margin-bottom: 40px
+      h2 
+         font-size: 32px
+         font-weight: 400
+         color: #ffffff
+         line-height: 38px
+         text-transform: none
+         letter-spacing: 0
+   .swiper9
+      width: 89%
+      .swiper-slide 
+         padding: 30px 20px 
+         transition: 0.5s
+         background: #35393d
+         border: 1px solid rgba(255,255,255,0.50)
+         .swiper7__info
+            margin-bottom: 15px
+            img 
+               width: 42px
+               height: 42px
+               object-fit: contain 
+               margin-right: 20px
+         .swiper7__text
+            max-width: 100%
+            margin-bottom: 0
+         &:hover 
+            border: 1px solid $yel
+   &__link 
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 20px
+      font-weight: 400
+      font-size: 16px
+      line-height: 19px
+      letter-spacing: -0.06em
+      color: #FFD8B0
+      border-bottom: 1px solid #FFD8B0
+      width: 215px
+      margin: 60px 0
+      &:hover 
+         color: white
+         border-bottom: 1px solid white
+         .svg 
+            path 
+               stroke: white
+.swiper9
+   width: 89%
+   .swiper-slide 
+      padding: 30px 20px 
+      background: #35393d
+      border: 1px solid rgba(255,255,255,0.50)
+      .swiper7__info
+         margin-bottom: 15px
+         img 
+            width: 42px
+            height: 42px
+            object-fit: contain 
+            margin-right: 20px
+      .swiper7__text
+         max-width: 100%
+         margin-bottom: 0
+.contacts-about
+   padding-bottom: 80px
+   h2
+      font-size: 40px
+      font-weight: 400
+      line-height: 57px
+      letter-spacing: -0.06px
+.transfer 
+   #map 
+      width: 100%
+      height: 842px
+   .team__left
+      max-width: 100%
+   &__row 
+      margin: 70px 0
+      align-items: flex-start
+      justify-content: space-between
+      h2 
+         font-size: 32px
+         font-weight: 400
+         color: #ffffff
+         line-height: 100%
+         letter-spacing: -0.29px
+.accordeon, .accordeon2
+   padding: 5px 0 30px
+   border-bottom: 1px solid #ececec
+   margin-bottom: 26px
+   width: 100%
+.accordeon__item 
+   width: 100%
+   list-style-type: none
+.accordeon__item:first-child .accordeon__button
+   margin-top: 0
+.accordeon__button
+   width: 100%
+   text-align: left
+   border: none
+   cursor: pointer
+   position: relative
+   transition: all 0.5s ease
+   font-size: 17px
+   font-weight: 700
+   color: #282828
+   display: flex
+   justify-content: space-between
+.accordeon__button:hover, .accordeon__button2:hover
+   color: $yel
+.accordeon__button:after, .accordeon__button2:after
+   content: ""
+   position: absolute
+   right: 0px
+   background: url(/img/faq1.svg) no-repeat !important
+   width: 7px
+   left: inherit
+   height: 5px
+   top: 8px
+   bottom: inherit
+   transition: all 0.5s ease
+.accordeon__button.active:after, .accordeon__button2.active:after
+   content: ""
+   position: absolute
+   right: 0px
+   background: url(/img/faq2.svg) no-repeat !important
+   width: 7px
+   left: inherit
+   height: 5px
+   bottom: 30%
+   transition: all 0.5s ease
+   transform: rotate(180deg)
+   -webkit-transform: rotate(180deg)
+.accordeon__panel, .accordeon__panel2
+   max-height: 0
+   overflow: hidden
+   margin-left: 0
+   transition: all 0.5s ease
+.panel__text, .panel__text2
+   list-style-type: none
+   padding-top: 0px
+   max-width: 688px
+   margin-top: 30px
+.panel__info
+   font-weight: 300
+   font-size: 16px
+   line-height: 140%
+   margin-bottom: 20px
+   &:last-child
+      margin-bottom: 0
+.help
+   .contacts-page__info
+      margin-left: 0
+      max-width: 559px
+      .contacts-page__form
+         input 
+            background: #BEC7CF
+         button 
+            margin-left: 0
+            width: 238px
+            height: 66px
+   h3
+      font-size: 40px
+      font-weight: 400
+      color: #ffd8b0
+      line-height: 57px
+      letter-spacing: -0.06px
+      margin-bottom: 80px
+      margin-top: 140px
+   .accordeon 
+      padding: 0
+      margin: 0
+      border: none 
+      &__button 
+         position: initial
+         font-size: 20px
+         font-weight: 400
+         color: #ffffff
+         line-height: 30px
+         letter-spacing: -0.18px
+         text-transform: uppercase
+         padding: 30px 0
+         width: 100%
+         max-width: 801px
+         &:after 
+            top: 50%
+            width: 48px
+            height: 48px
+            right: 0
+            bottom: initial
+            margin-top: -24px
+         &:hover 
+            color: $yel
+      .accordeon__button.active
+         padding-bottom: 20px
+         &:after 
+            top: 0
+            margin-top: 30px
+      &__item 
+         position: relative
+         border-bottom: 1px solid rgba(255,216,176,0.43)
+         .panel__info
+            padding-bottom: 29px
+            font-size: 17px
+            font-weight: 400
+            color: #ffffff
+            font-family: "Geometria"
+            line-height: 27px
+         .panel__text
+            max-width: 900px
+            margin-top: 0
+   .about__flex
+      margin-top: 120px
+      h2
+         font-size: 40px
+         font-weight: 400
+         color: #ffd8b0
+         line-height: 57px
+         letter-spacing: -0.06px
+         text-transform: uppercase
+         margin: 0
+         text-align: left
+      &_2 
+         align-items: flex-start
+   &__links 
+      width: 100%
+      max-width: 530px
+      a 
+         display: flex
+         align-items: center
+         justify-content: space-between
+         padding: 20px 0
+         margin-bottom: 20px
+         border-bottom: 1px solid #e8c7a5
+         p 
+            font-size: 16px
+            font-weight: 400
+            color: #ffd8b0
+            letter-spacing: -0.1px
+            text-shadow: 0px 3px 6px 0px rgba(0,0,0,0.10)
+            transition: 0.5s
+         &:hover 
+            border-bottom: 1px solid white
+            p 
+               color: white
+            .svg 
+               path 
+                  stroke: white
+.swiper7__info 
+   align-items: center
+   margin-bottom: 30px
+   p 
+      font-weight: 400
+      font-size: 13px
+      line-height: 150%
+      color: #FFD8B0
+      margin-right: 20px
+   span 
+      font-weight: 400
+      font-size: 13px
+      line-height: 150%
+      color: #FFFFFF
+.team 
+   .accordeon 
+      margin-top: 50px
+.reviews
+   .swiper9
+      width: 100%
+      display: flex
+      flex-wrap: wrap 
+      gap: 40px
+      margin-bottom: 60px
+      .swiper-slide
+         width: 31.2%
+         transition: 0.5s
+         &:hover 
+            border: 1px solid $yel
+   &__top 
+      margin-bottom: 100px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .btn 
+         width: 340px
+         height: 60px
+         border-radius: 0px
+      h1 
+         font-size: 40px
+         margin-bottom: 0
+.rules 
+   .team__left
+      max-width: 100%
+      margin-bottom: 70px
+   &__row 
+      justify-content: space-between
+      align-items: flex-start
+   &__content 
+      width: 100%
+      max-width: 690px
+   &__links 
+      width: 100%
+      padding: 25px 20px 
+      background: #2c3135
+      max-width: 391px
+      position: sticky
+      top: 30px
+      a 
+         display: block
+         font-size: 13px
+         font-weight: 400
+         color: #a1b2c3
+         line-height: 21px
+         font-family: "Geometria"
+         margin-bottom: 18px
+         &:hover 
+            color: $yel
+         &:last-child
+            margin-bottom: 0
+   &__item 
+      width: 100%
+      margin-bottom: 60px
+   &__title 
+      margin-bottom: 20px
+      font-size: 24px
+      font-weight: 400
+      color: #ffd8b0
+      letter-spacing: -0.14px
+   &__text 
+      font-size: 14px
+      font-family: "Geometria"
+      font-weight: 400
+      color: #ffffff
+      line-height: 21px
+   .links__btn
+      margin: 30px 0 0
+.page2 
+   overflow: visible
+.tabs2 h3:after
+   margin-bottom: 25px
+.map
+   &__pic 
+      width: 100%
+      max-width: 1360px
+      height: auto
+      object-fit: cover
+      margin: 0 auto
+      display: block
+   &__wrap 
+      position: absolute
+      height: 780px
+      top: 0
+      width: 1360px
+   &__local
+      padding: 4px 16px 4px 4px
+      display: flex
+      align-items: center
+      width: 38px
+      height: 38px
+      background: transparent
+      border-radius: 17px
+      box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.03)
+      transition: 0.5s
+      overflow: hidden
+      cursor: pointer
+      position: absolute
+      p 
+         margin-left: 10px
+         font-family: "Geometria"
+         text-transform: uppercase
+         font-size: 12px
+         font-weight: 500
+         color: #353a3e
+         transition: 0.5s 
+         opacity: 0
+      &:hover 
+         background: #fefefc
+         width: max-content
+         p 
+            opacity: 1
+      &_1 
+         left: 428px
+         top: 400px
+      &_2 
+         left: 528px
+         top: 200px
+      &_3
+         left: 728px
+         bottom: 100px
+      &_4
+         left: 728px
+         bottom: 300px
+.tabs2
+   .tabs__content
+      position: relative
+      margin-bottom: 50px
+   .tabs2__nav
+      margin-bottom: 100px
+   &__wrap 
+      h3
+         display: flex
+         flex-direction: column-reverse
+         &:after 
+            margin-bottom: 16px
+   &__row 
+      margin: 40px auto 0
+      width: 100%
+      max-width: 1044px
+      display: flex
+      flex-wrap: wrap 
+      justify-content: space-between
+   &__item 
+      display: flex
+      align-items: center
+      width: 25%
+      margin-bottom: 13px
+      p 
+         font-size: 12px
+         font-weight: 500
+         font-family: "Geometria"
+         color: #ffd8b0
+         margin-left: 10px
+         text-transform: uppercase
+   .links__btn
+      margin-top: 150px
 
- 
- 
+         
+
+               

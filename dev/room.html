@@ -193,7 +193,27 @@
 					</a>
 					<form action="#" class="item__form">
 						<div class="booking">
-							<div class="dates">
+							<div class="dates dates_1">
+								<div class="date-field">
+									<span class="date-label">Имя</span>
+									<div class="date-input">
+										<input type="name" placeholder="Имя">
+									</div>
+								</div>
+								<div class="date-field">
+									<span class="date-label">Номер телефона</span>
+									<div class="date-input">
+										<input type="tel" placeholder="Номер телефона" class="tel">
+									</div>
+								</div>
+								<div class="date-field">
+									<span class="date-label">Электронная почта</span>
+									<div class="date-input">
+										<input type="email" placeholder="Электронная почта">
+									</div>
+								</div>
+							</div>
+							<div class="dates dates_2">
 								<div class="date-field">
 									<span class="date-label">Заезд</span>
 									<div class="date-input">
@@ -206,36 +226,42 @@
 								<div class="date-field" id="checkin-field">
 									<span class="date-label">выезд</span>
 									<div class="date-input">
-										<input type="date" id="checkin">
+										<input type="date" id="checkout">
 										<span class="calendar-icon">
 											<img src="img/cal.svg" alt="image1">
 										</span>
 									</div>
 								</div>
-							</div>
-							<div class="item__per">
-								<span class="date-label">гости</span>
-									<div class="guests">
-									<label class="guest-option">
-										<input type="radio" name="guests" value="1">
-										<span class="count">1</span>
-										<span class="text">гость</span>
-									</label>
-									<label class="guest-option">
-										<input type="radio" name="guests" value="2">
-										<span class="count">2</span>
-										<span class="text">гостя</span>
-									</label>
-									<label class="guest-option">
-										<input type="radio" name="guests" value="3">
-										<span class="count">3</span>
-										<span class="text">гостя</span>
-									</label>
-									<label class="guest-option">
-										<input type="radio" name="guests" value="4+">
-										<span class="count">4+</span>
-										<span class="text">гостей</span>
-									</label>
+								<div class="date-field">
+									<span class="date-label">Гости</span>
+									<div class="custom-select" id="guestSelect">
+										<div class="select-trigger">
+										<span id="guestResult">1 взрослый, 0 детей</span>
+										<div class="arrrow">
+											<img src="img/sel.svg" alt="image1">
+										</div>
+										</div>
+										<div class="select-dropdown">
+										<div class="select-group">
+											<p>Взрослые</p>
+											<div class="options" data-type="adults">
+											<label><input type="radio" name="adults" value="1" checked> 1</label>
+											<label><input type="radio" name="adults" value="2"> 2</label>
+											<label><input type="radio" name="adults" value="3"> 3</label>
+											<label><input type="radio" name="adults" value="4"> 4</label>
+											</div>
+										</div>
+										<div class="select-group">
+											<p>Дети</p>
+											<div class="options" data-type="children">
+											<label><input type="radio" name="children" value="0" checked> 0</label>
+											<label><input type="radio" name="children" value="1"> 1</label>
+											<label><input type="radio" name="children" value="2"> 2</label>
+											<label><input type="radio" name="children" value="3"> 3</label>
+											</div>
+										</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

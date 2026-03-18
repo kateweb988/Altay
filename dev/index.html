@@ -163,6 +163,16 @@
 		</header>
 		<main class="main" id="main">
 			<div class="container head">
+				<div class="note" id="note1">
+					<p class="note__text">
+						Мы собираем и используем данные cookie для <br> обеспечения работы сайта
+					</p>
+					<div class="note__close btn" onclick="(document.getElementById('note1').style.display='none')">
+						Закрыть <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.4999 12.4999L6.5 6.5M6.5 6.5L0.5 0.5M6.5 6.5L12.5 0.5M6.5 6.5L0.5 12.5" stroke="#F4CEA8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+					</div>
+				</div>
 				<div class="header__wrap">
 					<h1>
 						<span>
@@ -973,7 +983,10 @@
 									</div>
 								</div>
 							</div>
-							<img src="img/area1.webp" alt="area1" class="area__img">
+							<picture>
+								<source srcset="img/area1.webp" media="(max-width: 576px)">
+								<img src="img/area1.webp" alt="area1" class="area__img">
+							</picture>
 						</div>
 						<div class="area__item">
 							<div class="area__content">

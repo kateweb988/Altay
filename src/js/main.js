@@ -1,12 +1,19 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
   class Tabs {
     constructor(element) {
       this.container = element;
-      this.nav = this.container.querySelector(':scope > .tabs__nav, :scope > .tabs2__nav');
-      this.buttons = this.nav.querySelectorAll(':scope > .tabs__btn');
-      this.panes = this.container.querySelectorAll(':scope > .tabs__content > .tabs__pane');
+
+      // Ищем nav на любой глубине
+      this.nav = this.container.querySelector('.tabs__nav, .tabs2__nav');
+
+      if (!this.nav) return;
+
+      // Кнопки
+      this.buttons = this.nav.querySelectorAll('.tabs__btn');
+
+      // Панели
+      this.panes = this.container.querySelectorAll('.tabs__content .tabs__pane');
 
       this.init();
       this.events();
@@ -27,8 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     show(button) {
       const index = button.dataset.index;
+
       const activeBtn = this.nav.querySelector('.tabs__btn_active');
-      const activePane = this.container.querySelector(':scope > .tabs__content > .tabs__pane_show');
+      const activePane = this.container.querySelector('.tabs__pane_show');
 
       if (button === activeBtn) return;
 
@@ -53,11 +61,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Инициализация ВСЕХ табов на странице
+  // Инициализация всех табов
   document.querySelectorAll('.tabs, .tabs2').forEach(tab => {
     new Tabs(tab);
   });
 
+});
+document.addEventListener("DOMContentLoaded", () => {
+  var accordeonButtons = document.getElementsByClassName("accordeon__button");
+
+  //пишем событие при клике на кнопки - вызов функции toggle
+  for (var i = 0; i < accordeonButtons.length; i++) {
+    var accordeonButton = accordeonButtons[i];
+
+    accordeonButton.addEventListener("click", toggleItems, false);
+  }
+
+  //пишем функцию
+  function toggleItems() {
+
+    // переменная кнопки(актульная) с классом
+    var itemClass = this.className;
+
+    // добавляем всем кнопкам класс close
+    for (var i = 0; i < accordeonButtons.length; i++) {
+      accordeonButtons[i].className = "accordeon__button closed";
+    }
+
+    // закрываем все открытые панели с текстом
+    var pannels = document.getElementsByClassName("accordeon__panel");
+    for (var z = 0; z < pannels.length; z++) {
+      pannels[z].style.maxHeight = 0;
+    }
+
+    // проверка. если кнопка имеет класс close при нажатии
+    // к актуальной(нажатой) кнопке добававляем активный класс
+    // а панели - которая находится рядом задаем высоту
+    if (itemClass == "accordeon__button closed") {
+      this.className = "accordeon__button active";
+      var panel = this.nextElementSibling;
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+  }
 });
 document.addEventListener("DOMContentLoaded", function () {
   
@@ -136,7 +182,60 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+document.addEventListener("DOMContentLoaded", () => {
 
+  const links = document.querySelectorAll(".youtube-link");
+
+  links.forEach(link => {
+
+    const videoID = link.getAttribute("youtubeid");
+    const autoPlay = 1;
+
+    if (!videoID) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const popup = document.createElement("div");
+      popup.className = "grtvideo-popup";
+
+      popup.innerHTML = `
+        <div class="grtvideo-popup-content">
+          <span class="grtvideo-popup-close">&times;</span>
+          <iframe class="grtyoutube-iframe"
+            src="https://www.youtube.com/embed/${videoID}?rel=0&wmode=transparent&autoplay=${autoPlay}&iv_load_policy=3"
+            allowfullscreen
+            frameborder="0">
+          </iframe>
+        </div>
+      `;
+
+      document.body.appendChild(popup);
+
+      const closeBtn = popup.querySelector(".grtvideo-popup-close");
+
+      function closePopup() {
+        popup.remove();
+      }
+
+      closeBtn.addEventListener("click", closePopup);
+
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) closePopup();
+      });
+
+      document.addEventListener("keyup", function escClose(e) {
+        if (e.key === "Escape") {
+          closePopup();
+          document.removeEventListener("keyup", escClose);
+        }
+      });
+
+    });
+
+  });
+
+});
 document.addEventListener("DOMContentLoaded", () => {
   const social = document.querySelector(".social");
 
@@ -348,7 +447,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let swiperHotel;
 
   if (document.querySelector('.swiper-hotel')) {
-
     swiperHotel = new Swiper('.swiper-hotel', {
       spaceBetween: 19,
       slidesPerView: 4,
@@ -382,9 +480,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     });
-
   }
-
 
   /* ==============================
      SWIPER CHALET
@@ -393,7 +489,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let swiperChalet;
 
   if (document.querySelector('.swiper-chalet')) {
-
     swiperChalet = new Swiper('.swiper-chalet', {
       spaceBetween: 19,
       slidesPerView: 4,
@@ -427,9 +522,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     });
-
   }
-
 
   /* ==============================
      SWIPER 4
@@ -465,7 +558,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-
   /* ==============================
      SWIPER 5 + THUMBS
   ============================== */
@@ -492,9 +584,103 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  /* ==============================
+     SWIPER 7
+  ============================== */
+
+  if (document.querySelector('.swiper7')) {
+    new Swiper('.swiper7', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next7',
+        prevEl: '.swiper-button-prev7',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+        },
+        767: {
+          slidesPerView: 1,
+        },
+        992: {
+          slidesPerView: 1,
+        },
+        1200: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  }
 
   /* ==============================
-     TABS (ФОРМА + СЛАЙДЕР)
+     SWIPER 9
+  ============================== */
+
+  if (document.querySelector('.swiper9')) {
+    new Swiper('.swiper9', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next9',
+        prevEl: '.swiper-button-prev9',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+        },
+        767: {
+          slidesPerView: 1,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  }
+
+  /* ==============================
+     SWIPER 8
+  ============================== */
+
+  if (document.querySelector('.swiper8')) {
+    new Swiper('.swiper8', {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      navigation: {
+        nextEl: '.swiper-button-next8',
+        prevEl: '.swiper-button-prev8',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+        },
+        767: {
+          slidesPerView: 1,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        }
+      }
+    });
+  }
+
+  /* ==============================
+     TABS
   ============================== */
 
   const tabs = document.querySelectorAll(".title-tab");
@@ -503,29 +689,19 @@ document.addEventListener('DOMContentLoaded', function () {
   if (tabs.length) {
 
     tabs.forEach(tab => {
-
       tab.addEventListener("click", function () {
 
         const tabName = this.dataset.tab;
 
-        /* активный заголовок */
-
         tabs.forEach(t => t.classList.remove("active"));
         this.classList.add("active");
 
-        /* переключаем контент */
-
         tabContents.forEach(content => {
-
           content.classList.remove("active");
-
           if (content.dataset.tab === tabName) {
             content.classList.add("active");
           }
-
         });
-
-        /* фикс swiper после display:none */
 
         setTimeout(() => {
 
@@ -550,7 +726,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 120);
 
       });
-
     });
 
   }
@@ -668,14 +843,27 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.go_to').forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
+
       const targetSelector = link.getAttribute('href');
+
+      if (!targetSelector || targetSelector === '#') return;
+
       const targetElement = document.querySelector(targetSelector);
+
       if (targetElement) {
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+        const offset = 100;
+
+        const targetPosition =
+          targetElement.getBoundingClientRect().top +
+          window.pageYOffset -
+          offset;
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
+      } else {
+        console.warn('Нет элемента:', targetSelector);
       }
     });
   });
