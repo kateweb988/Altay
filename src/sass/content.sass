@@ -3747,10 +3747,20 @@ button.btn
          color: #FFFFFF
          font-family: 'Geometria'
       .svg 
+         transition: 0.5s
          margin-left: auto
+         path 
+            transition: 0.5s
       &:last-child
          margin-bottom: 0
          border: none
+      &:hover 
+         .svg 
+            path 
+               opacity: 1 !important
+               fill: $yel
+         h3 
+            color: $yel
    &__btn 
       height: 60px
       border-radius: 0
@@ -5169,6 +5179,5 @@ button.btn
    .links__btn
       margin-top: 150px
 
-         
 
                
