@@ -1613,7 +1613,7 @@ p.title-tab
       flex-wrap: wrap 
       gap: 6px
       margin-bottom: 59px
-      .swiper-pagination-bullet
+      .nav-item
          display: flex
          align-items: center
          justify-content: center
@@ -1626,57 +1626,20 @@ p.title-tab
          border-radius: 57px
          background: rgba(255, 255, 255, 0.01)
          opacity: 1
-         &::after
-            content: ""
-            color: rgba(255, 216, 176, 1)
-            font-size: 12px
-            font-weight: 500
-            line-height: 14px
-            text-transform: uppercase
-            font-family: 'Geometria'
-         &:nth-child(1)
-            &:after 
-               content: "Общая и локальная криотерапия"
-         &:nth-child(2)
-            &:after 
-               content: "Интервальная гипокситерапия"
-         &:nth-child(3)
-            &:after 
-               content: "Ксенонотерапия"
-         &:nth-child(4)
-            &:after 
-               content: "Озонотерапия"
-         &:nth-child(5)
-            &:after 
-               content: "Миотерапия"
-         &:nth-child(6)
-            &:after 
-               content: "Гипербарическая кислородная камера"
-         &:nth-child(7)
-            &:after 
-               content: "Бальнеотерапия и пантолечение"
-         &:nth-child(8)
-            &:after 
-               content: "Детокс-процедуры и массаж"
-         &:nth-child(9)
-            &:after 
-               content: "Гидро и гидровакуумный массаж в живой воде"
-         &:nth-child(10)
-            &:after 
-               content: "Медицинская невесомость в иммерсионной ванне"
-         &:nth-child(11)
-            &:after 
-               content: "Термокомплекс"
-         &:nth-child(12)
-            &:after 
-               content: "Бассейны для взрослых и детей"
-         &:nth-child(13)
-            &:after 
-               content: "Пилатес и йога"
-      .swiper-pagination-bullet-active
-         background: rgb(199,168,136) !important
-         &:after 
+         color: rgba(255, 216, 176, 1)
+         font-size: 12px
+         font-weight: 500
+         cursor: pointer
+         line-height: 14px
+         text-transform: uppercase
+         font-family: 'Geometria'
+         transition: 0.5s
+         &:hover 
+            background: rgb(199,168,136) !important
             color: rgba(255, 255, 255, 1)
+      .nav-item.active
+         background: rgb(199,168,136) !important
+         color: rgba(255, 255, 255, 1)
 .info 
    padding: 0px 0 142px
    h2 
@@ -3473,8 +3436,13 @@ button.btn
    .arrow
       background: transparent
       border: 1px solid #e4b27f
-      path 
-         stroke: white
+      .svg 
+         path 
+            stroke: #e4b27f
+      &:hover 
+         svg 
+            path 
+               stroke: black
    &__area 
       h2
          font-weight: 400
@@ -5095,9 +5063,8 @@ button.btn
    margin-bottom: 25px
 .map
    &__pic 
-      width: 100%
-      max-width: 1360px
-      height: auto
+      width: 1360px
+      height: 780px
       object-fit: cover
       margin: 0 auto
       display: block
@@ -5106,6 +5073,8 @@ button.btn
       height: 780px
       top: 0
       width: 1360px
+      left: 50%
+      margin-left: -668px
    &__local
       padding: 4px 16px 4px 4px
       display: flex
@@ -5178,6 +5147,333 @@ button.btn
          text-transform: uppercase
    .links__btn
       margin-top: 150px
+.body-wrap.hidd 
+   overflow: visible
+.services-item 
+   background: #383d41
+   padding: 0 0 80px
+   h2, h3
+      font-size: 32px
+      font-weight: 400
+      color: #ffffff
+      line-height: 38px
+      text-transform: none
+      letter-spacing: 0
+      width: 100%
+      max-width: 500px
+      margin-bottom: 40px
+   h3 
+      max-width: 350px
+   .blog-item__wrap
+      position: initial
+      &:after 
+         display: none
+      img 
+         position: absolute
+         top: 0
+         left: 0
+         height: 100%
+   &__area
+      padding-top: 40px
+      padding-bottom: 60px
+      position: relative
+      .bread 
+         position: relative
+         z-index: 3
+      &:after
+         content: ""
+         display: block
+         position: absolute
+         bottom: -1px
+         left: 0
+         width: 100%
+         height: 100%
+         z-index: 1
+         background: linear-gradient(180deg, #383D41 11.57%, rgba(0, 0, 0, 0) 26%)
+         transform: rotate(-540deg)
+         opacity: 0.95
+   &__wrap 
+      width: 100%
+      max-width: 611px
+      img 
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         height: 100%
+         object-fit: cover
+      h1, p, a 
+         position: relative
+         z-index: 3
+      h1 
+         font-size: 40px
+         margin-bottom: 40px
+      p 
+         font-size: 18px
+         font-weight: 400
+         color: #ffffff
+         font-family: "Geometria"
+         line-height: 24px
+         letter-spacing: -0.11px
+         margin-bottom: 40px
+         width: 100%
+         max-width: 530px
+      a 
+         width: 340px
+         height: 60px
+         border-radius: 0px
+   .bread 
+      margin-bottom: 150px
+   &__row 
+      padding-top: 40px
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+   &__nav 
+      padding-bottom: 40px
+      margin-top: 60px
+      width: 100%
+      max-width: 250px
+      position: sticky
+      top: 30px
+      a 
+         display: block
+         margin-bottom: 28px
+         font-size: 24px
+         font-weight: 400
+         color: #9b9ea0
+         line-height: 29px
+         &:last-child
+            margin-bottom: 0
+         &:hover 
+            color: white
+   &__content 
+      max-width: 886px
+      width: 100%
+      ul 
+         margin-bottom: 50px
+         li 
+            text-transform: none
+            font-size: 16px
+            font-family: "Geometria"
+            font-weight: 400
+            color: #ffd8b0
+            line-height: 21px
+            margin-bottom: 18px
+            &:last-child
+               margin-bottom: 0
+      blockquote
+         box-sizing: border-box
+         padding: 22px 99px 
+         background: #2a2f33
+         margin: 0 0 70px
+         width: 100%
+         font-family: "Geometria"
+         max-width: 750px 
+         font-size: 16px
+         font-weight: 400
+         color: #ffd8b0
+         line-height: 21px
+   &__top 
+      font-size: 24px
+      font-family: "Geometria"
+      font-weight: 400
+      color: #ffd8b0
+      line-height: 31px
+      margin-bottom: 50px
+   &__contacts 
+      margin-bottom: 70px
+      div 
+         span 
+            display: block
+            opacity: 0.5
+            font-size: 15px
+            font-weight: 400
+            color: #ffffff
+            line-height: 24px
+            margin-bottom: 17px
+         a, p 
+            font-size: 22px
+            font-weight: 400
+            color: #ffffff
+            letter-spacing: -0.14px
+         a:hover 
+            color: $yel
+   &__line 
+      display: flex
+      justify-content: space-between
+   &__order 
+      width: 355px
+      height: 69px
+      border-radius: 0
+      margin-top: 40px
+   &__video 
+      height: 364px
+      position: relative
+      overflow: hidden
+      padding: 40px 47px
+      cursor: pointer
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      margin-bottom: 40px
+      img 
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         height: 100%
+         object-fit: cover 
+         z-index: 0
+      .svg, p 
+         z-index: 2
+      p 
+         margin-top: 15px
+         font-family: "Geometria"
+         font-size: 14px
+         font-weight: 400
+         color: #ffffff
+         transition: 0.5s
+         line-height: 21px
+      .svg 
+         margin-top: auto
+      &:after 
+         content: ""
+         display: block
+         position: absolute
+         top: 0
+         left: 0
+         z-index: 1
+         background: #2A2D32
+         opacity: 0.45
+         width: 100%
+         height: 100%
+      &:hover 
+         p 
+            color: #ffd8b0
+         .svg 
+            path 
+               fill: #ffd8b0
+            circle 
+               stroke: #ffd8b0
+   &-price 
+      .price__sub
+         width: 90px
+         height: 90px
+         p 
+            bottom: -35px
+            right: -187px
+            width: auto
+            max-width: 236px
+      &__top
+         padding-right: 186px
+         margin-bottom: 80px 
+         display: flex
+         align-items: center
+         justify-content: space-between
+      &__info 
+         margin-bottom: 60px
+         div 
+            display: flex
+            align-items: center
+            margin-bottom: 20px
+            justify-content: space-between
+            &:last-child
+               margin-bottom: 0
+            p 
+               &:first-child
+                  font-size: 14px
+                  font-weight: 400
+                  font-family: "Geometria"
+                  color: #ffffff
+                  line-height: 21px
+               &:nth-child(2)
+                  font-size: 13px
+                  font-weight: 400
+                  text-align: right
+                  color: #ffd8b0
+                  line-height: 20px
+      &__text 
+         margin-bottom: 60px
+         p 
+            font-size: 14px
+            line-height: 21px
+            color: white
+            margin-bottom: 10px
+            font-family: "Geometria"
+            span
+               font-weight: 700
+               color: #ffd8b0
+            &:last-child
+               margin-bottom: 0
+      &__information 
+         margin-bottom: 80px
+         p 
+            font-size: 14px
+            font-weight: 400
+            font-family: "Geometria"
+            color: #ffffff
+            margin-bottom: 35px
+            line-height: 21px
+            padding-left: 20px
+            border-left: 2px solid #ffd8b0
+            &:last-child
+               margin-bottom: 0
+      &__area 
+         h3 
+            max-width: 695px 
+            color: #FFD8B0
+         div 
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            p 
+               font-size: 14px
+               font-weight: 400
+               color: #ffffff
+               line-height: 21px
+               width: 46%
+   h4 
+      margin-top: 0
+      margin-bottom: 50px
+      font-size: 20px
+      font-weight: 400
+      color: #ffffff
+      line-height: 24px
+   h5 
+      margin-top: 0
+      margin-bottom: 30px
+      font-size: 20px
+      font-weight: 400
+      color: #ffffff
+      line-height: 24px
+   .arrow
+      background: transparent
+      border: 1px solid #e4b27f
+      .svg 
+         path 
+            stroke: #e4b27f
+      &:hover 
+         svg 
+            path 
+               stroke: black
+   &-rev 
+      margin: 60px 0 80px
+      h2 
+         margin-bottom: 0
+   .swiper10 
+      overflow: hidden
+      .swiper-slide 
+         height: 513px
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+   .about__flex
+      margin-bottom: 40px
+      
 
 
-               
+
+
+

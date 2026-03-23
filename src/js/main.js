@@ -356,36 +356,78 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
-  /* ==============================
-     SWIPER 3 + SELECT
-  ============================== */
-  if (document.querySelector('.swiper3')) {
+  if (!document.querySelector('.swiper3')) return;
 
-    const swiper3 = new Swiper('.swiper3', {
-      slidesPerView: 'auto',
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination3',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next3',
-        prevEl: '.swiper-button-prev3',
-      },
+  const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: 'auto',
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+    },
+  });
+
+  const nav = document.querySelector('.custom-nav');
+  const navItems = document.querySelectorAll('.custom-nav .nav-item');
+
+  let select = null;
+
+  /* ==============================
+     СОЗДАЁМ SELECT ИЗ NAV
+  ============================== */
+  if (nav && navItems.length) {
+    select = document.createElement('select');
+    select.id = 'swiperSelect3';
+
+    navItems.forEach((item, index) => {
+      const option = document.createElement('option');
+      option.value = index;
+      option.textContent = item.textContent.trim();
+      select.appendChild(option);
     });
 
-    const select = document.getElementById('swiperSelect3');
+    const selectWrapper = document.createElement('div');
+    selectWrapper.className = 'swiper-select';
+    selectWrapper.appendChild(select);
 
-    if (select) {
-      select.addEventListener('change', () => {
-        swiper3.slideToLoop(+select.value);
-      });
-
-      swiper3.on('slideChange', () => {
-        select.value = swiper3.realIndex;
-      });
-    }
+    // вставляем перед навигацией
+    nav.parentNode.insertBefore(selectWrapper, nav);
   }
+
+  /* ==============================
+     КЛИК ПО NAV
+  ============================== */
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const index = +item.dataset.index;
+      swiper3.slideToLoop(index);
+    });
+  });
+
+  /* ==============================
+     SELECT CHANGE
+  ============================== */
+  if (select) {
+    select.addEventListener('change', () => {
+      swiper3.slideToLoop(+select.value);
+    });
+  }
+
+  /* ==============================
+     СИНХРОНИЗАЦИЯ
+  ============================== */
+  function updateUI(index) {
+    navItems.forEach(item => item.classList.remove('active'));
+    if (navItems[index]) navItems[index].classList.add('active');
+
+    if (select) select.value = index;
+  }
+
+  swiper3.on('slideChange', () => {
+    updateUI(swiper3.realIndex);
+  });
+
+  updateUI(swiper3.realIndex);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -641,6 +683,37 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         1200: {
           slidesPerView: 3,
+        }
+      }
+    });
+  }
+  
+  /* ==============================
+     SWIPER 10
+  ============================== */
+
+  if (document.querySelector('.swiper10')) {
+    new Swiper('.swiper10', {
+      slidesPerView: 4,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: '.swiper-button-next10',
+        prevEl: '.swiper-button-prev10',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+          loop: true,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
         }
       }
     });
@@ -913,3 +986,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const note = document.getElementById("note1");
+
+  // Проверяем, закрывал ли пользователь
+  if (localStorage.getItem("noteClosed") === "true") {
+    note.style.display = "none";
+  }
+
+  // Обработчик закрытия
+  const closeBtn = note.querySelector(".note__close");
+  closeBtn.addEventListener("click", function () {
+    note.style.display = "none";
+    localStorage.setItem("noteClosed", "true");
+  });
+});
