@@ -42,6 +42,10 @@
 		</h2>
 		<ul class="mm" style="display: flex; max-width: 800px; margin: 0 auto 50px; flex-wrap: wrap;">
 			<li style="width: 25%; margin: 0 auto 40px;">
+				<a href="index.html"
+					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">главная</a>
+			</li>
+			<li style="width: 25%; margin: 0 auto 40px;">
 				<a href="about.html"
 					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">о центре</a>
 			</li>
@@ -71,7 +75,7 @@
 					прайс лист
 				</a>
 			</li>
-			<li style="width: 25%; margin: 0 auto;">
+			<li style="width: 25%; margin: 40px auto;">
 				<a href="certificates.html"
 					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">сертификаты</a>
 			</li>
@@ -131,11 +135,101 @@
 				<a href="reviews.html"
 					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">отзывы</a>
 			</li>
+			<li style="width: 25%; margin: 40px auto 0;">
+				<a href="rules.html"
+					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">правила</a>
+			</li>
+			<!-- <li style="width: 25%; margin: 40px auto 0;">
+				<a href="loyalty.html"
+					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">Программа лояльности</a>
+			</li> -->
 			<!-- <li style="width: 25%; margin: 40px auto 0;">
 				<a href="map.html"
 					style="font-weight: bold; color: white; font-size: 18px; line-height: 120%; text-transform: uppercase; display: block; text-align: center;">Карта курорта</a>
 			</li> -->
 		</ul>
+		<div class="d-flex"
+			style="justify-content: center; margin-top: 80px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+			<a href="#" class="btn btn_1 a1" style="margin: 20px;">
+				popup
+			</a>
+		</div>
+		<div style="display:none;">
+			<div class="box-modal call" id="popup-call3">
+				<div class="popup-call__box">
+					<img src="img/pop3.svg" alt="image1" class="popup__fig1">
+					<img src="img/pop4.svg" alt="image1" class="popup__fig2">
+					<div class="box-modal__close articmodal-close">
+						<img src="img/close2.svg" alt="image1">
+					</div>
+					<p class="popup__name">
+						Бронирование столика
+					</p>
+					<form action="success.php" class="popup__form js-form" id="popupResult" method="post">
+						<div class="popup__item">
+							<label>
+								ИМЯ
+							</label>
+							<input type="tel" placeholder="ИВАН ИВАНОВ" class="form__field" required="" name="tel">
+						</div>
+						<div class="popup__item">
+							<label>
+								ТЕЛЕФОН
+							</label>
+							<input type="text" placeholder="+7 _________" class="form__field tel" required="" name="tel">
+						</div>
+						<div class="dates item">
+							<div class="date-field">
+								<span class="date-label">Когда?</span>
+								<div class="date-input">
+									<input type="datetime-local" id="popupDateTime" class="form__field" placeholder="выберите">
+									<span class="selected-datetime"></span>
+									<span class="calendar-icon">
+										<img src="img/cal.svg" alt="calendar">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="popup__item select">
+							<label>Столик</label>
+
+							<div class="select-box">
+								<input type="text" readonly  class="form__field">
+								<div class="select-options">
+									<div>У окна</div>
+									<div>На террасе</div>
+									<div>В центре</div>
+									<div>VIP</div>
+								</div>
+							</div>
+							<span class="select-icon">
+								<img src="img/select.svg" alt="select">
+							</span>
+						</div>
+						<div class="popup__item select">
+							<label>Гостей</label>
+
+							<div class="select-box">
+								<input type="text" readonly  class="form__field">
+
+								<div class="select-options">
+									<div>1 гость</div>
+									<div>2 гостя</div>
+									<div>3 гостя</div>
+									<div>4 гостя</div>
+								</div>
+							</div>
+							<span class="select-icon">
+								<img src="img/select.svg" alt="select">
+							</span>
+						</div>
+						<button class="btn">
+							Заказать <img src="img/arr.svg" alt="image1">
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>

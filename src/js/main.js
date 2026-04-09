@@ -175,23 +175,34 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#popup-call2').arcticmodal({
     });
   });
-  $('.social, .menu__tel').click(function (e) {
+  $('.social, .menu__tel, .footer__btn').click(function (e) {
     e.preventDefault();
     $('#popup-social').arcticmodal({
+    });
+  });
+   $('.area__btn').click(function (e) {
+    e.preventDefault();
+    $('#popup-call3').arcticmodal({
     });
   });
 
 });
 document.addEventListener("DOMContentLoaded", () => {
 
-  const links = document.querySelectorAll(".youtube-link");
+  const links = document.querySelectorAll(".vk-video-link");
 
   links.forEach(link => {
 
-    const videoID = link.getAttribute("youtubeid");
-    const autoPlay = 1;
+    const data = link.getAttribute("data-vk");
+    if (!data) return;
 
-    if (!videoID) return;
+    const { oid, id, hash } = JSON.parse(data);
+
+    // iframe ссылка
+    const embedSrc = `https://vk.com/video_ext.php?oid=${oid}&id=${id}&hash=${hash}&autoplay=1`;
+
+    // обычная ссылка (fallback)
+    const fallbackUrl = `https://vk.com/video${oid}_${id}`;
 
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -202,8 +213,9 @@ document.addEventListener("DOMContentLoaded", () => {
       popup.innerHTML = `
         <div class="grtvideo-popup-content">
           <span class="grtvideo-popup-close">&times;</span>
-          <iframe class="grtyoutube-iframe"
-            src="https://www.youtube.com/embed/${videoID}?rel=0&wmode=transparent&autoplay=${autoPlay}&iv_load_policy=3"
+          <iframe class="grtvideo-iframe"
+            src="${embedSrc}"
+            allow="autoplay; encrypted-media; fullscreen"
             allowfullscreen
             frameborder="0">
           </iframe>
@@ -212,7 +224,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.body.appendChild(popup);
 
+      const iframe = popup.querySelector("iframe");
       const closeBtn = popup.querySelector(".grtvideo-popup-close");
+
+      // ❗ fallback если VK блокирует iframe
+      let failed = false;
+
+      const failTimeout = setTimeout(() => {
+        failed = true;
+        popup.remove();
+        window.open(fallbackUrl, "_blank");
+      }, 3000); // если за 3 сек не загрузилось
+
+      iframe.onload = () => {
+        clearTimeout(failTimeout);
+      };
 
       function closePopup() {
         popup.remove();
@@ -481,326 +507,161 @@ document.addEventListener("DOMContentLoaded", function () {
   updatePreview();
 });
 document.addEventListener('DOMContentLoaded', function () {
-    
+
   /* ==============================
-     SWIPER HOTEL
+     SWIPER HOTEL (оптимизированный)
   ============================== */
-
   let swiperHotel;
-
   if (document.querySelector('.swiper-hotel')) {
     swiperHotel = new Swiper('.swiper-hotel', {
       spaceBetween: 19,
       slidesPerView: 4,
       watchOverflow: true,
-      allowTouchMove: false,
-      pagination: {
-        el: '.swiper-pagination-hotel',
-        type: 'progressbar',
-      },
+      simulateTouch: true,
+      grabCursor: true,
+      touchRatio: 1,
+      touchAngle: 45,
+      mousewheel: { forceToAxis: true, sensitivity: 1 },
+      lazy: { loadPrevNext: true, loadPrevNextAmount: 2 },
+      pagination: { el: '.swiper-pagination-hotel', type: 'progressbar', clickable: true },
       breakpoints: {
-        0: {
-          slidesPerView: 1,
-          allowTouchMove: true,
-          grid: {
-            rows: 1,
-            fill: 'row',
-          },
-        },
-        768: {
-          slidesPerView: 2,
-          grid: {
-            rows: 2,
-            fill: 'row',
-          },
-        },
-        1200: {
-          slidesPerView: 4,
-          grid: {
-            rows: 1,
-          },
-        },
+        0: { slidesPerView: 1, allowTouchMove: true, grid: { rows: 1, fill: 'row' } },
+        768: { slidesPerView: 2, allowTouchMove: true, grid: { rows: 2, fill: 'row' } },
+        1200: { slidesPerView: 4, allowTouchMove: true, grid: { rows: 1 } },
       },
+      on: { init: function () { this.pagination.render(); this.pagination.update(); } },
     });
   }
 
   /* ==============================
-     SWIPER CHALET
+     SWIPER CHALET (оптимизированный)
   ============================== */
-
   let swiperChalet;
-
   if (document.querySelector('.swiper-chalet')) {
     swiperChalet = new Swiper('.swiper-chalet', {
       spaceBetween: 19,
       slidesPerView: 4,
       watchOverflow: true,
-      allowTouchMove: false,
-      pagination: {
-        el: '.swiper-pagination-chalet',
-        type: 'progressbar',
-      },
+      simulateTouch: true,
+      grabCursor: true,
+      touchRatio: 1,
+      touchAngle: 45,
+      mousewheel: { forceToAxis: true, sensitivity: 1 },
+      lazy: { loadPrevNext: true, loadPrevNextAmount: 2 },
+      pagination: { el: '.swiper-pagination-chalet', type: 'progressbar', clickable: true },
       breakpoints: {
-        0: {
-          slidesPerView: 1,
-          allowTouchMove: true,
-          grid: {
-            rows: 1,
-            fill: 'row',
-          },
-        },
-        768: {
-          slidesPerView: 2,
-          grid: {
-            rows: 2,
-            fill: 'row',
-          },
-        },
-        1200: {
-          slidesPerView: 4,
-          grid: {
-            rows: 1,
-          },
-        },
+        0: { slidesPerView: 1, allowTouchMove: true, grid: { rows: 1, fill: 'row' } },
+        768: { slidesPerView: 2, allowTouchMove: true, grid: { rows: 2, fill: 'row' } },
+        1200: { slidesPerView: 4, allowTouchMove: true, grid: { rows: 1 } },
       },
+      on: { init: function () { this.pagination.render(); this.pagination.update(); } },
     });
   }
 
   /* ==============================
      SWIPER 4
   ============================== */
-
   if (document.querySelector('.swiper4')) {
     new Swiper('.swiper4', {
       slidesPerView: 3,
       spaceBetween: 30,
-      navigation: {
-        nextEl: '.swiper-button-next4',
-        prevEl: '.swiper-button-prev4',
-      },
+      navigation: { nextEl: '.swiper-button-next4', prevEl: '.swiper-button-prev4' },
       breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 12,
-          loop: true,
-        },
-        767: {
-          slidesPerView: 2,
-          spaceBetween: 12,
-        },
-        992: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        }
-      }
+        320: { slidesPerView: 1, spaceBetween: 12, loop: true },
+        767: { slidesPerView: 2, spaceBetween: 12 },
+        992: { slidesPerView: 2, spaceBetween: 20 },
+        1200: { slidesPerView: 3, spaceBetween: 30 },
+      },
     });
   }
 
   /* ==============================
      SWIPER 5 + THUMBS
   ============================== */
-
   if (document.querySelector('.mySwiper5') && document.querySelector('.mySwiper6')) {
-
     const swiper6 = new Swiper(".mySwiper6", {
       spaceBetween: 0,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
     });
-
     new Swiper(".mySwiper5", {
       spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next5",
-        prevEl: ".swiper-button-prev5",
-      },
-      thumbs: {
-        swiper: swiper6,
-      },
+      navigation: { nextEl: ".swiper-button-next5", prevEl: ".swiper-button-prev5" },
+      thumbs: { swiper: swiper6 },
     });
-
   }
 
   /* ==============================
      SWIPER 7
   ============================== */
-
   if (document.querySelector('.swiper7')) {
     new Swiper('.swiper7', {
       slidesPerView: 1,
       spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next7',
-        prevEl: '.swiper-button-prev7',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          loop: true,
-        },
-        767: {
-          slidesPerView: 1,
-        },
-        992: {
-          slidesPerView: 1,
-        },
-        1200: {
-          slidesPerView: 1,
-        }
-      }
+      navigation: { nextEl: '.swiper-button-next7', prevEl: '.swiper-button-prev7' },
+      breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 1 }, 1200: { slidesPerView: 1 } },
     });
   }
 
   /* ==============================
      SWIPER 9
   ============================== */
-
   if (document.querySelector('.swiper9')) {
     new Swiper('.swiper9', {
       slidesPerView: 3,
       spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next9',
-        prevEl: '.swiper-button-prev9',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          loop: true,
-        },
-        767: {
-          slidesPerView: 1,
-        },
-        992: {
-          slidesPerView: 2,
-        },
-        1200: {
-          slidesPerView: 3,
-        }
-      }
+      navigation: { nextEl: '.swiper-button-next9', prevEl: '.swiper-button-prev9' },
+      breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } },
     });
   }
-  
+
   /* ==============================
      SWIPER 10
   ============================== */
-
   if (document.querySelector('.swiper10')) {
     new Swiper('.swiper10', {
       slidesPerView: 4,
       spaceBetween: 0,
-      navigation: {
-        nextEl: '.swiper-button-next10',
-        prevEl: '.swiper-button-prev10',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 0,
-          loop: true,
-        },
-        767: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        }
-      }
+      navigation: { nextEl: '.swiper-button-next10', prevEl: '.swiper-button-prev10' },
+      breakpoints: { 320: { slidesPerView: 2, spaceBetween: 0, loop: true }, 767: { slidesPerView: 2 }, 992: { slidesPerView: 3 }, 1200: { slidesPerView: 4 } },
     });
   }
 
   /* ==============================
      SWIPER 8
   ============================== */
-
   if (document.querySelector('.swiper8')) {
     new Swiper('.swiper8', {
       slidesPerView: 3,
       spaceBetween: 40,
-      navigation: {
-        nextEl: '.swiper-button-next8',
-        prevEl: '.swiper-button-prev8',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          loop: true,
-        },
-        767: {
-          slidesPerView: 1,
-        },
-        992: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        }
-      }
+      navigation: { nextEl: '.swiper-button-next8', prevEl: '.swiper-button-prev8' },
+      breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 2, spaceBetween: 20 }, 1200: { slidesPerView: 3, spaceBetween: 40 } },
     });
   }
 
   /* ==============================
      TABS
   ============================== */
-
   const tabs = document.querySelectorAll(".title-tab");
   const tabContents = document.querySelectorAll(".tab-content");
 
   if (tabs.length) {
-
     tabs.forEach(tab => {
       tab.addEventListener("click", function () {
-
         const tabName = this.dataset.tab;
-
         tabs.forEach(t => t.classList.remove("active"));
         this.classList.add("active");
-
         tabContents.forEach(content => {
           content.classList.remove("active");
-          if (content.dataset.tab === tabName) {
-            content.classList.add("active");
-          }
+          if (content.dataset.tab === tabName) content.classList.add("active");
         });
-
         setTimeout(() => {
-
-          if (swiperHotel) {
-            swiperHotel.update();
-            swiperHotel.updateSlides();
-            swiperHotel.updateProgress();
-            swiperHotel.updateSize();
-            swiperHotel.pagination.render();
-            swiperHotel.pagination.update();
-          }
-
-          if (swiperChalet) {
-            swiperChalet.update();
-            swiperChalet.updateSlides();
-            swiperChalet.updateProgress();
-            swiperChalet.updateSize();
-            swiperChalet.pagination.render();
-            swiperChalet.pagination.update();
-          }
-
+          if (swiperHotel) { swiperHotel.update(); swiperHotel.pagination.update(); }
+          if (swiperChalet) { swiperChalet.update(); swiperChalet.pagination.update(); }
         }, 120);
-
       });
     });
-
   }
 
 });
@@ -826,59 +687,166 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+// document.addEventListener('DOMContentLoaded', () => {
+
+//   const popup = document.getElementById('popup-call3');
+//   if (!popup) return;
+
+//   /* =========================
+//      DATE + TIME FINAL FIX
+//   ========================= */
+//   const dateInput = popup.querySelector('#popupDateTime');
+//   const dateOutput = popup.querySelector('.selected-datetime');
+//   const calendarIcon = popup.querySelector('.calendar-icon');
+
+//   if (dateInput && dateOutput) {
+
+//     const updateDate = () => {
+//       const value = dateInput.value;
+
+//       if (!value) {
+//         dateOutput.textContent = '';
+//         dateOutput.classList.remove('active');
+//         return;
+//       }
+
+//       const date = new Date(value);
+//       if (isNaN(date)) return;
+
+//       const formatted =
+//         date.toLocaleDateString('ru-RU') +
+//         ' ' +
+//         date.toLocaleTimeString('ru-RU', {
+//           hour: '2-digit',
+//           minute: '2-digit'
+//         });
+
+//       dateOutput.textContent = formatted;
+//       dateOutput.classList.add('active'); // 🔥 показываем только когда есть значение
+//     };
+
+//     dateInput.addEventListener('input', updateDate);
+//     dateInput.addEventListener('change', updateDate);
+
+//     if (calendarIcon) {
+//       calendarIcon.addEventListener('click', () => {
+//         if (dateInput.showPicker) {
+//           dateInput.showPicker();
+//         } else {
+//           dateInput.focus();
+//         }
+//       });
+//     }
+
+//     dateInput.addEventListener('click', () => {
+//       if (dateInput.showPicker) {
+//         dateInput.showPicker();
+//       }
+//     });
+//   }
+
+//   /* =========================
+//      SELECTS
+//   ========================= */
+//   const selects = popup.querySelectorAll('.select-box');
+
+//   selects.forEach(select => {
+//     const input = select.querySelector('input');
+//     const options = select.querySelector('.select-options');
+
+//     input.addEventListener('click', (e) => {
+//       e.stopPropagation();
+
+//       selects.forEach(s => s.classList.remove('active'));
+//       select.classList.toggle('active');
+//     });
+
+//     options.querySelectorAll('div').forEach(option => {
+//       option.addEventListener('click', () => {
+//         input.value = option.textContent;
+//         select.classList.remove('active');
+//       });
+//     });
+//   });
+
+//   document.addEventListener('click', (e) => {
+//     if (!popup.contains(e.target)) {
+//       selects.forEach(s => s.classList.remove('active'));
+//     }
+//   });
+
+// });
 document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('popup-call3');
+  if (!popup) return;
 
-  const guestSelect = document.getElementById('guestSelect');
-  const guestResult = document.getElementById('guestResult');
+  const dateInput = popup.querySelector('#popupDateTime');
+  const dateOutput = popup.querySelector('.selected-datetime');
+  const calendarIcon = popup.querySelector('.calendar-icon');
 
-  if (!guestSelect || !guestResult) return;
+  if (dateInput && dateOutput) {
+    const updateDate = () => {
+      const value = dateInput.value;
+      if (!value) {
+        dateOutput.textContent = '';
+        dateOutput.classList.remove('active');
+        return;
+      }
 
-  const trigger = guestSelect.querySelector('.select-trigger');
+      const date = new Date(value);
+      if (isNaN(date)) return;
 
-  /* ==============================
-     Открытие / закрытие
-  ============================== */
-  if (trigger) {
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      guestSelect.classList.toggle('active');
+      const formatted =
+        date.toLocaleDateString('ru-RU') + ' ' +
+        date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+
+      dateOutput.textContent = formatted;
+      dateOutput.classList.add('active');
+
+      /* инпут оставляем для формы, текст скрыт через CSS */
+    };
+
+    dateInput.addEventListener('input', updateDate);
+    dateInput.addEventListener('change', updateDate);
+
+    if (calendarIcon) {
+      calendarIcon.addEventListener('click', () => {
+        if (dateInput.showPicker) dateInput.showPicker();
+        else dateInput.focus();
+      });
+    }
+
+    dateInput.addEventListener('click', () => {
+      if (dateInput.showPicker) dateInput.showPicker();
     });
   }
 
-  /* ==============================
-     Обновление текста
-  ============================== */
-  function updateGuestText() {
-    const adultsInput = guestSelect.querySelector('input[name="adults"]:checked');
-    const childrenInput = guestSelect.querySelector('input[name="children"]:checked');
+  // SELECTS
+  const selects = popup.querySelectorAll('.select-box');
 
-    const adults = adultsInput ? adultsInput.value : 0;
-    const children = childrenInput ? childrenInput.value : 0;
+  selects.forEach(select => {
+    const input = select.querySelector('input');
+    const options = select.querySelector('.select-options');
 
-    guestResult.textContent = `${adults} взрослых, ${children} детей`;
-  }
+    input.addEventListener('click', e => {
+      e.stopPropagation();
+      selects.forEach(s => s.classList.remove('active'));
+      select.classList.toggle('active');
+    });
 
-  // Слушаем изменение радиокнопок
-  guestSelect.addEventListener('change', (e) => {
-    if (e.target.matches('input[name="adults"], input[name="children"]')) {
-      updateGuestText();
-    }
+    options.querySelectorAll('div').forEach(option => {
+      option.addEventListener('click', () => {
+        input.value = option.textContent;
+        select.classList.remove('active');
+      });
+    });
   });
 
-  /* ==============================
-     Закрытие при клике вне
-  ============================== */
-  document.addEventListener('click', (e) => {
-    if (!guestSelect.contains(e.target)) {
-      guestSelect.classList.remove('active');
+  document.addEventListener('click', e => {
+    if (!popup.contains(e.target)) {
+      selects.forEach(s => s.classList.remove('active'));
     }
   });
-
-  /* ==============================
-     Инициализация текста при загрузке
-  ============================== */
-  updateGuestText();
-
 });
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.querySelector('.menu-btn');
@@ -941,7 +909,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
 
+			const images = document.querySelectorAll(".images img");
+			const modal = document.getElementById("imageModal");
+			const modalImg = modal.querySelector("img");
+			const prev = modal.querySelector(".prev");
+			const next = modal.querySelector(".next");
+
+			let currentIndex = 0;
+
+			function showImage(index) {
+				currentIndex = index;
+
+				if (currentIndex < 0) currentIndex = images.length - 1;
+				if (currentIndex >= images.length) currentIndex = 0;
+
+				modalImg.src = images[currentIndex].src;
+			}
+
+			images.forEach((img, index) => {
+				img.addEventListener("click", () => {
+				modal.classList.add("show");
+				showImage(index);
+				});
+			});
+
+			prev.addEventListener("click", (e) => {
+				e.stopPropagation();
+				showImage(currentIndex - 1);
+			});
+
+			next.addEventListener("click", (e) => {
+				e.stopPropagation();
+				showImage(currentIndex + 1);
+			});
+
+			document.addEventListener("keydown", (e) => {
+				if (!modal.classList.contains("show")) return;
+
+				if (e.key === "Escape") modal.classList.remove("show");
+				if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+				if (e.key === "ArrowRight") showImage(currentIndex + 1);
+			});
+
+			modal.addEventListener("click", () => {
+				modal.classList.remove("show");
+			});
+
+			});
 // Замена <img class="svg"> на inline SVG
 document.addEventListener("DOMContentLoaded", () => {
   const svgImages = document.querySelectorAll('img.svg');

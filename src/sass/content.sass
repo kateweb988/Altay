@@ -8,146 +8,6 @@ input:-moz-placeholder
    color: rgba(93, 93, 93, 1) !important
 .menu
    display: none
-.box-modal__close 
-   z-index: 10
-   cursor: pointer
-   position: absolute
-   top: 20px
-   right: 20px
-   cursor: pointer
-   fill: white
-   z-index: 20
-   transition: 0.5s
-   display: flex
-   align-items: center
-   justify-content: center
-   width: 16px
-   height: 16px
-   &:hover 
-      transition: 0.5s
-      transform: rotate(90deg)
-.box-modal 
-   position: relative
-.popup-call__box 
-   position: absolute
-   top: -15rem
-   left: 50%
-   height: auto
-   margin-left: -250px
-   overflow: hidden
-   height: max-content
-   transition: 0.5s all
-   height: auto
-   width: 500px
-   padding: 40px
-   box-sizing: border-box
-   border-radius: 8px
-   background: #2D3235
-label.error 
-   display: none !important
-input.error 
-   padding: 0 0 0 20px !important
-.popup 
-   &__form 
-      position: relative
-      z-index: 2
-      width: 100%
-      button 
-         width: 343px
-         height: 104px
-         border-radius: 0px 
-         margin: 20px auto 0
-         border: none
-         outline: none !important
-   &__item 
-      width: 100%
-      label 
-         display: block
-         color: rgba(255, 216, 176, 1)
-         font-size: 16px
-         font-weight: 400
-         line-height: 19px
-         text-transform: uppercase
-         margin-bottom: 6px   
-      input 
-         width: 100%
-         padding-left: 20px
-         height: 56px
-         box-sizing: border-box
-         border: 1px solid rgba(0, 0, 0, 0)
-         background: rgba(255, 255, 255, 1)
-         margin-bottom: 12px
-         color: black
-         font-size: 14px
-         font-weight: 400
-         border: 1px solid rgba(255, 255, 255, 1)
-         line-height: 17px
-         text-transform: uppercase
-         &:focus 
-            border: 1px solid red
-      textarea 
-         width: 100%
-         padding-left: 20px
-         padding-top: 15px
-         height: 197px
-         max-width: 100%
-         box-sizing: border-box
-         border: 1px solid rgba(0, 0, 0, 0)
-         background: rgba(255, 255, 255, 1)
-         margin-bottom: 12px
-         color: black
-         font-size: 14px
-         font-weight: 400
-         border: 1px solid rgba(255, 255, 255, 1)
-         line-height: 17px
-         text-transform: uppercase
-   &__fig1 
-      position: absolute
-      top: 9px
-      left: 8px
-      z-index: 0
-   &__fig2
-      position: absolute
-      bottom: 0
-      left: 0
-      z-index: 0
-   &__socials 
-      position: relative
-      z-index: 2
-      justify-content: space-between
-      a 
-         font-size: 15px
-         width: 134px
-         .svg 
-            margin-right: 7px
-   &__tel 
-      position: relative
-      z-index: 2
-      margin: 0 auto 22px 
-      color: rgba(255, 255, 255, 1)
-      font-size: 31px
-      font-weight: 400
-      line-height: 36px
-      display: block
-      width: max-content
-      &:hover 
-         color: $yel
-   &__name 
-      position: relative
-      z-index: 2
-      color: rgba(255, 255, 255, 1)
-      font-size: 15px
-      font-weight: 400
-      line-height: 89%
-      text-align: center
-      text-transform: uppercase
-      margin-bottom: 74px
-   &__btn 
-      width: 188px
-      margin: 0 auto
-      border-radius: 0px
-      img 
-         margin-left: 25px
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
    display: none
 .custom-checkbox 
@@ -1191,7 +1051,8 @@ ul.info li
    .calendar-icon  
       pointer-events: none 
       position: absolute
-      top: 11px
+      z-index: 2
+      top: 14px
       right: 12px
    .calendar-icon img  
       width: 27px 
@@ -1261,9 +1122,8 @@ ul.info li
             top: 0
             left: 0
             width: 100%
-            opacity: 0
             height: 435px
-            background: rgba(0, 0, 0, 0.3 )
+            background: rgba(0, 0, 0, 0.35)
    &__pic
       position: absolute
       width: 100%
@@ -1326,8 +1186,12 @@ ul.info li
       width: 100%
       z-index: 3
       padding: 0 26px
-      margin-top: auto
+      margin-top: 0
       margin-bottom: 0px
+      height: 86%
+      display: flex
+      align-items: flex-start
+      flex-direction: column
    &__txt 
       font-size: 12px
       font-weight: 500
@@ -1335,7 +1199,7 @@ ul.info li
       line-height: 15px
       color: #FFFFFF
       font-family: 'Geometria'
-      margin: 10px 0 20px
+      margin: auto 0 20px
       width: 100%
       max-width: 209px
    &__row 
@@ -1358,13 +1222,16 @@ ul.info li
          line-height: 14px
          text-transform: uppercase
    &__sum 
-      color: rgba(255, 216, 176, 1)
+      color: rgb(255, 216, 176)
       font-size: 38px
       font-weight: 400
       line-height: 47px
       letter-spacing: -0.15rem
       text-align: left
       text-transform: uppercase
+      min-height: initial
+      margin-top: 228px
+      margin-bottom: 0px
    &__gold 
       position: absolute
       top: 5px
@@ -1673,7 +1540,7 @@ p.title-tab
          letter-spacing: -0.05rem
          font-weight: 400
          line-height: 19px
-      &_7
+      &:nth-child(7)
          margin-left: auto
          width: 35%
          margin-top: 70px
@@ -1681,7 +1548,7 @@ p.title-tab
             max-width: 415px
       &_8
          margin-top: 70px
-      &_5, &_6, &_8
+      &_dop
          &:before 
             content: ""
             display: block 
@@ -1764,6 +1631,7 @@ p.title-tab
       align-items: flex-start
       border-bottom: 1px solid rgba(61, 64, 66, 1)
       margin-bottom: 88px
+      padding-bottom: 60px
       &:last-child
          margin-bottom: 0
       &:nth-child(2n)
@@ -1771,7 +1639,7 @@ p.title-tab
             order: 2
          .area__img
             order: 1
-      &:nth-child(3)
+      &:nth-child(3), &:nth-child(2)
          .btn 
             width: 340px
       &:nth-child(4)
@@ -1835,7 +1703,7 @@ p.title-tab
          border-left: 2px solid rgba(228, 178, 127, 1)
          br 
             display: none
-   &__img
+   &__item
       picture
          display: block 
          width: 46.6%
@@ -2019,6 +1887,8 @@ p.title-tab
          height: 4px
          background: rgba(228, 178, 127, 1)
    &__left 
+      width: 100%
+      max-width: 361px
       margin-right: 70px
    &__socials 
       margin-bottom: 33px
@@ -2488,7 +2358,7 @@ p.title-tab
       width: 100%
       left: 0
    .popup__name 
-      font-size: 32px
+      font-size: 28px
       text-transform: uppercase
       margin-top: 19px
 #popup-call2
@@ -2722,16 +2592,16 @@ span.text
    padding-bottom: 40px
    .search__nav
       margin: 30px auto 100px
-   .swiper2
-      gap: 20px
-      height: auto
-      width: 100%
-      display: flex
-      flex-wrap: wrap
-      .swiper-slide 
-         height: 539px
-         width: 23.8%
-         margin-bottom: 30px
+   // .swiper2
+   //    gap: 20px
+   //    height: auto
+   //    width: 100%
+   //    display: flex
+   //    flex-wrap: wrap
+   //    .swiper-slide 
+   //       height: 539px
+   //       width: 23.8%
+   //       margin-bottom: 30px
    &__link 
       display: flex
       align-items: center
@@ -3187,7 +3057,7 @@ button.btn
 .address
    font-style: normal
 .item .swiper-pagination-progressbar
-   display: none
+   display: flex
 .item .swiper2
    width: 100%
    overflow: hidden
@@ -3497,7 +3367,7 @@ button.btn
       .swiper-slide
          width: 100%
          display: flex
-         align-items: flex-start
+         align-items: stretch
          justify-content: space-between
          background: #35393D
          border: 1px solid rgba(255, 255, 255, 0.5)
@@ -3519,7 +3389,7 @@ button.btn
                      fill: white
                      fill-opacity: 1
       &__img 
-         height: 100%
+         height: auto
          width: 400px
          object-fit: cover
       &__content 
@@ -4335,6 +4205,16 @@ button.btn
    .team__left
       max-width: 100%
 .exc-item
+   .blog-item__content
+      h3 
+         margin-top: 50px
+         margin-bottom: 30px
+         font-size: 24px
+         font-weight: 400
+         text-align: LEFT
+         color: #ffd8b0
+         letter-spacing: -0.14px
+         text-transform: none
    .blog-item__wrap
       img 
          height: 658px
@@ -4343,9 +4223,16 @@ button.btn
    .blog-item__row
       margin-bottom: 80px
       position: relative
-      h3
+      h2
          width: 100%
          max-width: 490px
+         margin-top: 0
+         margin-bottom: 0
+         font-size: 40px
+         font-weight: 400
+         color: #ffffff
+         line-height: 36px
+         letter-spacing: -0.36px
       &_2 
          margin-bottom: 50px
          h3 
@@ -5471,9 +5358,351 @@ button.btn
             object-fit: cover
    .about__flex
       margin-bottom: 40px
-      
+.gym 
+   padding: 60px 0
+   background: #32373A
+   h2 
+      margin-bottom: 60px
+      font-weight: 400
+      font-size: 60px
+      line-height: 57px
+      letter-spacing: -1.5px
+      text-transform: uppercase
+      color: #FFD8B0
+      width: 100%
+      max-width: 818px
+   &__row 
+      justify-content: space-between
+   &__item 
+      width: 49.3%
+      img 
+         width: 100%
+         object-fit: cover 
+         height: 445px
+         margin-bottom: 30px
+      p 
+         font-weight: 400
+         font-size: 16px
+         line-height: 19px
+         letter-spacing: -0.06em
+         color: #90979E
+         width: 100%
+         max-width: 533px
+      &:nth-child(2)
+         p 
+            max-width: 387px
+.room3__left ul li:before
+   flex: 1 0 auto 
+   max-width: 35px
+.grtvideo-popup-content 
+   width: 95%
+   max-width: 900px
+   position: relative
+.grtvideo-popup-close 
+   position: absolute
+   top: -40px
+   right: 0
+   color: #fff
+   font-size: 30px
+   cursor: pointer
+.grtvideo-iframe 
+   width: 100%
+   aspect-ratio: 16/9
+   border: none
 
 
+.box-modal__close 
+   z-index: 10
+   cursor: pointer
+   position: absolute
+   top: 10px
+   right: 10px
+   cursor: pointer
+   fill: white
+   z-index: 20
+   transition: 0.5s
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 33px
+   height: 33px
+   img 
+      width: 100%
+      height: auto
+   &:hover 
+      transition: 0.5s
+      transform: rotate(90deg)
+.box-modal 
+   position: relative
+.popup-call__box 
+   position: absolute
+   top: -15rem
+   left: 50%
+   height: auto
+   margin-left: -250px
+   overflow: visible
+   height: max-content
+   transition: 0.5s all
+   height: auto
+   width: 500px
+   padding: 40px
+   box-sizing: border-box
+   border-radius: 8px
+   background: #2D3235
+   .item 
+      padding: 0 !important
+   .item .date-field:first-child
+      margin-right: 0
+      margin-bottom: 0px
+   .item .date-field
+      width: 100%
+   .item .date-input input
+      height: 56px
+      background: #F0F0F1
+      border: 1px solid #F0F0F1
+      margin-bottom: 20px
+   .item .date-input
+      margin-bottom: 25px
+label.error 
+   display: none !important
+input.error 
+   padding: 0 0 0 20px !important
+.popup 
+   &__form 
+      position: relative
+      z-index: 2
+      width: 100%
+      button 
+         width: 100%
+         height: 104px
+         border-radius: 0px 
+         margin: 20px auto 0
+         border: none
+         outline: none !important
+      .select-icon
+         position: absolute
+         bottom: 30px
+         pointer-events: none
+         right: 11px
+   &__item 
+      position: relative
+      width: 100%
+      label 
+         display: block
+         color: rgba(255, 216, 176, 1)
+         font-size: 16px
+         font-weight: 400
+         line-height: 19px
+         text-transform: uppercase
+         margin-bottom: 6px   
+      input 
+         width: 100%
+         padding-left: 20px
+         height: 56px
+         box-sizing: border-box
+         background: #F0F0F1
+         font-family: 'Geometria' !important
+         margin-bottom: 20px
+         color: black
+         font-size: 14px
+         font-weight: 500
+         border: 1px solid #F0F0F1
+         line-height: 17px
+         text-transform: uppercase
+         &:focus 
+            border: 1px solid red
+      textarea 
+         width: 100%
+         padding-left: 20px
+         padding-top: 15px
+         height: 197px
+         max-width: 100%
+         box-sizing: border-box
+         border: 1px solid rgba(0, 0, 0, 0)
+         background: rgba(255, 255, 255, 1)
+         margin-bottom: 12px
+         color: black
+         font-size: 14px
+         font-weight: 400
+         border: 1px solid rgba(255, 255, 255, 1)
+         line-height: 17px
+         text-transform: uppercase
+   &__fig1 
+      position: absolute
+      top: 9px
+      left: 8px
+      z-index: 0
+   &__fig2
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 0
+   &__socials 
+      position: relative
+      z-index: 2
+      justify-content: space-between
+      a 
+         font-size: 15px
+         width: 134px
+         .svg 
+            margin-right: 7px
+   &__tel 
+      position: relative
+      z-index: 2
+      margin: 0 auto 22px 
+      color: rgba(255, 255, 255, 1)
+      font-size: 31px
+      font-weight: 400
+      line-height: 36px
+      display: block
+      width: max-content
+      &:hover 
+         color: $yel
+   &__name 
+      position: relative
+      z-index: 2
+      color: rgba(255, 255, 255, 1)
+      font-size: 15px
+      font-weight: 400
+      line-height: 89%
+      text-align: center
+      text-transform: uppercase
+      margin-bottom: 74px
+   &__btn 
+      width: 188px
+      margin: 0 auto
+      border-radius: 0px
+      img 
+         margin-left: 25px
+.selected-datetime 
+   position: absolute
+   right: 40px
+   top: 50%
+   transform: translateY(-50%)
+   font-size: 14px
+   color: #333
+   pointer-events: none
+/* ==== DATE ==== */
+#popup-call3 .date-input  
+   position: relative 
+   input::-webkit-input-placeholder 
+      color: transparent !important
+   input::-moz-placeholder
+      color: transparent !important
+   input:-ms-input-placeholder 
+      color: transparent !important
+   input:-moz-placeholder 
+      color: transparent !important
+#popup-call3 .selected-datetime  
+   position: absolute 
+   left: 20px 
+   right: initial
+   top: 62% 
+   transform: translateY(-50%) 
+   font-size: 14px 
+   color: #333 
+   pointer-events: none 
+/* ==== SELECT ==== */
+#popup-call3 .select-box  
+   position: relative 
+   cursor: pointer 
+#popup-call3 .select-options  
+   position: absolute 
+   top: 87% 
+   left: 0 
+   width: 100% 
+   background: #fff 
+   border: 1px solid #ddd 
+   display: none 
+   z-index: 100 
+#popup-call3 .select-options div  
+   padding: 10px 
+   font-weight: 500
+   font-family: 'Geometria'
+   font-size: 12px
+   line-height: 15px
+   text-transform: uppercase
+   color: #282828
+   cursor: pointer 
+#popup-call3 .select-options div:hover  
+   background: #f5f5f5 
+#popup-call3 .select-box.active .select-options  
+   display: block 
+#popup-call3 input[type="datetime-local"]  
+   color: transparent 
+   caret-color: transparent 
+#popup-call3 input[type="datetime-local"]::-webkit-datetime-edit  
+   color: transparent 
+#popup-call3 input[type="datetime-local"]::-webkit-calendar-picker-indicator  
+   opacity: 0 
+/* скрываем текст справа по умолчанию */
+#popup-call3 .selected-datetime  
+   opacity: 0 
+   transition: 0.2s
+/* показываем только когда есть значение */
+#popup-call3 .selected-datetime.active  
+   opacity: 1 
+#popup-call3 input[type="datetime-local"]  
+   color: black            /* делаем текст видимым */
+   caret-color: black      /* показываем курсор */
+#popup-call3 input[type="datetime-local"]::placeholder  
+   color: #999             /* серый placeholder */
+/* Текст справа */
+#popup-call3 .selected-datetime  
+   opacity: 0 
+   transition: 0.2s 
+#popup-call3 .selected-datetime.active  
+   opacity: 1 
+#popup-call3 .select-box 
+   position: relative
+   cursor: pointer   
+#popup-call3 .select-options  
+   position: absolute 
+   top: 87% 
+   left: 0 
+   width: 100% 
+   background: #fff 
+   border: 1px solid #ddd 
+   display: none 
+   z-index: 100 
+#popup-call3 .select-box.active .select-options   
+   display: block   
+#popup-call3 .select-options div  
+   padding: 10px 
+   font-weight: 500 
+   font-size: 12px 
+   text-transform: uppercase 
+   cursor: pointer 
+#popup-call3 .select-options div:hover   
+   background: #f5f5f5  
+
+#popup-call3 input[type="datetime-local"]  
+   color: transparent                  
+   caret-color: black                 
+   -webkit-text-fill-color: transparent  
+   background: #F0F0F1                
+   position: relative 
+   z-index: 1 
 
 
+#popup-call3 input[type="datetime-local"]::placeholder  
+   color: #999                       
 
+
+#popup-call3 .selected-datetime  
+   position: absolute 
+   left: 20px 
+   top: 60% 
+   transform: translateY(-50%) 
+   font-size: 14px 
+   color: #282828 !important
+   font-weight: 500 !important
+   pointer-events: none 
+   opacity: 0 
+   transition: 0.2s 
+   font-family: 'Geometria' !important
+   z-index: 2                          
+
+
+#popup-call3 .selected-datetime.active  
+   opacity: 1 

@@ -62,6 +62,8 @@
       max-width: 400px
    .reviews .swiper9 .swiper-slide
       width: 31%
+   .exc-item .blog-item__row h2
+      max-width: 411px
 @media screen and (max-width: 1199px)
    .main 
       overflow: hidden
@@ -574,6 +576,13 @@
       height: 400px
    .map__local
       opacity: 0
+   .area__item picture 
+      width: 52.6%
+   .gym__item img 
+      height: 275px
+      margin-bottom: 20px
+   .gym h2
+      margin-bottom: 40px
 @media ( max-width: 991px )
    .item .date-input input
       margin-bottom: 0  !important
@@ -1012,7 +1021,29 @@
       width: 43%
    .tabs2__item p
       font-size: 10px
+   .area__item picture 
+      width: 47.6%
+   .gym__row
+      flex-direction: column
+   .gym__item
+      width: 100%
+      margin-bottom: 40px
+      &:last-child
+         margin-bottom: 0
+   .gym__item p, .gym__item:nth-child(2) p
+      max-width: 100%
 @media screen and (max-width: 767px)
+   .gym h2
+      font-size: 24px
+      line-height: 32px 
+      text-align: center
+      margin-bottom: 30px
+   .gym__item img
+      height: 164px
+   .gym__item p
+      text-align: center
+   .gym
+      padding: 40px 0
    .main .head h1
       max-width: 300px
       margin-left: auto
@@ -1154,6 +1185,8 @@
       text-align: center
       max-width: 100%
       font-size: 12px
+   .area__item
+      padding-bottom: 40px
    .med .arrows 
       margin: 21px auto 0
       position: relative
@@ -1664,6 +1697,14 @@
       align-items: flex-start
    .services-item-price .price__sub
       display: none
+   .area__item picture 
+      width: 100%
+      margin-bottom: 40px
+      height: 200px
+      img 
+         margin-bottom: 0
+   .contacts__left
+      margin: 0 auto
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -1790,6 +1831,7 @@
    .call 
       .popup-call__box
          top: -20rem
+         padding-top: 50px
    #popup-call2 button
       width: 100%
    #popup-thank .popup__title
@@ -2235,6 +2277,13 @@
       padding-bottom: 40px
    .about__content .blog-item__name p
       text-align: left
+   .exc-item .blog-item__row h2
+      font-size: 24px
+      line-height: 32px
+   .exc-item .blog-item__content h3 
+      margin-top: 40px
+      margin-bottom: 20px
+      font-size: 21px
 @media screen and (max-width: 576px) and (min-width: 440px)
    .error__fig
       top: -60px
