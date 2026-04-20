@@ -64,6 +64,11 @@
       width: 31%
    .exc-item .blog-item__row h2
       max-width: 411px
+   .main__btn 
+      margin-left: 629px
+      top: 618px
+   .footer__box
+      padding-right: 144px
 @media screen and (max-width: 1199px)
    .main 
       overflow: hidden
@@ -84,26 +89,47 @@
       left: 263px
       bottom: 123px
       text-align: center
-   .main__sub
-      margin-left: 0
-      margin-bottom: 42px
+   .main__sub 
       text-align: center
       width: 100%
+      margin: -60px auto 40px
+      max-width: 519px
+   .main__item:nth-child(2), .main__item:nth-child(4), .main__item:nth-child(6)
+      top: 0 !important
    .main
       padding: 0px 0 78px
+   .sale .swiper11 .swiper-slide h3
+      font-size: 24px
+      line-height: 36px
+      max-width: 468px
+   .sale .swiper11 .swiper-slide p
+      font-size: 13px
+      line-height: 18px 
+      max-width: 468px
+   .sale h2
+      display: none
+   .sale
+      padding-top: 60px
+   .footer__box, .footer__bottom
+      padding-right: 0
    .main .head h1
       width: 100%
       max-width: 649px
-   .main__btn
-      position: absolute
-      width: 48.5%
-      height: 316px
-      bottom: 47px
+   .main__btn 
+      position: relative
+      width: 100%
+      height: 118px
+      bottom: 0
       right: 0
       top: initial
       font-size: 24px
-      flex-direction: column 
+      flex-direction: column
       padding-left: 0
+      max-width: 100%
+      left: 0
+      margin-left: 0
+      align-items: center
+      margin-top: 10px
       img 
          top: 28px
          right: 28px
@@ -1705,6 +1731,52 @@
          margin-bottom: 0
    .contacts__left
       margin: 0 auto
+   .sale 
+      padding-top: 0
+      padding-bottom: 0
+      .arrows 
+         display: none
+   .sale .swiper11 .swiper-slide span 
+      font-size: 96px
+      line-height: 73px
+      margin: 0 auto 70px
+   .sale .swiper11 .swiper-slide h3 
+      font-size: 20px
+      line-height: 23px
+      max-width: 276px
+      margin: 0 auto 30px
+      text-align: center
+      letter-spacing: 0
+   .sale .swiper11 .swiper-slide p
+      font-size: 11px
+      text-align: center
+      max-width: 290px
+      margin: 0 auto 30px
+      line-height: 15px
+   .bb 
+      margin-top: 0
+   .sale .swiper11 .swiper-slide a 
+      margin: 0 auto 20px
+      width: 222px
+      height: 52px
+      position: relative
+   .sale__nav 
+      position: relative
+      right: 0
+      bottom: 68px
+      display: flex
+      align-items: center
+      width: 100%
+   .sale .swiper-pagination11 
+      top: 0
+      width: 100%
+      margin-right: 0
+      display: flex
+      justify-content: center
+   .sale .swiper11
+      min-height: 512px
+   .sale .swiper11 .swiper-slide
+      padding: 0 24px 40px
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -2284,6 +2356,18 @@
       margin-top: 40px
       margin-bottom: 20px
       font-size: 21px
+   .main__item p
+      font-size: 16px
+      line-height: 19px
+   .main__item .svg
+      width: 40px
+      height: 40px
+   .main__item:after
+      opacity: 0.5
+   .main__item
+      padding-top: 20px
+   .bb
+      margin-top: 0
 @media screen and (max-width: 576px) and (min-width: 440px)
    .error__fig
       top: -60px
