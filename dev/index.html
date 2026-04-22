@@ -1196,7 +1196,7 @@
 									"Мы создали пространство, где современная роскошь  
 									органично сочетается с духом Алтайских гор"
 								</blockquote>
-								<a href="#" class="btn area__btn">
+								<a href="#" class="btn btn__rest area__btn">
 									Заказать столик <img src="img/arr.svg" alt="arr">
 								</a>
 							</div>
@@ -2009,7 +2009,7 @@
 						<label>
 							ИМЯ
 						</label>
-						<input type="tel" placeholder="ИВАН ИВАНОВ" class="form__field" required="" name="tel">
+						<input type="tel" placeholder="ИВАН ИВАНОВ" class="form__field" required="" name="name">
 					</div>
 					<div class="popup__item">
 						<label>
@@ -2021,7 +2021,7 @@
 						<div class="date-field">
 							<span class="date-label">Когда?</span>
 							<div class="date-input">
-								<input type="datetime-local" id="popupDateTime" class="form__field" placeholder="выберите">
+								<input type="datetime-local" id="popupDateTime" class="form__field" placeholder="выберите" name="datetime">
 								<span class="selected-datetime"></span>
 								<span class="calendar-icon">
 									<img src="img/cal.svg" alt="calendar">
@@ -2033,7 +2033,7 @@
 						<label>Столик</label>
 
 						<div class="select-box">
-							<input type="text" readonly  class="form__field">
+							<input type="text" readonly  class="form__field" name="local">
 							<div class="select-options">
 								<div>У окна</div>
 								<div>На террасе</div>
@@ -2049,7 +2049,7 @@
 						<label>Гостей</label>
 
 						<div class="select-box">
-							<input type="text" readonly  class="form__field">
+							<input type="text" readonly  class="form__field" name="guests">
 
 							<div class="select-options">
 								<div>1 гость</div>
@@ -2062,7 +2062,7 @@
 							<img src="img/select.svg" alt="select">
 						</span>
 					</div>
-					<button class="btn">
+					<button class="btn" data-submit>
 						Заказать <img src="img/arr.svg" alt="image1">
 					</button>
 				</form>

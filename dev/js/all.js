@@ -175,12 +175,12 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#popup-call2').arcticmodal({
     });
   });
-  $('.social, .menu__tel, .footer__btn').click(function (e) {
+  $('.social, .menu__tel, .footer__btn, .contacts__socials a').click(function (e) {
     e.preventDefault();
     $('#popup-social').arcticmodal({
     });
   });
-   $('.area__btn').click(function (e) {
+   $('.btn__rest').click(function (e) {
     e.preventDefault();
     $('#popup-call3').arcticmodal({
     });
@@ -633,24 +633,24 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ==============================
      SWIPER 8
   ============================== */
-  if (document.querySelector('.swiper8')) {
-    new Swiper('.swiper8', {
-      slidesPerView: 3,
-      spaceBetween: 40,
-      navigation: { nextEl: '.swiper-button-next8', prevEl: '.swiper-button-prev8' },
-      breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 2, spaceBetween: 20 }, 1200: { slidesPerView: 3, spaceBetween: 40 } },
-    });
-  }
-  if (document.querySelector('.swiper11')) {
-    new Swiper('.swiper11', {
-      slidesPerView: 1,
-      loop: true,
-      spaceBetween: 0,
-      navigation: { nextEl: '.swiper-button-next11', prevEl: '.swiper-button-prev11' },
-      pagination: { el: '.swiper-pagination11', clickable: true },
-      breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 1, spaceBetween: 0 }, 1200: { slidesPerView: 1, spaceBetween: 0 } },
-    });
-  }
+if (document.querySelector('.swiper8')) {
+new Swiper('.swiper8', {
+slidesPerView: 3,
+spaceBetween: 40,
+navigation: { nextEl: '.swiper-button-next8', prevEl: '.swiper-button-prev8' },
+breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 2, spaceBetween: 20 }, 1200: { slidesPerView: 3, spaceBetween: 40 } },
+});
+}
+if (document.querySelector('.swiper11')) {
+new Swiper('.swiper11', {
+slidesPerView: 1,
+loop: true,
+spaceBetween: 0,
+navigation: { nextEl: '.swiper-button-next11', prevEl: '.swiper-button-prev11' },
+pagination: { el: '.swiper-pagination11', clickable: true },
+breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 1, spaceBetween: 0 }, 1200: { slidesPerView: 1, spaceBetween: 0 } },
+});
+}
 
   /* ==============================
      TABS
@@ -677,6 +677,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const wrap = document.querySelector('.main__wrap');
+//   const row = wrap.querySelector('.main__row');
+
+//   // Проверяем, что устройство – десктоп
+//   if (window.matchMedia("(min-width: 768px)").matches) {
+//     wrap.addEventListener('mousemove', e => {
+//       const { width } = wrap.getBoundingClientRect();
+//       const mouseX = e.clientX - wrap.getBoundingClientRect().left;
+
+//       const maxScroll = row.scrollWidth - wrap.clientWidth;
+//       const scroll = (mouseX / width) * maxScroll;
+
+//       row.style.transform = `translateX(${-scroll}px)`;
+//     });
+
+//     // Чтобы скролл возвращался в исходное положение при уходе мыши
+//     wrap.addEventListener('mouseleave', () => {
+//       row.style.transform = `translateX(0)`;
+//     });
+//   }
+// });
+
+
 // document.addEventListener('DOMContentLoaded', () => {
 
 //   const popup = document.getElementById('popup-call3');
