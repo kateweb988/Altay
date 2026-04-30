@@ -516,6 +516,10 @@ input:-moz-placeholder {
   display: none;
 }
 
+.checkbox {
+  margin-bottom: 40px;
+}
+
 .custom-checkbox {
   position: absolute;
   z-index: -1;
@@ -524,7 +528,7 @@ input:-moz-placeholder {
 
 .custom-checkbox + label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   user-select: none;
   font-weight: 400;
   font-size: 16px;
@@ -535,6 +539,21 @@ input:-moz-placeholder {
 .custom-checkbox + label:hover:before {
   border: 1px solid rgb(255, 216, 176);
 }
+.custom-checkbox + label span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: #F0F0F1;
+}
+.custom-checkbox + label span a {
+  text-decoration: underline;
+  color: rgb(255, 216, 176);
+}
+.custom-checkbox + label span a:hover {
+  color: white;
+}
 
 .custom-checkbox + label::before {
   content: "";
@@ -544,22 +563,24 @@ input:-moz-placeholder {
   flex-grow: 0;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 8px;
-  background: #FFFFFF;
+  background-size: 13px;
   flex: 1 0 auto;
   transition: 0.2s;
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  border: 1px solid #e9e9e9;
-  background-color: #ffffff;
-  max-width: 20px;
-  margin-right: 11px;
+  max-width: 21px;
+  margin-right: 15px;
+  box-sizing: border-box;
+  width: 21px;
+  height: 21px;
+  background: #F0F0F1;
+  border-radius: 0px;
+  padding-top: 1px;
+  border: none !important;
 }
 
 .custom-checkbox:checked + label::before {
-  background: url(../img/check2.webp) no-repeat center center;
-  background-size: 8px;
+  background: url(../img/check.svg) no-repeat center center;
+  background-color: white;
+  background-size: 13px;
 }
 
 .swiper-pagination {
@@ -2258,6 +2279,13 @@ p.title-tab {
   position: absolute;
   right: 0;
   top: 33px;
+}
+.footer__socials {
+  margin-top: 108px;
+  gap: 11px;
+}
+.footer__socials a:hover .svg rect {
+  fill: black;
 }
 
 .med {
@@ -7531,9 +7559,13 @@ input.error {
   overflow: hidden;
   min-height: 512px;
 }
+.sale .swiper11 .swiper-wrapper {
+  min-height: 512px;
+}
 .sale .swiper11 .swiper-slide {
   padding: 0 24px 51px 44px;
   width: 100%;
+  height: auto;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -7613,8 +7645,8 @@ input.error {
     top: 84px;
   }
   .item__sum {
-    font-size: 36px;
-    line-height: 100%;
+    font-size: 23px;
+    line-height: 34px;
   }
   .info__item_7 p {
     max-width: 368px;
@@ -7704,6 +7736,9 @@ input.error {
   }
   .footer__box {
     padding-right: 144px;
+  }
+  .item .swiper2 .swiper-slide:after {
+    height: 465px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -9034,6 +9069,13 @@ input.error {
   .gym__item p, .gym__item:nth-child(2) p {
     max-width: 100%;
   }
+  .footer__socials {
+    bottom: 7px;
+    margin-top: 0;
+    gap: 11px;
+    position: absolute;
+    right: 88px;
+  }
 }
 @media screen and (max-width: 767px) {
   .gym h2 {
@@ -9991,6 +10033,9 @@ input.error {
   .sale .swiper11 .swiper-slide {
     padding: 0 24px 40px;
   }
+  .footer__socials {
+    right: 0;
+  }
 }
 @media screen and (max-width: 576px) {
   button:active, button:focus {
@@ -10809,6 +10854,27 @@ input.error {
     height: 70px;
     margin-left: -35px;
     background-size: 100%;
+  }
+  .item__pic {
+    height: 470px;
+  }
+  .address {
+    padding-left: 60px;
+  }
+  .footer__socials {
+    top: 208px;
+    left: 0;
+    right: initial;
+    bottom: initial;
+    flex-direction: column;
+  }
+  .footer__socials a {
+    width: 33px;
+    height: 33px;
+  }
+  .footer__socials a .svg {
+    height: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 576px) and (min-width: 440px) {
