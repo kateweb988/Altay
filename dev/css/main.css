@@ -186,6 +186,11 @@ body {
   font-size: 16px;
   line-height: 120%;
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: none;
+  font-synthesis: none;
 }
 
 a {
@@ -1214,7 +1219,7 @@ ul.info li {
   font-weight: 500;
 }
 .menu .footer__el {
-  width: 350px;
+  width: 357px;
   margin: 0 auto 30px;
 }
 .menu .footer__el a, .menu .footer__el span {
@@ -1284,6 +1289,9 @@ ul.info li {
   transition: 0.5s;
   stroke-opacity: 1;
   fill: white;
+}
+.menu .footer__el span {
+  max-width: 100%;
 }
 
 .nav {
@@ -1669,6 +1677,12 @@ ul.info li {
   position: relative;
   padding: 63px 0 100px;
 }
+.item__form {
+  position: relative;
+}
+.item__second {
+  margin-top: 130px;
+}
 .item__title {
   display: flex;
   align-items: flex-start;
@@ -1731,7 +1745,7 @@ ul.info li {
 .item__btn {
   padding-top: 93px;
   position: absolute;
-  top: 0;
+  top: -109px;
   right: 42px;
   width: 353px;
   height: 353px;
@@ -7642,7 +7656,7 @@ input.error {
     margin-right: 60px;
   }
   .item__btn {
-    top: 84px;
+    top: -80px;
   }
   .item__sum {
     font-size: 23px;
@@ -7883,7 +7897,11 @@ input.error {
     margin-top: 48px;
   }
   .item__btn {
-    top: 88px;
+    top: -80px;
+  }
+  .item .date-label {
+    position: relative;
+    z-index: 2;
   }
   .swiper2 .swiper-wrapper {
     align-items: stretch;
@@ -8516,9 +8534,12 @@ input.error {
     padding-left: 0;
   }
   .item__btn {
-    top: 230px;
+    top: 50px;
     right: inherit;
     left: 187px;
+  }
+  .item__second {
+    margin-top: 80px;
   }
   .med .swiper3 .swiper-slide p {
     padding-right: 0;
@@ -9192,7 +9213,7 @@ input.error {
     font-size: 11px;
   }
   .item__btn {
-    top: 235px;
+    top: 150px;
     width: 263px;
     height: 263px;
     right: inherit;
@@ -10091,7 +10112,8 @@ input.error {
     padding-top: 20px;
   }
   .item__btn {
-    left: 35px;
+    left: 100px;
+    top: 172px;
   }
   .info__pic {
     bottom: 318px;

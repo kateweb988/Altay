@@ -524,277 +524,488 @@
 			<img src="img/gold.webp" alt="gold" class="item__gold">
 			<div class="container">
 				<div class="item__wrap">
-					<div class="item__title">
-						<h2 class="title-tab active" data-tab="hotel">
-							отель <span>&</span>
+
+					<!-- =========================
+						ОТЕЛЬ
+					========================= -->
+
+					<div class="item__head">
+
+						<h2 class="item__main">
+							отель
 						</h2>
-						<p class="title-tab" data-tab="chalet">
-							шале
-						</p>
+
+
 					</div>
-					<!-- TAB ОТЕЛЬ -->
-					<div class="tab-content active" data-tab="hotel">
+
+					<form action="#" class="item__form">
 						<a href="#" class="item__btn">
-							Забронировать   проживание
-							<img src="img/st.svg" alt="st">
+							Забронировать проживание
+							<img src="img/st.svg" alt="">
 						</a>
-						<form action="#" class="item__form">
-							<div class="booking">
-								<div class="dates">
-									<div class="date-field">
-										<span class="date-label">Заезд</span>
-										<div class="date-input">
-											<input type="date" id="checkin">
-											<span class="calendar-icon">
-											<img src="img/cal.svg" alt="calendar">
-											</span>
-										</div>
+
+						<div class="booking">
+
+							<div class="dates">
+
+								<div class="date-field">
+
+									<span class="date-label">Заезд</span>
+
+									<div class="date-input">
+
+										<input type="date" id="hotel-checkin">
+
+										<span class="calendar-icon">
+											<img src="img/cal.svg" alt="">
+										</span>
+
 									</div>
-									<div class="date-field" id="checkin-field">
-										<span class="date-label">выезд</span>
-										<div class="date-input">
-											<input type="date" id="checkin">
-											<!-- <span class="calendar-icon">
-												<img src="img/cal.svg" alt="image1">
-											</span> -->
-										</div>
-									</div>
+
 								</div>
-								<div class="item__per">
-									<span class="date-label">гости</span>
-										<div class="guests">
-										<label class="guest-option">
-											<input type="radio" name="guests" value="1">
-											<span class="count">1</span>
-											<span class="text">гость</span>
-										</label>
-										<label class="guest-option">
-											<input type="radio" name="guests" value="2">
-											<span class="count">2</span>
-											<span class="text">гостя</span>
-										</label>
-										<label class="guest-option">
-											<input type="radio" name="guests" value="3">
-											<span class="count">3</span>
-											<span class="text">гостя</span>
-										</label>
-										<label class="guest-option">
-											<input type="radio" name="guests" value="4+">
-											<span class="count">4+</span>
-											<span class="text">гостей</span>
-										</label>
+
+								<div class="date-field">
+
+									<span class="date-label">Выезд</span>
+
+									<div class="date-input">
+										<input type="date" id="hotel-checkout">
 									</div>
+
 								</div>
+
 							</div>
-						</form>
-						<div class="swiper2 swiper-hotel">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="img/st1.png" alt="item" class="item__pic">
-									<div class="item__content">
-										<p class="item__sum">
-											стандарт
-										</p>
-										<p class="item__txt">
-											Одноместные или двухместные номера «стандарт» рассчитаны на проживание одного/двух гостей
-										</p>
-									</div>
-									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="arr">
-									</a>
+
+							<div class="item__per">
+
+								<span class="date-label">Гости</span>
+
+								<div class="guests">
+
+									<label class="guest-option">
+										<input type="radio" name="hotel-guests">
+										<span class="count">1</span>
+										<span class="text">гость</span>
+									</label>
+
+									<label class="guest-option">
+										<input type="radio" name="hotel-guests">
+										<span class="count">2</span>
+										<span class="text">гостя</span>
+									</label>
+
+									<label class="guest-option">
+										<input type="radio" name="hotel-guests">
+										<span class="count">3</span>
+										<span class="text">гостя</span>
+									</label>
+
+									<label class="guest-option">
+										<input type="radio" name="hotel-guests">
+										<span class="count">4+</span>
+										<span class="text">гостей</span>
+									</label>
+
 								</div>
-								<div class="swiper-slide">
-									<img src="img/st2.png" alt="item" class="item__pic">
-									<div class="item__content">
-										<p class="item__sum">
-											супериор супериор
-										</p>
-										<p class="item__txt">
-											Улучшенный номер, рассчитанный на проживание трех гостей.
-										</p>
-									</div>
-									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<img src="img/st3.png" alt="image1" class="item__pic">
-									<div class="item__content">
-										<p class="item__sum">
-											люкс
-										</p>
-										<p class="item__txt">
-											Роскошные люксовые номера, состоящие из двух комнат с дизайнерским ремонтом
-											Роскошные люксовые номера, состоящие из двух комнат с дизайнерским ремонтом
-										</p>
-									</div>
-									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<img src="img/st4.png" alt="image1" class="item__pic">
-									<div class="item__content">
-										<p class="item__sum">
-											шале
-										</p>
-										<p class="item__txt">
-											Отдельный домик для гостей, которые ценят тишину и приватность.
-										</p>
-									</div>
-									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<img src="img/st4.png" alt="image1" class="item__pic">
-									<div class="item__content">
-										<p class="item__sum">
-											шале
-										</p>
-										<p class="item__txt">
-											Отдельный домик для гостей, которые ценят тишину и приватность.
-										</p>
-									</div>
-									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
-									</a>
-								</div>
+
 							</div>
+
 						</div>
-						<div class="swiper-pagination2 swiper-pagination-hotel"></div>
-					</div>
-					<!-- TAB ШАЛЕ -->
-					<div class="tab-content" data-tab="chalet">
-						<a href="#" class="item__btn">
-							Забронировать   проживание
-							<img src="img/st.svg" alt="st">
-						</a>
-						<form action="#" class="item__form">
-							<div class="booking">
-								<div class="dates">
-									<div class="date-field">
-										<span class="date-label">Заезд</span>
-										<div class="date-input">
-											<input type="date" id="checkin">
-											<span class="calendar-icon">
-											<img src="img/cal.svg" alt="calendar">
-											</span>
-										</div>
-									</div>
-									<div class="date-field" id="checkin-field">
-										<span class="date-label">выезд</span>
-										<div class="date-input">
-											<input type="date" id="checkin">
-											<!-- <span class="calendar-icon">
-												<img src="img/cal.svg" alt="image1">
-											</span> -->
-										</div>
-									</div>
+
+					</form>
+
+					<div class="swiper2 swiper-hotel">
+
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide">
+
+								<img src="img/st1.png" alt="" class="item__pic">
+
+								<div class="item__content">
+
+									<p class="item__sum">
+										стандарт
+									</p>
+
+									<p class="item__txt">
+										Одноместные или двухместные номера стандарт с современным интерьером, удобной кроватью, рабочей зоной и всем необходимым для комфортного проживания и отдыха.
+									</p>
+
 								</div>
+
+								<a href="#" class="item__lnl btn">
+									Посмотреть номера
+									<img src="img/arr.svg" alt="">
+								</a>
+
+							</div>
+
+							<div class="swiper-slide">
+
+								<img src="img/st2.png" alt="" class="item__pic">
+
+								<div class="item__content">
+
+									<p class="item__sum">
+										супериор
+									</p>
+
+									<p class="item__txt">
+										Улучшенный номер для трех гостей с увеличенной площадью, мягкой зоной отдыха, панорамными окнами и атмосферой максимального уюта.
+									</p>
+
+								</div>
+
+								<a href="#" class="item__lnl btn">
+									Посмотреть номера
+									<img src="img/arr.svg" alt="">
+								</a>
+
+							</div>
+
+							<div class="swiper-slide">
+
+								<img src="img/st3.png" alt="" class="item__pic">
+
+								<div class="item__content">
+
+									<p class="item__sum">
+										люкс
+									</p>
+
+									<p class="item__txt">
+										Роскошный люкс с дизайнерским интерьером, просторной спальней, отдельной гостиной зоной и премиальными материалами отделки.
+									</p>
+
+								</div>
+
+								<a href="#" class="item__lnl btn">
+									Посмотреть номера
+									<img src="img/arr.svg" alt="">
+								</a>
+
+							</div>
+
+							<div class="swiper-slide">
+
+								<img src="img/st4.png" alt="" class="item__pic">
+
+								<div class="item__content">
+
+									<p class="item__sum">
+										family room
+									</p>
+
+									<p class="item__txt">
+										Просторный семейный номер с несколькими спальными местами, уютной атмосферой и комфортными условиями для отдыха всей семьёй.
+									</p>
+
+								</div>
+
+								<a href="#" class="item__lnl btn">
+									Посмотреть номера
+									<img src="img/arr.svg" alt="">
+								</a>
+
+							</div>
+
+							<div class="swiper-slide">
+
+								<img src="img/st1.png" alt="" class="item__pic">
+
+								<div class="item__content">
+
+									<p class="item__sum">
+										deluxe
+									</p>
+
+									<p class="item__txt">
+										Просторный номер deluxe с панорамным видом, стильным интерьером, комфортной мебелью и повышенным уровнем сервиса.
+									</p>
+
+								</div>
+
+								<a href="#" class="item__lnl btn">
+									Посмотреть номера
+									<img src="img/arr.svg" alt="">
+								</a>
+
+							</div>
+
+							<div class="swiper-slide">
+
+								<img src="img/st2.png" alt="" class="item__pic">
+
+								<div class="item__content">
+
+									<p class="item__sum">
+										premium
+									</p>
+
+									<p class="item__txt">
+										Премиальный номер с отдельной зоной отдыха, современным дизайном, качественной отделкой и максимальным уровнем комфорта.
+									</p>
+
+								</div>
+
+								<a href="#" class="item__lnl btn">
+									Посмотреть номера
+									<img src="img/arr.svg" alt="">
+								</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="swiper-pagination2 swiper-pagination-hotel"></div>
+
+
+
+					<!-- =========================
+						ШАЛЕ
+					========================= -->
+
+					<div class="item__second">
+
+						<div class="item__head">
+
+							<h2 class="item__main">
+								шале
+							</h2>
+
+							
+
+						</div>
+
+						<form action="#" class="item__form">
+							<a href="#" class="item__btn">
+								Забронировать проживание
+								<img src="img/st.svg" alt="">
+							</a>
+
+							<div class="booking">
+
+								<div class="dates">
+
+									<div class="date-field">
+
+										<span class="date-label">Заезд</span>
+
+										<div class="date-input">
+
+											<input type="date" id="chalet-checkin">
+
+											<span class="calendar-icon">
+												<img src="img/cal.svg" alt="">
+											</span>
+
+										</div>
+
+									</div>
+
+									<div class="date-field">
+
+										<span class="date-label">Выезд</span>
+
+										<div class="date-input">
+											<input type="date" id="chalet-checkout">
+										</div>
+
+									</div>
+
+								</div>
+
 								<div class="item__per">
-									<span class="date-label">гости</span>
-										<div class="guests">
+
+									<span class="date-label">Гости</span>
+
+									<div class="guests">
+
 										<label class="guest-option">
-											<input type="radio" name="guests" value="1">
+											<input type="radio" name="chalet-guests">
 											<span class="count">1</span>
 											<span class="text">гость</span>
 										</label>
+
 										<label class="guest-option">
-											<input type="radio" name="guests" value="2">
+											<input type="radio" name="chalet-guests">
 											<span class="count">2</span>
 											<span class="text">гостя</span>
 										</label>
+
 										<label class="guest-option">
-											<input type="radio" name="guests" value="3">
+											<input type="radio" name="chalet-guests">
 											<span class="count">3</span>
 											<span class="text">гостя</span>
 										</label>
+
 										<label class="guest-option">
-											<input type="radio" name="guests" value="4+">
+											<input type="radio" name="chalet-guests">
 											<span class="count">4+</span>
 											<span class="text">гостей</span>
 										</label>
+
 									</div>
+
 								</div>
+
 							</div>
+
 						</form>
+
 						<div class="swiper2 swiper-chalet">
+
 							<div class="swiper-wrapper">
+
 								<div class="swiper-slide">
-									<img src="img/st1.png" alt="item" class="item__pic">
+
+									<img src="img/st3.png" alt="" class="item__pic">
+
 									<div class="item__content">
+
 										<p class="item__sum">
-											стандарт2
+											шале deluxe
 										</p>
+
 										<p class="item__txt">
-											Одноместные или двухместные номера «стандарт» рассчитаны на проживание одного/двух гостей
+											Отдельный домик с приватной территорией, уютной атмосферой, просторной спальней и всем необходимым для комфортного отдыха.
 										</p>
+
 									</div>
+
 									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="arr">
+										Посмотреть номера
+										<img src="img/arr.svg" alt="">
 									</a>
+
 								</div>
+
 								<div class="swiper-slide">
-									<img src="img/st2.png" alt="item" class="item__pic">
+
+									<img src="img/st4.png" alt="" class="item__pic">
+
 									<div class="item__content">
+
 										<p class="item__sum">
-											супериор2
+											шале premium
 										</p>
+
 										<p class="item__txt">
-											Улучшенный номер, рассчитанный на проживание трех гостей.
+											Большое шале для отдыха всей семьёй с просторной гостиной, современной кухней и отдельной террасой на свежем воздухе.
 										</p>
+
 									</div>
+
 									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
+										Посмотреть номера
+										<img src="img/arr.svg" alt="">
 									</a>
+
 								</div>
+
 								<div class="swiper-slide">
-									<img src="img/st3.png" alt="image1" class="item__pic">
+
+									<img src="img/st1.png" alt="" class="item__pic">
+
 									<div class="item__content">
+
 										<p class="item__sum">
-											люкс
+											mountain chalet
 										</p>
+
 										<p class="item__txt">
-											Роскошные люксовые номера, состоящие из двух комнат с дизайнерским ремонтом
+											Уютное шале с видом на горы, большой террасой, панорамными окнами и атмосферой полного уединения среди природы.
 										</p>
+
 									</div>
+
 									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
+										Посмотреть номера
+										<img src="img/arr.svg" alt="">
 									</a>
+
 								</div>
+
 								<div class="swiper-slide">
-									<img src="img/st4.png" alt="image1" class="item__pic">
+
+									<img src="img/st2.png" alt="" class="item__pic">
+
 									<div class="item__content">
+
 										<p class="item__sum">
-											шале
+											forest house
 										</p>
+
 										<p class="item__txt">
-											Отдельный домик для гостей, которые ценят тишину и приватность.
+											Комфортный домик среди леса с камином, уютной зоной отдыха, натуральными материалами и тишиной вокруг.
 										</p>
+
 									</div>
+
 									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
+										Посмотреть номера
+										<img src="img/arr.svg" alt="">
 									</a>
+
 								</div>
+
 								<div class="swiper-slide">
-									<img src="img/st4.png" alt="image1" class="item__pic">
+
+									<img src="img/st3.png" alt="" class="item__pic">
+
 									<div class="item__content">
+
 										<p class="item__sum">
-											шале
+											lake chalet
 										</p>
+
 										<p class="item__txt">
-											Отдельный домик для гостей, которые ценят тишину и приватность.
+											Шале возле озера с собственной зоной отдыха, красивым видом на воду и идеальной атмосферой для спокойного отпуска.
 										</p>
+
 									</div>
+
 									<a href="#" class="item__lnl btn">
-										Посмотреть номера <img src="img/arr.svg" alt="image1">
+										Посмотреть номера
+										<img src="img/arr.svg" alt="">
 									</a>
+
 								</div>
+
+								<div class="swiper-slide">
+
+									<img src="img/st4.png" alt="" class="item__pic">
+
+									<div class="item__content">
+
+										<p class="item__sum">
+											vip chalet
+										</p>
+
+										<p class="item__txt">
+											VIP-шале с сауной, просторной гостиной, премиальным интерьером и максимальным уровнем приватности и комфорта.
+										</p>
+
+									</div>
+
+									<a href="#" class="item__lnl btn">
+										Посмотреть номера
+										<img src="img/arr.svg" alt="">
+									</a>
+
+								</div>
+
 							</div>
+
 						</div>
+
 						<div class="swiper-pagination2 swiper-pagination-chalet"></div>
+
 					</div>
+
 				</div>
 			</div>
 		</section>
