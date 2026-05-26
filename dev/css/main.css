@@ -7648,6 +7648,24 @@ input.error {
   z-index: 1;
 }
 
+.swiper-pagination-hotel,
+.swiper-pagination-chalet {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.swiper-pagination-hotel .swiper-pagination-progressbar-fill,
+.swiper-pagination-chalet .swiper-pagination-progressbar-fill {
+  pointer-events: none;
+}
+
+.swiper2 {
+  position: relative;
+  z-index: 1;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1200px;

@@ -5877,4 +5877,52 @@ input.error
             height: 100%
             background: rgba(0,0,0,0.57)
             z-index: 1
-                           
+#item 
+   .swiper-pagination2
+      position: relative
+      overflow: hidden
+   .swiper-pagination-clickable-hotel,
+   .swiper-pagination-clickable-chalet
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      z-index: 5
+   .fake-bullet
+      flex: 1
+      height: 100%
+      cursor: pointer
+      position: relative
+      z-index: 10
+   .swiper-pagination2
+      position: relative !important
+      overflow: visible !important
+      z-index: 30
+      pointer-events: auto
+
+   .swiper-pagination-clickable-hotel,
+   .swiper-pagination-clickable-chalet
+      position: absolute
+      inset: 0
+      width: 100%
+      height: 100%
+      display: flex
+      z-index: 50
+      pointer-events: auto
+
+   .fake-bullet
+      flex: 1 1 auto
+      height: 100%
+      cursor: pointer
+      pointer-events: auto
+      position: relative
+      z-index: 60
+   .swiper2
+      position: relative
+      z-index: 1
+
+   .swiper-pagination2
+      position: relative
+      z-index: 100
