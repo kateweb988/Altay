@@ -508,175 +508,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // сразу отображаем превью для первого слайда
   updatePreview();
 });
-// document.addEventListener('DOMContentLoaded', function () {
-
-//   /* ==============================
-//      SWIPER HOTEL (оптимизированный)
-//   ============================== */
-//   let swiperHotel;
-//   if (document.querySelector('.swiper-hotel')) {
-//     swiperHotel = new Swiper('.swiper-hotel', {
-//       spaceBetween: 19,
-//       slidesPerView: 4,
-//       watchOverflow: true,
-//       simulateTouch: true,
-//       grabCursor: true,
-//       touchRatio: 1,
-//       touchAngle: 45,
-//       mousewheel: { forceToAxis: true, sensitivity: 1 },
-//       lazy: { loadPrevNext: true, loadPrevNextAmount: 2 },
-     
-//       breakpoints: {
-//         0: { slidesPerView: 1, allowTouchMove: true, grid: { rows: 1, fill: 'row' } },
-//         768: { slidesPerView: 2, allowTouchMove: true, grid: { rows: 2, fill: 'row' } },
-//         1200: { slidesPerView: 4, allowTouchMove: true, grid: { rows: 1 } },
-//       },
-//       on: { init: function () { this.pagination.render(); this.pagination.update(); } },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER CHALET (оптимизированный)
-//   ============================== */
-//   let swiperChalet;
-//   if (document.querySelector('.swiper-chalet')) {
-//     swiperChalet = new Swiper('.swiper-chalet', {
-//       spaceBetween: 19,
-//       slidesPerView: 4,
-//       watchOverflow: true,
-//       simulateTouch: true,
-//       grabCursor: true,
-//       touchRatio: 1,
-//       touchAngle: 45,
-//       mousewheel: { forceToAxis: true, sensitivity: 1 },
-//       lazy: { loadPrevNext: true, loadPrevNextAmount: 2 },
-//       pagination: { el: '.swiper-pagination-chalet', type: 'progressbar', clickable: true },
-//       breakpoints: {
-//         0: { slidesPerView: 1, allowTouchMove: true, grid: { rows: 1, fill: 'row' } },
-//         768: { slidesPerView: 2, allowTouchMove: true, grid: { rows: 2, fill: 'row' } },
-//         1200: { slidesPerView: 4, allowTouchMove: true, grid: { rows: 1 } },
-//       },
-//       on: { init: function () { this.pagination.render(); this.pagination.update(); } },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER 4
-//   ============================== */
-//   if (document.querySelector('.swiper4')) {
-//     new Swiper('.swiper4', {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//       navigation: { nextEl: '.swiper-button-next4', prevEl: '.swiper-button-prev4' },
-//       breakpoints: {
-//         320: { slidesPerView: 1, spaceBetween: 12, loop: true },
-//         767: { slidesPerView: 2, spaceBetween: 12 },
-//         992: { slidesPerView: 2, spaceBetween: 20 },
-//         1200: { slidesPerView: 3, spaceBetween: 30 },
-//       },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER 5 + THUMBS
-//   ============================== */
-//   if (document.querySelector('.mySwiper5') && document.querySelector('.mySwiper6')) {
-//     const swiper6 = new Swiper(".mySwiper6", {
-//       spaceBetween: 0,
-//       slidesPerView: 4,
-//       freeMode: true,
-//       watchSlidesProgress: true,
-//     });
-//     new Swiper(".mySwiper5", {
-//       spaceBetween: 10,
-//       navigation: { nextEl: ".swiper-button-next5", prevEl: ".swiper-button-prev5" },
-//       thumbs: { swiper: swiper6 },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER 7
-//   ============================== */
-//   if (document.querySelector('.swiper7')) {
-//     new Swiper('.swiper7', {
-//       slidesPerView: 1,
-//       spaceBetween: 10,
-//       navigation: { nextEl: '.swiper-button-next7', prevEl: '.swiper-button-prev7' },
-//       breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 1 }, 1200: { slidesPerView: 1 } },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER 9
-//   ============================== */
-//   if (document.querySelector('.swiper9')) {
-//     new Swiper('.swiper9', {
-//       slidesPerView: 3,
-//       spaceBetween: 10,
-//       navigation: { nextEl: '.swiper-button-next9', prevEl: '.swiper-button-prev9' },
-//       breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER 10
-//   ============================== */
-//   if (document.querySelector('.swiper10')) {
-//     new Swiper('.swiper10', {
-//       slidesPerView: 4,
-//       spaceBetween: 0,
-//       navigation: { nextEl: '.swiper-button-next10', prevEl: '.swiper-button-prev10' },
-//       breakpoints: { 320: { slidesPerView: 2, spaceBetween: 0, loop: true }, 767: { slidesPerView: 2 }, 992: { slidesPerView: 3 }, 1200: { slidesPerView: 4 } },
-//     });
-//   }
-
-//   /* ==============================
-//      SWIPER 8
-//   ============================== */
-// if (document.querySelector('.swiper8')) {
-// new Swiper('.swiper8', {
-// slidesPerView: 3,
-// spaceBetween: 40,
-// navigation: { nextEl: '.swiper-button-next8', prevEl: '.swiper-button-prev8' },
-// breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 2, spaceBetween: 20 }, 1200: { slidesPerView: 3, spaceBetween: 40 } },
-// });
-// }
-// if (document.querySelector('.swiper11')) {
-// new Swiper('.swiper11', {
-// slidesPerView: 1,
-// loop: true,
-// spaceBetween: 0,
-// navigation: { nextEl: '.swiper-button-next11', prevEl: '.swiper-button-prev11' },
-// pagination: { el: '.swiper-pagination11', clickable: true },
-// breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0, loop: true }, 767: { slidesPerView: 1 }, 992: { slidesPerView: 1, spaceBetween: 0 }, 1200: { slidesPerView: 1, spaceBetween: 0 } },
-// });
-// }
-
-//   /* ==============================
-//      TABS
-//   ============================== */
-//   const tabs = document.querySelectorAll(".title-tab");
-//   const tabContents = document.querySelectorAll(".tab-content");
-
-//   if (tabs.length) {
-//     tabs.forEach(tab => {
-//       tab.addEventListener("click", function () {
-//         const tabName = this.dataset.tab;
-//         tabs.forEach(t => t.classList.remove("active"));
-//         this.classList.add("active");
-//         tabContents.forEach(content => {
-//           content.classList.remove("active");
-//           if (content.dataset.tab === tabName) content.classList.add("active");
-//         });
-//         setTimeout(() => {
-//           if (swiperHotel) { swiperHotel.update(); swiperHotel.pagination.update(); }
-//           if (swiperChalet) { swiperChalet.update(); swiperChalet.pagination.update(); }
-//         }, 120);
-//       });
-//     });
-//   }
-
-// });
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ==============================
@@ -883,6 +714,45 @@ document.addEventListener('DOMContentLoaded', function () {
         1200: {
           slidesPerView: 3,
           spaceBetween: 30
+        },
+
+      },
+
+    });
+
+  }
+  if (document.querySelector('.swiper14')) {
+
+    new Swiper('.swiper14', {
+
+      slidesPerView: 3,
+      spaceBetween: 45,
+       pagination: {
+        el: '.swiper-pagination14',
+      },
+
+
+      breakpoints: {
+
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+          loop: true
+        },
+
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 12
+        },
+
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 45
         },
 
       },
@@ -1100,21 +970,34 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ==============================
      SWIPER 11
   ============================== */
-  if (document.querySelector('.swiper11')) {
+ if (document.querySelectorAll('.swiper11').length) {
 
-    new Swiper('.swiper11', {
+  document.querySelectorAll('.swiper11').forEach((slider) => {
+
+    const wrapper = slider.parentElement;
+
+    const pagination = wrapper.querySelector('.swiper-pagination11')
+      || wrapper.parentElement.querySelector('.swiper-pagination11');
+
+    const nextBtn = wrapper.querySelector('.swiper-button-next11')
+      || wrapper.parentElement.querySelector('.swiper-button-next11');
+
+    const prevBtn = wrapper.querySelector('.swiper-button-prev11')
+      || wrapper.parentElement.querySelector('.swiper-button-prev11');
+
+    new Swiper(slider, {
 
       slidesPerView: 1,
       loop: true,
       spaceBetween: 0,
 
       navigation: {
-        nextEl: '.swiper-button-next11',
-        prevEl: '.swiper-button-prev11'
+        nextEl: nextBtn,
+        prevEl: prevBtn
       },
 
       pagination: {
-        el: '.swiper-pagination11',
+        el: pagination,
         clickable: true
       },
 
@@ -1122,8 +1005,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         320: {
           slidesPerView: 1,
-          spaceBetween: 0,
-          loop: true
+          spaceBetween: 0
         },
 
         767: {
@@ -1138,14 +1020,15 @@ document.addEventListener('DOMContentLoaded', function () {
         1200: {
           slidesPerView: 1,
           spaceBetween: 0
-        },
+        }
 
-      },
+      }
 
     });
 
-  }
+  });
 
+}
 
   /* ==============================
      TABS
@@ -1194,6 +1077,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
+  
 
 });
 document.addEventListener('DOMContentLoaded', () => {
