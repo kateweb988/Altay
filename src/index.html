@@ -150,12 +150,11 @@
 						<a href="index.html" class="nav__logo">
 							<img src="img/logo.webp" alt="logo">
 						</a>
-						<a href="tel:+78007073640" class="nav__tel">
-							<img src="img/tel.svg" alt="tel">
-							+7 (800) 707-36-40
+						<a href="#" class="nav__reward btn">
+							<img src="img/reward.svg" alt="" class="svg"> Подарочный сертификат
 						</a>
 						<a href="#" class="btn nav__btn">
-							Забронировать
+							Забронировать 
 						</a>
 					</div>
 				</div>
@@ -1966,6 +1965,9 @@
 									</a>
 								</li>
 							</ul>
+							<a target="_blank"  id="hotels101_partner_widget_103" style="text-decoration: none; position: relative; left: -5px;	top: -9px; display: block; width: 95px; height: 101px;" href="https://101hotels.com/main/cities/belokuriha/otel_altay_restart.html">
+								<img width="95" height="101" src="https://101hotels.com/images/banner/101hotels_recommend5.png" alt="Отель Алтай Рестарт - 101hotels.com рекомендует">
+							</a>
 						</div>
 						<div class="footer__item">
 							<p class="footer__name">
@@ -2058,6 +2060,19 @@
 			</div>
 		</footer>
 	</div>
+	
+	
+	<script>
+		(function() {
+			var script   = document.createElement('script'), generated_id = 103;
+			script.type  = 'text/javascript';
+			script.async = true;
+			script.src   = 'https://101hotels.com/widget/generator/' + generated_id + '/676010/t-10';
+			var node = document.getElementsByTagName('head')[0];
+			node.appendChild(script);
+		}());
+	</script>
+          
 	<script>
 		document.querySelectorAll('.date-input').forEach(wrapper => {
 			const input = wrapper.querySelector('input');
@@ -2195,6 +2210,92 @@
 						Отправить <img src="img/arr.svg" alt="image1">
 					</button>
 				</form>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal call" id="popup-call5">
+			<div class="popup-call__box">
+				<div class="box-modal__close articmodal-close">
+					<img src="img/close2.svg" alt="image1">
+				</div>
+				<div class="reward__box q">
+					<div class="reward__left">
+						<img src="img/rew.png" alt="">
+					</div>
+					<div class="reward__right">
+						<img src="img/lines.svg" alt="" class="reward__lines">
+						<p class="reward__sub">
+							Оформление
+						</p>
+						<p class="popup__name">
+							Подарочного сертификата
+						</p>
+						<p class="reward__text">
+							Вы оплачиваете сертификат на любую сумму, дарите его вашему близкому человеку. Он едет отдыхать и получает скидку на сумму сертификата
+						</p>
+						<form action="success.php" class="popup__form js-form" id="popupResult" method="post">
+							<div class="popup__item">
+								<label>
+									Ваше имя
+								</label>
+								<input type="text" placeholder="Иван Иванов" class="form__field" required="" name="name">
+							</div>
+							<div class="popup__item">
+								<label>
+									Ваш телефон
+								</label>
+								<input type="tel" placeholder="+7" class="form__field tel" required="" name="tel">
+							</div>
+							<div class="popup__item">
+								<label>
+									Пожелание:
+								</label>
+								<input type="text" placeholder="на удачный отдых" class="form__field" required="" name="text">
+							</div>
+							<div class="popup__item">
+								<label>
+									Сумма
+								</label>
+								<input type="number" placeholder="10 000 ₽" class="form__field" required="" name="sum">
+							</div>
+							<div class="popup__item">
+								<label>
+									Ваша почта
+								</label>
+								<input type="email" placeholder="email@mail.ru" class="form__field" required="" name="email">
+							</div>
+							<div class="checkbox q">
+								<input class="form-check-input custom-checkbox form-control" type="checkbox" name="checkss2" id="formist2"
+									value="Я даю свое согласие на обработку персональных данных">
+								<label class="form-check-label " for="formist2">
+									<span>
+										Я даю согласие <a href="#" target="_blank"> с политикой конфиденциальности и обработки персональных данных</a>
+									</span>
+								</label>
+							</div>
+							<div class="reward__flex q">
+								<button class="btn">
+									Заказать <img src="img/arr.svg" alt="image1">
+								</button>
+								<div class="reward__socials q">
+									<a href="#" target="_blank">
+										<img src="img/rew1.svg" alt="" class="svg">
+									</a>
+									<a href="#" target="_blank">
+										<img src="img/rew2.svg" alt="" class="svg">
+									</a>
+									<a href="#" target="_blank">
+										<img src="img/rew3.svg" alt="" class="svg">
+									</a>
+									<a href="#" target="_blank">
+										<img src="img/rew4.svg" alt="" class="svg">
+									</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -185,6 +185,11 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#popup-call3').arcticmodal({
     });
   });
+   $('.nav__reward').click(function (e) {
+    e.preventDefault();
+    $('#popup-call5').arcticmodal({
+    });
+  });
 
 });
 document.addEventListener("DOMContentLoaded", () => {

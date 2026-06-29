@@ -1299,6 +1299,28 @@ ul.info li {
   z-index: 20;
   position: relative;
 }
+.nav__reward {
+  width: 254px;
+  height: 47px;
+  background: #474D53;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: 15px;
+  font-size: 14px;
+}
+.nav__reward .svg {
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
+}
+.nav__reward:after {
+  width: 100%;
+  height: 2px;
+}
+.nav__reward:before {
+  width: 114px;
+  background: url(../img/union2.svg) no-repeat center center;
+}
 .nav__box {
   align-items: center;
 }
@@ -8198,6 +8220,87 @@ input.error {
   margin-top: 40px;
 }
 
+#popup-call5 .popup-call__box {
+  padding: 0;
+  width: 1100px;
+  margin-left: -550px;
+}
+
+.reward__box {
+  justify-content: space-between;
+}
+.reward__left {
+  position: relative;
+  width: 52%;
+  overflow: hidden;
+}
+.reward__left img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  z-index: 0;
+}
+.reward__right {
+  width: 48%;
+  padding: 50px;
+  position: relative;
+}
+.reward__right .popup__name {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 90%;
+  letter-spacing: -0.09em;
+  text-transform: uppercase;
+  color: #FFD8B0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.reward__right button {
+  width: 223px;
+  height: 69px;
+  margin: 0;
+  margin-right: 25px;
+}
+.reward__sub {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 90%;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.reward__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Geometria";
+  margin-bottom: 25px;
+  color: #FFD8B0;
+}
+.reward__flex {
+  align-items: center;
+}
+.reward__socials {
+  align-items: center;
+  gap: 5px;
+}
+.reward__socials a:hover .svg rect {
+  fill: black;
+}
+.reward__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1200px;
@@ -9200,6 +9303,16 @@ input.error {
   }
   .sales2__flex .svg {
     display: none;
+  }
+  .reward__left {
+    display: none;
+  }
+  #popup-call5 .popup-call__box {
+    width: 510px;
+    margin-left: -255px;
+  }
+  .reward__right {
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -10874,6 +10987,47 @@ input.error {
     font-size: 27px;
     color: #FFD8B0;
   }
+  .nav__reward .svg {
+    margin-right: 0;
+    position: relative;
+    top: 0;
+    flex: 1 0 auto;
+    max-width: 28px;
+    position: relative;
+    left: 39px;
+  }
+  .nav__reward {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    color: transparent;
+    text-align: center;
+  }
+  .nav__reward:before, .nav__reward:after {
+    display: none;
+  }
+  #popup-call5 .popup-call__box {
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+  }
+  .reward__right {
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  .reward__sub {
+    font-size: 16px;
+  }
+  .reward__text {
+    font-size: 14px;
+  }
+  .reward__flex {
+    flex-direction: column;
+  }
+  .reward__right button {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 576px) {
   button:active, button:focus {
@@ -11758,6 +11912,9 @@ input.error {
   .sales2__btn {
     width: 100%;
     margin: 0 auto;
+  }
+  .nav__btn {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 576px) and (min-width: 440px) {

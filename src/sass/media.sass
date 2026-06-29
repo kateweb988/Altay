@@ -748,6 +748,13 @@
       width: 47.3%
    .sales2__flex .svg
       display: none
+   .reward__left
+      display: none
+   #popup-call5 .popup-call__box
+      width: 510px
+      margin-left: -255px
+   .reward__right
+      width: 100%
 @media ( max-width: 991px )
    .item .date-input input
       margin-bottom: 0  !important
@@ -2001,6 +2008,38 @@
    .room2 h2
       font-size: 27px
       color: #FFD8B0
+   .nav__reward .svg 
+      margin-right: 0
+      position: relative
+      top: 0
+      flex: 1 0 auto
+      max-width: 28px
+      position: relative
+      left: 39px
+   .nav__reward
+      width: 33px
+      height: 33px
+      border-radius: 50%
+      color: transparent
+      text-align: center
+      &:before, &:after 
+         display: none
+   #popup-call5 .popup-call__box
+      margin-left: 0
+      left: 0
+      width: 100%
+   .reward__right
+      padding: 30px
+      box-sizing: border-box
+   .reward__sub
+      font-size: 16px
+   .reward__text
+      font-size: 14px
+   .reward__flex
+      flex-direction: column
+   .reward__right button
+      margin-right: 0
+      margin-bottom: 20px
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -2649,6 +2688,8 @@
    .sales2__btn
       width: 100%
       margin: 0 auto
+   .nav__btn
+      margin-left: 0
 @media screen and (max-width: 576px) and (min-width: 440px)
    .error__fig
       top: -60px
