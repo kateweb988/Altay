@@ -777,10 +777,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const swiper6 = new Swiper(".mySwiper6", {
 
-      spaceBetween: 0,
+      spaceBetween: 18,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
+        breakpoints: {
+
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 0
+        },
+
+        767: {
+          spaceBetween: 0,
+          slidesPerView: 4
+        },
+
+        992: {
+          spaceBetween: 18,
+          slidesPerView: 4
+        },
+
+        1200: {
+          spaceBetween: 18,
+          slidesPerView: 4
+        },
+
+      },
 
     });
 

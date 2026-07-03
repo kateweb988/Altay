@@ -1446,7 +1446,7 @@ ul.info li {
 }
 .main__wrap {
   position: relative;
-  padding-bottom: 220px;
+  padding-bottom: 120px;
 }
 .main__row {
   display: flex;
@@ -1540,6 +1540,9 @@ ul.info li {
 }
 .main__item:nth-child(6) p {
   max-width: 383px;
+}
+.main__item:nth-child(7) p {
+  max-width: 354px;
 }
 .main__item:hover p {
   color: rgb(255, 216, 176);
@@ -3997,8 +4000,8 @@ span.text {
 }
 .room3__right {
   width: 100%;
-  margin-left: 60px;
-  max-width: 502px;
+  max-width: 635px;
+  margin-left: 54px;
 }
 .room3__right ul li {
   margin-bottom: 20px;
@@ -4055,7 +4058,7 @@ span.text {
 .room3__slider .mySwiper5 {
   width: 100%;
   overflow: hidden;
-  height: 758px;
+  height: 487px;
 }
 .room3__slider .mySwiper5 .swiper-slide img {
   width: 100%;
@@ -4065,8 +4068,8 @@ span.text {
 .room3__slider .mySwiper6 {
   overflow: hidden;
   width: 100%;
-  max-width: 500px;
-  margin: -65px auto 0;
+  max-width: 89%;
+  margin: 64px 0 0;
   height: 124px;
 }
 .room3__slider .mySwiper6 .swiper-slide {
@@ -4121,7 +4124,7 @@ span.text {
   justify-content: center;
 }
 .room3__row {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .room2 h2 {
@@ -8301,6 +8304,130 @@ input.error {
   object-fit: cover;
 }
 
+.room__all {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.06em;
+  color: #FFD8B0;
+  margin-bottom: 40px;
+  display: block;
+  margin-top: 35px;
+}
+.room__all:hover {
+  color: white;
+}
+.room__sub {
+  font-weight: 400;
+  font-size: 16.7px;
+  line-height: 20px;
+  font-family: "Geometria";
+  letter-spacing: -0.06em;
+  color: #FFD8B0;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: flex-start;
+}
+.room__sub:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  flex: 1 0 auto;
+  max-width: 4px;
+  border-radius: 50%;
+  background: #FFD8B0;
+  margin: 0 10px;
+  position: relative;
+  top: 5px;
+}
+
+.room3 .room3__slider {
+  position: relative;
+}
+.room3 .arrows {
+  position: absolute;
+  top: 345px;
+  right: 32px;
+  z-index: 5;
+}
+.room3 .room3__right .room__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.5px;
+  margin-bottom: 50px;
+}
+.room3 .room3__right .room__list li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 149.75%;
+  letter-spacing: -0.06em;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: max-content;
+  height: 43px;
+  padding: 0 19px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 81px;
+  margin-bottom: 0;
+}
+.room3 .room3__right .room__list li:before {
+  display: none;
+}
+.room3 .room3__right .room3__name {
+  font-size: 19px;
+  margin-bottom: 50px;
+  line-height: 110%;
+  width: 100%;
+  max-width: 427px;
+}
+.room3 .room3__right h2 {
+  text-align: left;
+  font-size: 42px;
+  margin-bottom: 63px;
+}
+.room3 .room3__right .room3__text {
+  width: 100%;
+  max-width: 519px;
+  margin-bottom: 47px;
+}
+.room3 .room3__right .room3__sub {
+  text-align: left;
+  font-size: 18px;
+  font-family: "Geometria";
+  margin-bottom: 33px;
+}
+.room3 .room3__right .room__left ul {
+  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+.room3 .room3__right .room__left ul li {
+  width: 32%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: -0.06em;
+  font-family: "Tenor Sans", sans-serif;
+  color: #FFFFFF;
+  align-items: flex-start;
+  margin-bottom: 67px;
+}
+.room3 .room3__right .room__left ul li:before {
+  position: relative;
+  top: -1px;
+  margin-left: 0;
+  width: 24px;
+  max-width: 24px;
+  height: 24px;
+  border-radius: 0;
+  background: url(../img/star3.webp) no-repeat center center;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1200px;
@@ -8482,6 +8609,13 @@ input.error {
   }
   .ser-row .error__row .error__item {
     width: 22.3%;
+  }
+  .room3__left {
+    max-width: 520px;
+  }
+  .room3 .room3__right .room__left ul li {
+    font-size: 18px;
+    line-height: 29px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -9314,6 +9448,32 @@ input.error {
   .reward__right {
     width: 100%;
   }
+  .main__item:nth-child(7) {
+    margin: 0 auto 45px !important;
+  }
+  .main__item:nth-child(7) p {
+    max-width: 286px;
+  }
+  .room__all {
+    font-size: 18px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .room3__slider .mySwiper6 {
+    width: 100%;
+    max-width: 92%;
+    margin: -41px auto 40px;
+    height: 124px;
+  }
+  .room3 .arrows {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 5;
+  }
+  .room3 .room3__right .room3__text {
+    max-width: 100%;
+  }
 }
 @media (max-width: 991px) {
   .item .date-input input {
@@ -9660,9 +9820,6 @@ input.error {
   }
   .room2__item:nth-child(2n) .room2__sub {
     margin-left: 0;
-  }
-  .room3__slider .mySwiper5 {
-    height: 600px;
   }
   .blog-page .swiper4 .swiper-slide, .blog-page .swiper41 .swiper-slide {
     width: 48.5%;
@@ -11915,6 +12072,67 @@ input.error {
   }
   .nav__btn {
     margin-left: 0;
+  }
+  .room3 .room3__right h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .room3 .room3__right .room3__text {
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+  .room3 .room3__right .room3__sub, .room3 .room3__right .room3__name {
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  .room3 .room3__right .room__left ul {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .room3 .room3__right .room__left ul li {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .room3 .room3__right .room__left ul li br {
+    display: none;
+  }
+  .room3 .room3__right .room__list li {
+    font-size: 14px;
+    height: 38px;
+    padding: 0 15px;
+  }
+  .room3 .room3__right .room__list {
+    margin-bottom: 30px;
+  }
+  .room__sub {
+    font-size: 13px;
+  }
+  .room3__slider .mySwiper6 {
+    height: 68px;
+    margin: -26px auto 40px;
+  }
+  .room3__slider .mySwiper6 .swiper-slide-thumb-active:before {
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+    background-size: 100% !important;
+  }
+  .room3__slider .mySwiper5 {
+    height: 238px;
+  }
+  .nav__btn {
+    margin-left: auto;
+  }
+  .room__all {
+    margin-bottom: 25px;
   }
 }
 @media screen and (max-width: 576px) and (min-width: 440px) {
