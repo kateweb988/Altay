@@ -708,6 +708,8 @@ input:-moz-placeholder {
   line-height: 57px;
   letter-spacing: -0.07px;
   margin-bottom: 5px;
+  width: 100%;
+  max-width: 700px;
 }
 .search__sub {
   opacity: 0.5;
@@ -8548,6 +8550,34 @@ input.error {
   background: url(../img/star3.webp) no-repeat center center;
 }
 
+.sauna__box {
+  margin-bottom: 60px;
+}
+.sauna__box .spa__area {
+  margin-bottom: 60px;
+}
+.sauna__box .spa__wrap {
+  padding-bottom: 50px;
+}
+.sauna__btns {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.sauna__btns a {
+  width: 305px;
+  height: 60px;
+  border-radius: 0px;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+.sauna__btns a:before {
+  display: none;
+}
+.sauna__btns a .svg {
+  margin-right: 20px;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1200px;
@@ -12368,6 +12398,22 @@ input.error {
   .transfer__wrap .corporate__row .room3__left ul li:before {
     left: 10px;
     margin-right: 17px;
+  }
+  .sauna__btns a {
+    width: 240px;
+    font-size: 13px;
+  }
+  .sauna__btns a .svg {
+    margin-right: 12px;
+  }
+  .sauna__box .spa__wrap {
+    padding-bottom: 30px;
+  }
+  .sauna__box .spa__area {
+    margin-bottom: 40px;
+  }
+  .sauna__box {
+    margin-bottom: 60px;
   }
 }
 @media screen and (max-width: 576px) and (min-width: 440px) {
